@@ -1,15 +1,15 @@
 ---
+import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const modules = import.meta.glob('../../../source-sops/*.md', { eager: true });
-export function getStaticPaths() {
-  return Object.entries(modules).map(([path, mod]) => {
-    const slug = path.split('/').pop()?.replace(/\.md$/, '') ?? '';
-    return { params: { slug }, props: { mod, slug } };
-  });
+
+export async function getStaticPaths() {
+  const docs = await getCollection('sops');
+  return docs.map((doc) => ({ params: { slug: doc.id }, props: { doc } }));
 }
-const { mod, slug } = Astro.props;
-const Content = mod.Content;
+
+const { doc } = Astro.props;
+const { Content } = await render(doc);
 ---
-<BaseLayout title={`${slug} | Blinto Reviews`}>
+<BaseLayout title={`${doc.id} | Blinto Reviews`}>
   <article class="prose"><Content /></article>
 </BaseLayout>
