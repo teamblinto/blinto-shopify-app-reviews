@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const modules = import.meta.glob('../../../source-sops/*.md', { eager: true });
+const docs = Object.entries(modules).map(([path, mod]) => {
+  const slug = path.split('/').pop()?.replace(/\.md$/, '') ?? '';
+  const title = (mod as any).frontmatter?.title || slug.replace(/^\d+-/, '').replaceAll('-', ' ');
+  return { slug, title };
+}).sort((a, b) => a.slug.localeCompare(b.slug));
+---
+<BaseLayout title="Source SOPs | Blinto Reviews">
+  <div class="eyebrow">Canonical reference</div>
+  <h1>Source SOPs</h1>
+  <p class="lead">These are the preserved detailed project strategy and SOPs. The lightweight workflow points back here when deeper requirements are needed.</p>
+  <div class="grid">
+    {docs.map((doc) => <a class="card" href={`/sops/${doc.slug}/`}><h3>{doc.title}</h3><p>Open source document</p></a>)}
+  </div>
+</BaseLayout>
