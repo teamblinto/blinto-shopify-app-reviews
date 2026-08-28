@@ -1,6 +1,7 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const reviews = Object.values(import.meta.glob('../../reviews/**/*.{md,mdx}', { eager: true }));
+const reviews = await getCollection('reviews');
 const statuses = ['Backlog','Assigned','Research','Writing','Review','Revision','Approved','Published','Monitoring'];
 ---
 <BaseLayout>
