@@ -2,13 +2,40 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const docs = (await getCollection('sops')).sort((a, b) => a.id.localeCompare(b.id));
-const titleFromId = (id) => id.replace(/^\d+-/, '').replaceAll('-', ' ');
+
+const documentMeta = (id) => {
+  const number = id.match(/^(\d+)-/)?.[1] ?? '';
+  const rawTitle = id.replace(/^\d+-/, '').replaceAll('-', ' ');
+
+  if (number === '00') {
+    return {
+      label: 'CORE STRATEGY',
+      title: 'Blinto Shopify App Review Authority Project',
+    };
+  }
+
+  return {
+    label: `SOP ${Number(number)}`,
+    title: rawTitle
+      .replace(/^sop /, '')
+      .replace(/\b\w/g, (letter) => letter.toUpperCase()),
+  };
+};
 ---
 <BaseLayout title="Core Strategy & SOPs | Blinto Reviews">
   <div class="eyebrow">Core documentation</div>
   <h1>Core Strategy & SOPs</h1>
-  <p class="lead">The complete strategy, standards and SOPs governing Blinto's Shopify App Review program. Use the Process section for the simplified day-to-day workflow.</p>
+  <p class="lead">The governing strategy and seven SOPs for Blinto's Shopify App Review program. Use Process for the simplified day-to-day workflow.</p>
   <div class="grid">
-    {docs.map((doc) => <a class="card" href={`/sops/${doc.id}/`}><h3>{titleFromId(doc.id)}</h3><p>Core document · Author: Shemanto</p></a>)}
+    {docs.map((doc) => {
+      const meta = documentMeta(doc.id);
+      return (
+        <a class="card" href={`/sops/${doc.id}/`}>
+          <span class="status">{meta.label}</span>
+          <h3>{meta.title}</h3>
+          <p>Author: Shemanto</p>
+        </a>
+      );
+    })}
   </div>
 </BaseLayout>
