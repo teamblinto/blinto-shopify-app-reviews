@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+const { title = 'Blinto Shopify Review Workspace', description = 'Private review operations workspace' } = Astro.props;
+const path = Astro.url.pathname;
+const nav = [
+  ['/', 'Home'],
+  ['/process/', 'Process'],
+  ['/sops/', 'SOPs'],
+  ['/reviews/', 'Reviews'],
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">Blinto Reviews</div>
+        <div class="subbrand">Private Shopify Review Workspace</div>
+        <nav class="nav">
+          {nav.map(([href, label]) => <a class={path === href || (href !== '/' && path.startsWith(href)) ? 'active' : ''} href={href}>{label}</a>)}
+        </nav>
+      </aside>
+      <main class="main"><slot /></main>
+    </div>
+  </body>
+</html>
