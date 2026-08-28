@@ -1,6 +1,14 @@
+---
+title: "[App Name] Review"
+author: "[Human Reviewer]"
+category: "[Category]"
+status: "Research & Write"
+testing_level: "Not set"
+---
+
 # [App Name] Review
 
-> Working file for one assigned Shopify app review. One author owns the review. Complete evidence first; do not fill gaps with assumptions.
+> The named human reviewer owns testing, evidence, judgment, and factual approval. The AI assistant may research public information and write the complete prose, but must never invent experience or evidence.
 
 ## Review Record
 
@@ -8,17 +16,20 @@
 - **Developer:**
 - **Category:**
 - **Content type:** Single App Review
-- **Author / Assignee:**
-- **Assigned date:**
+- **Human reviewer / assignee:**
 - **Due date:**
 - **ClickUp task:**
-- **Status:** Assigned
+- **Shopify App Store:**
+- **GitHub repository:** https://github.com/teamblinto/blinto-shopify-app-reviews
+- **Review Hub:** https://reviews.blinto.co
+- **Content Preview:**
+- **Status:** Research & Write
 - **Research date:**
 - **Last verified:**
 
-## Testing Status
+## Human Testing & Evidence
 
-Choose one:
+### Testing level
 
 - [ ] Level 1 — Full Hands-On Test
 - [ ] Level 2 — Partial Hands-On Test
@@ -26,17 +37,25 @@ Choose one:
 - [ ] Level 4 — Research-Only Evaluation
 - [ ] Level 5 — Insufficient Evidence
 
-**What we tested:**
+**What I tested:**
 
-**What we did not test:**
+**What I did not test:**
 
 **Testing limitations:**
 
----
+**Raw observations / experience:**
 
-# Research & Evidence
+The reviewer may provide notes one-by-one or as a batch. Writing quality is not required here; record what actually happened.
 
-## Official Sources
+## Evidence / Screenshots
+
+| Evidence | What it proves | Location/link | Publishable? |
+|---|---|---|---|
+| | | | |
+
+## AI Research & Evidence Organization
+
+### Official Sources
 
 - Shopify App Store:
 - Developer website:
@@ -44,7 +63,7 @@ Choose one:
 - Documentation/help center:
 - Other official sources:
 
-## Baseline
+### Baseline
 
 - Core use case:
 - Target merchant:
@@ -57,75 +76,51 @@ Choose one:
 - Main integrations:
 - Important requirements/restrictions:
 
-## Developer Claims
+### Developer Claims
 
 | Claim | Source | Verified? | Notes |
 |---|---|---|---|
 | | | | |
 
-## Hands-On / Evaluation Notes
+### Merchant Feedback Patterns
 
-### Installation
-### Onboarding
-### Core Merchant Workflow
-### Important Features
-### Dashboard & Usability
-### Storefront / Customer Experience
-### Integrations / Compatibility
-### Documentation & Support
-### Performance / Technical Observations
+**Common positives:**
 
-Only include conclusions supported by appropriate evidence. Escalate material specialist claims when necessary.
+**Common complaints / limitations:**
 
-## Pricing Findings
+**Sources reviewed:**
 
-**Pricing verified on:**
+Do not present isolated merchant reviews as universal experience.
 
-**Plans relevant to the target merchant:**
+### Missing Evidence / Questions for Human Reviewer
 
-**Important restrictions / usage pricing:**
-
-## Merchant Feedback Patterns
-
-### Common positives
-### Common complaints / limitations
-### Sources reviewed
-
-Do not present isolated reviews as universal experience.
-
-## Evidence / Screenshots
-
-| Evidence | What it proves | Location/link | Publishable? |
-|---|---|---|---|
-| | | | |
-
-## Strengths
-
-1.
-2.
-3.
-
-## Limitations
-
-1.
-2.
-3.
-
-## Best Fit
-
-## Poor Fit
-
-## Alternatives to Consider
-
-## Research Gaps / Claims We Must Not Make
+The AI assistant should ask these sequentially as needed rather than guessing.
 
 -
 
----
+## Evaluation
 
-# SEO & Content Direction
+### Strengths
+1.
+2.
+3.
 
-This section can be concise. It supports the author's writing; it is not a separate ClickUp stage.
+### Limitations
+1.
+2.
+3.
+
+### Best Fit
+
+### Poor Fit
+
+### Alternatives to Consider
+
+### Claims We Must Not Make
+
+-
+
+## SEO & Content Direction
 
 - **Target merchant:**
 - **Merchant problem:**
@@ -138,61 +133,41 @@ This section can be concise. It supports the author's writing; it is not a separ
 - **CTA direction:**
 - **Required disclosures:**
 
-## Outline
+## AI-Written Review
 
-# [H1]
+The AI assistant writes the complete polished merchant-focused article here using verified public research plus the human reviewer's supplied testing/evidence.
 
-## Quick Verdict
-## What Is [App]?
-## How We Evaluated [App]
-## [Important Decision Section]
-## Features & Merchant Value
-## Pricing
-## Setup & Ease of Use
-## Integrations / Support / Technical Considerations
-## Pros and Cons
-## Who [App] Is Best For
-## Who Should Consider an Alternative
-## Alternatives
-## Final Verdict
+## Human Fact-check Before SEO Handoff
 
-Adjust to evidence and search intent. Do not add sections merely to increase length.
-
----
-
-# Draft
-
-[Write article here]
-
----
-
-# Author Self-Check
-
-- [ ] Intended merchant decision/search intent is satisfied.
+- [ ] The article accurately represents what I tested and observed.
+- [ ] Testing language matches the actual testing level.
 - [ ] Important factual claims are supported.
-- [ ] Testing language matches actual testing.
 - [ ] Developer claims are not presented as Blinto findings without verification.
-- [ ] Pricing is verified and dated.
-- [ ] Strengths and limitations are balanced.
-- [ ] Best-fit and poor-fit merchants are clear.
-- [ ] Material specialist claims are supported or flagged for escalation.
-- [ ] Merchant feedback is represented as patterns, not universal fact.
+- [ ] Pricing/time-sensitive information is verified and dated.
+- [ ] Strengths, limitations, best-fit, and poor-fit conclusions match the evidence.
 - [ ] No fabricated testing, facts, scores, quotes, feedback, statistics, screenshots, or citations exist.
-- [ ] Evidence/screenshots are linked where useful.
-- [ ] Verdict follows the research.
-- [ ] Internal links, CTA direction, and required disclosures are included.
+- [ ] Missing evidence is disclosed or the unsupported claim was removed.
+- [ ] I approve this article as the named human reviewer.
 
-**Author ready for SEO Check:** [ ] Yes
+**Human reviewer approved:** [ ] Yes
 
----
+## Preview Handoff
 
-# Final SEO / Quality Check
+Before moving ClickUp to **SEO Check**:
+
+- [ ] Review committed/pushed to GitHub.
+- [ ] Review rendered successfully on `reviews.blinto.co`.
+- [ ] Exact Content Preview URL added to ClickUp.
+
+**Content Preview:**
+
+**Ready for SEO Check:** [ ] Yes
+
+## Final SEO / Quality Check
 
 - **Reviewer:** Shemanto / SEO Agent
 - **Date:**
 - **Status:** Pending / Changes Requested / Passed
-
-Check:
 
 - [ ] Search intent and primary topic alignment
 - [ ] Title/H1 and heading structure
@@ -205,21 +180,17 @@ Check:
 - [ ] Required disclosures
 - [ ] Metadata direction
 
-## Feedback / Corrections
+### Feedback / Corrections
 
 -
 
-If corrections are requested, the task stays in **SEO Check** while the same author resolves them.
+If changes are requested, the task stays in **SEO Check** while the same reviewer works with their AI assistant to update the review and preview.
 
 **Ready to Publish:** [ ] Yes
 
----
-
-# Publishing
+## Publishing
 
 - **Published by:** Fazle / Shemanto
 - **Published date:**
 - **Public URL:**
 - **Live QA complete:** [ ] Yes
-- **Monitoring owner:**
-- **Monitoring active:** [ ] Yes
