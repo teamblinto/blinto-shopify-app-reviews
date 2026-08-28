@@ -10,6 +10,10 @@ Every review has **one author** who owns the complete review from research throu
 
 **Assign → Research & Test → Brief → Write → Self-check → Technical Writing Review → SEO Review → Approve → Private Preview → Publish → Monitor**
 
+Use [`docs/review-process.md`](docs/review-process.md) for the practical day-to-day workflow.
+
+Use [`templates/app-review.md`](templates/app-review.md) when an app is assigned and a new review begins.
+
 ## Source of Truth
 
 The original project strategy and SOPs written for this initiative are preserved under `source-sops/`. They are the canonical detailed requirements and must not be silently simplified, removed, or overwritten.
@@ -39,6 +43,8 @@ The execution guides, templates, checklists, assistant instructions, and website
 ## Initial Rollout
 
 Start with **five reviews total: one review from each of the five writers**. Run all five through the complete workflow, identify weaknesses, improve the system, and only then expand the category review pipeline.
+
+Category research and assignments are intentionally **TBD** until the category research is completed.
 
 ## Repository Build Plan
 
