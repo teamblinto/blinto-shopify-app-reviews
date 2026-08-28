@@ -4,11 +4,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const docs = (await getCollection('sops')).sort((a, b) => a.id.localeCompare(b.id));
 const titleFromId = (id) => id.replace(/^\d+-/, '').replaceAll('-', ' ');
 ---
-<BaseLayout title="Source SOPs | Blinto Reviews">
-  <div class="eyebrow">Canonical reference</div>
-  <h1>Source SOPs</h1>
-  <p class="lead">These are the preserved detailed project strategy and SOPs. The lightweight workflow points back here when deeper requirements are needed.</p>
+<BaseLayout title="Core Strategy & SOPs | Blinto Reviews">
+  <div class="eyebrow">Core documentation</div>
+  <h1>Core Strategy & SOPs</h1>
+  <p class="lead">The complete strategy, standards and SOPs governing Blinto's Shopify App Review program. Use the Process section for the simplified day-to-day workflow.</p>
   <div class="grid">
-    {docs.map((doc) => <a class="card" href={`/sops/${doc.id}/`}><h3>{titleFromId(doc.id)}</h3><p>Open source document</p></a>)}
+    {docs.map((doc) => <a class="card" href={`/sops/${doc.id}/`}><h3>{titleFromId(doc.id)}</h3><p>Core document · Author: Shemanto</p></a>)}
   </div>
 </BaseLayout>
