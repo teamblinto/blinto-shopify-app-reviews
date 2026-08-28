@@ -42,9 +42,9 @@ One review has one primary author/assignee. The author's normal Blinto role does
 
 **One owner → AI-guided research & writing → one final SEO/quality check → publish.**
 
-The human author owns the review and performs/provides the real-world work: app access, hands-on testing, screenshots, observations, judgment, and any information that cannot be independently verified by the assistant.
+The human author owns the review and performs/provides the real-world work: app access, hands-on testing, screenshots, observations, judgment, and any information that cannot be independently verified by the AI assistant.
 
-The repository-connected assistant guides the author through:
+The repository-connected AI assistant guides the author through:
 
 **Research & Testing → Evidence → Brief as needed → Writing → Self-check → Corrections**
 
@@ -82,11 +82,13 @@ Planning, category selection, SEO topic validation, distribution strategy, and p
 
 ## 6. AI-Guided Review Start Protocol
 
-When an assigned author starts a review in ChatGPT or another repository-connected assistant, the assistant should make the process conversational and sequential. Do not dump every SOP requirement on the author at once.
+Authors may use **ChatGPT, Claude, or another approved AI assistant that can work with the Review Hub repository/context**. The workflow is platform-neutral; the repository and SOPs are the source of truth, not a specific AI product.
+
+When an assigned author starts a review with an AI assistant, the assistant should make the process conversational and sequential. Do not dump every SOP requirement on the author at once.
 
 A standard author instruction is:
 
-> I am assigned to review [APP NAME] for Blinto. Guide me through the Shopify App Review process from the beginning. Follow the Review Hub repository and SOPs. Ask me for the manual testing, screenshots, observations, and information you need. Do not invent anything I have not tested or provided.
+> I am assigned to review [APP NAME] for Blinto. Guide me through the Shopify App Review process from the beginning. Follow the Blinto Shopify App Review Hub repository and SOPs. Ask me for the manual testing, screenshots, observations, and information you need. Do not invent anything I have not tested or provided.
 
 If the author simply says something equivalent to **“I am starting my assigned Shopify app review”**, use repository evidence to identify the assignment when available. If the assignment cannot be verified, ask for the app/task rather than inventing it.
 
@@ -102,7 +104,7 @@ The assistant should then:
 8. Run the author self-check with the human author, resolving evidence gaps rather than writing around them.
 9. Tell the author when the review is ready to move to **SEO Check** and what remains blocked if it is not ready.
 
-Do not mark manual testing complete because the assistant researched the app online. Do not manufacture first-hand language on behalf of the author.
+Do not mark manual testing complete because the AI researched the app online. Do not manufacture first-hand language on behalf of the author.
 
 ## 7. Evidence & AI Rules
 
@@ -140,7 +142,7 @@ Required task context:
 
 Standard task-level checklist:
 
-- [ ] Started review with ChatGPT + Review Hub
+- [ ] Started review with AI assistant + Review Hub
 - [ ] Manual app testing/research completed
 - [ ] Required evidence/screenshots provided
 - [ ] Full article + author self-check completed
@@ -154,10 +156,10 @@ The detailed SOP checks remain in the repository and should be enforced through 
 `https://reviews.blinto.co` — the private Blinto Shopify App Review Hub.
 
 ### How do I start my review?
-Open the assigned ClickUp task, use the Review Hub/repository in ChatGPT, and ask the assistant to guide the assigned review from the beginning. The assistant should lead the author through the documented process and request manual testing/evidence as needed.
+Open the assigned ClickUp task, use **ChatGPT, Claude, or another approved repository-capable AI assistant**, give it access/context for the Review Hub repository, and ask it to guide the assigned review from the beginning. The assistant should lead the author through the documented process and request manual testing/evidence as needed.
 
 ### How do I write a review?
-Use `docs/review-process.md`, `docs/operating-model.md`, the relevant source SOPs, and `templates/app-review.md`. The assistant should guide the human author through research/testing, evidence, brief, writing, and self-check before SEO Check.
+Use `docs/review-process.md`, `docs/operating-model.md`, the relevant source SOPs, and `templates/app-review.md`. The AI assistant should guide the human author through research/testing, evidence, brief, writing, and self-check before SEO Check.
 
 ### Who reviews it?
 The routine final pilot gate is Shemanto or a calibrated SEO Agent. Escalate specialist issues only when necessary.
@@ -166,7 +168,7 @@ The routine final pilot gate is Shemanto or a calibrated SEO Agent. Escalate spe
 There is no separate Final Approval ceremony. Passing SEO Check moves the article to Ready to Publish; Fazle or Shemanto publishes it.
 
 ### What happens if changes are requested?
-Keep the ClickUp task in SEO Check. The original author works with the assistant to fix the comments and resubmits.
+Keep the ClickUp task in SEO Check. The original author works with their AI assistant to fix the comments and resubmits.
 
 ### Can AI write/research this?
 Yes. AI is expected to materially assist with research organization, source work, brief creation, drafting, editing, and QA. The human author must provide/perform manual testing and evidence-dependent work. AI cannot invent missing evidence or claim unperformed testing.
