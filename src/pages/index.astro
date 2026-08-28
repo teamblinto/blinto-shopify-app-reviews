@@ -11,6 +11,7 @@ const reviews = entries.map((entry) => ({
   status: entry.data.status ?? 'Backlog',
   author: entry.data.author ?? 'Unassigned',
   category: entry.data.category ?? 'TBD',
+  due_date: entry.data.due_date ?? null,
   clickup: entry.data.clickup ?? null,
   published_url: entry.data.published_url ?? null,
   clicks: entry.data.clicks ?? null,
@@ -26,9 +27,10 @@ const published = counts['Published'] ?? 0;
   <p class="lead">Research, write, review, publish and measure Blinto's Shopify app reviews from one command center. GitHub remains the content source of truth while each operational metric is read from its authoritative system.</p>
 
   <h2>100 Reviews Dashboard</h2>
-  <div class="metric-grid">
-    <div class="metric"><strong>{published}</strong><span>Published / {goal}</span></div>
-    {statuses.slice(0,4).map((status) => <div class="metric"><strong>{counts[status] ?? 0}</strong><span>{status}</span></div>)}
+  <div class="metric-grid" id="metric-filters">
+    <button class="metric metric-filter active" data-status="All"><strong>{reviews.length}</strong><span>All Reviews</span></button>
+    <button class="metric metric-filter" data-status="Published"><strong>{published}</strong><span>Published / {goal}</span></button>
+    {statuses.slice(0,4).map((status) => <button class="metric metric-filter" data-status={status}><strong>{counts[status] ?? 0}</strong><span>{status}</span></button>)}
   </div>
 
   <div class="source-note"><strong>Data contract:</strong> ClickUp → production status · Review Hub/GitHub → content & previews · Blinto website/CMS → published truth · GSC/GA4 → organic performance · SEO API → rankings/backlinks.</div>
@@ -44,14 +46,16 @@ const published = counts['Published'] ?? 0;
   ) : (
     <div class="report-wrap">
       <table class="report" id="report">
-        <thead><tr><th>Review</th><th>Reviewer</th><th>Status</th><th>Preview</th><th>Published</th><th>Clicks</th><th>Impressions</th><th>Backlinks</th></tr></thead>
+        <thead><tr><th>Review</th><th>Reviewer</th><th>Status</th><th>Due</th><th>Preview</th><th>ClickUp</th><th>Published</th><th>Clicks</th><th>Impressions</th><th>Backlinks</th></tr></thead>
         <tbody>
           {reviews.map((review) => (
             <tr data-status={review.status}>
               <td><strong>{review.title}</strong><small>{review.category}</small></td>
               <td>{review.author}</td>
               <td><span class="status">{review.status}</span></td>
+              <td>{review.due_date ?? '—'}</td>
               <td><a href={`/reviews/${review.id}/`}>Preview</a></td>
+              <td>{review.clickup ? <a href={review.clickup}>Task</a> : '—'}</td>
               <td>{review.published_url ? <a href={review.published_url}>Live</a> : '—'}</td>
               <td>{review.clicks ?? '—'}</td><td>{review.impressions ?? '—'}</td><td>{review.backlinks ?? '—'}</td>
             </tr>
@@ -61,14 +65,16 @@ const published = counts['Published'] ?? 0;
     </div>
   )}
 
-  <h2>Performance Intelligence</h2>
-  <div class="integration-grid">
-    <div class="integration"><strong>ClickUp</strong><span>Backlog, ownership, due dates and production stages</span><em>Production source</em></div>
-    <div class="integration"><strong>Blinto Website</strong><span>Published reviews and live URLs</span><em>Publication source</em></div>
-    <div class="integration"><strong>Search Console</strong><span>Clicks, impressions, CTR and search position</span><em>Connect when search data exists</em></div>
-    <div class="integration"><strong>Google Analytics</strong><span>Sessions, engagement and conversions</span><em>Connect with performance phase</em></div>
-    <div class="integration"><strong>SEO API</strong><span>Rankings, referring domains and backlinks</span><em>Later integration</em></div>
+  <h2>Data Sources</h2>
+  <div class="source-health">
+    <span><i class="health health-ready"></i><strong>Review Hub</strong> Connected</span>
+    <span><i class="health health-planned"></i><strong>ClickUp</strong> Planned</span>
+    <span><i class="health health-planned"></i><strong>Blinto Website</strong> Planned</span>
+    <span><i class="health health-planned"></i><strong>GSC</strong> Planned</span>
+    <span><i class="health health-planned"></i><strong>GA4</strong> Planned</span>
+    <span><i class="health health-later"></i><strong>SEO API</strong> Later</span>
   </div>
+  <p class="source-caption">Connect new sources only when the review program produces data that makes the integration useful.</p>
 
   <h2>Quick Access</h2>
   <div class="grid">
@@ -82,15 +88,16 @@ const published = counts['Published'] ?? 0;
   <div class="empty"><strong>Five-review validation pilot.</strong> Build the minimum repeatable process, publish the first reviews, learn from the workflow and performance data, then scale toward 100.</div>
 
   <script is:inline>
-    document.querySelectorAll('.filter').forEach((button) => {
-      button.addEventListener('click', () => {
-        document.querySelectorAll('.filter').forEach((b) => b.classList.remove('active'));
-        button.classList.add('active');
-        const wanted = button.dataset.status;
-        document.querySelectorAll('#report tbody tr').forEach((row) => {
-          row.style.display = wanted === 'All' || row.dataset.status === wanted ? '' : 'none';
-        });
+    const applyFilter = (wanted) => {
+      document.querySelectorAll('#report tbody tr').forEach((row) => {
+        row.style.display = wanted === 'All' || row.dataset.status === wanted ? '' : 'none';
       });
+      document.querySelectorAll('[data-status]').forEach((control) => {
+        control.classList.toggle('active', control.dataset.status === wanted);
+      });
+    };
+    document.querySelectorAll('.filter, .metric-filter').forEach((button) => {
+      button.addEventListener('click', () => applyFilter(button.dataset.status));
     });
   </script>
 </BaseLayout>
