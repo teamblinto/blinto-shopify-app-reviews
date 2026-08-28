@@ -60,7 +60,7 @@ Known Review Hub participants:
 | Shemanto | Marketing Strategist / SEO Consultant | Author of the Core Strategy & SOPs; SEO/strategy context and review-program guidance |
 | Rakibul | Product Designer / Shopify product-growth context | Review author and future category owner |
 | Muna | Developer | Review author and future category owner |
-| Saim | Developer | Review author and future category owner |
+| Sayem | Developer | Review author and future category owner |
 | Imran | Product Designer | Review author and future category owner |
 
 Each review has **one primary author**. Any review author is expected to own the full review process rather than only the part matching their normal job title.
