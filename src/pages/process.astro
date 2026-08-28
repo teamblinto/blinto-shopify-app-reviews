@@ -1,6 +1,10 @@
 ---
+import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Content } from '../../docs/review-process.md';
+const docs = await getCollection('docs');
+const processDoc = docs.find((entry) => entry.id.includes('review-process'));
+if (!processDoc) throw new Error('review-process.md was not found in docs/');
+const { Content } = await render(processDoc);
 ---
 <BaseLayout title="Review Process | Blinto Reviews">
   <article class="prose"><Content /></article>
