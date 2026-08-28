@@ -1,19 +1,19 @@
 ---
+import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const modules = import.meta.glob('../../../reviews/**/*.{md,mdx}', { eager: true });
-export function getStaticPaths() {
-  return Object.entries(modules).map(([path, mod]) => {
-    const slug = path.replace(/^.*\/reviews\//, '').replace(/\.(md|mdx)$/, '');
-    return { params: { slug }, props: { mod, slug } };
-  });
+
+export async function getStaticPaths() {
+  const reviews = await getCollection('reviews');
+  return reviews.map((review) => ({ params: { slug: review.id }, props: { review } }));
 }
-const { mod, slug } = Astro.props;
-const Content = mod.Content;
-const fm = mod.frontmatter ?? {};
+
+const { review } = Astro.props;
+const { Content } = await render(review);
+const fm = review.data ?? {};
 ---
-<BaseLayout title={`${fm.title ?? slug} | Blinto Reviews`}>
+<BaseLayout title={`${fm.title ?? review.id} | Blinto Reviews`}>
   <div class="eyebrow">Private review preview</div>
-  <h1>{fm.title ?? slug}</h1>
+  <h1>{fm.title ?? review.id}</h1>
   <div class="pipeline">
     <span>Status: {fm.status ?? 'Unknown'}</span>
     <span>Author: {fm.author ?? 'Unassigned'}</span>
