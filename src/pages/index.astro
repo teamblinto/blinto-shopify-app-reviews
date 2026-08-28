@@ -1,11 +1,15 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getClickUpReviewTasks } from '../lib/clickup';
 
 const entries = await getCollection('reviews');
+const clickup = await getClickUpReviewTasks();
 const goal = 100;
 const statuses = ['Backlog', 'Research & Write', 'SEO Check', 'Ready to Publish', 'Published'];
-const reviews = entries.map((entry) => ({
+const contentByTask = new Map(entries.map((entry) => [entry.data.clickup?.split('/').pop(), entry]));
+
+const repoReviews = entries.map((entry) => ({
   id: entry.id,
   title: entry.data.title ?? entry.id.replaceAll('-', ' '),
   status: entry.data.status ?? 'Backlog',
@@ -18,6 +22,24 @@ const reviews = entries.map((entry) => ({
   impressions: entry.data.impressions ?? null,
   backlinks: entry.data.backlinks ?? null,
 }));
+
+const reviews = clickup.connected ? clickup.tasks.map((task) => {
+  const content = contentByTask.get(task.id);
+  return {
+    id: content?.id ?? null,
+    title: task.name.replace(/^Review:\s*/i, ''),
+    status: task.status,
+    author: task.reviewer,
+    category: content?.data.category ?? task.name.split('—')[1]?.trim() ?? 'TBD',
+    due_date: task.dueDate,
+    clickup: task.clickupUrl,
+    published_url: content?.data.published_url ?? null,
+    clicks: content?.data.clicks ?? null,
+    impressions: content?.data.impressions ?? null,
+    backlinks: content?.data.backlinks ?? null,
+  };
+}) : repoReviews;
+
 const counts = Object.fromEntries(statuses.map((status) => [status, reviews.filter((r) => r.status === status).length]));
 const published = counts['Published'] ?? 0;
 ---
@@ -42,7 +64,7 @@ const published = counts['Published'] ?? 0;
   </div>
 
   {reviews.length === 0 ? (
-    <div class="empty" style="margin-top:18px">No review records are in the repository yet. The five-review validation pilot can begin from ClickUp; review rows and private previews will appear here as review records are created.</div>
+    <div class="empty" style="margin-top:18px">No review tasks found yet.</div>
   ) : (
     <div class="report-wrap">
       <table class="report" id="report">
@@ -54,7 +76,7 @@ const published = counts['Published'] ?? 0;
               <td>{review.author}</td>
               <td><span class="status">{review.status}</span></td>
               <td>{review.due_date ?? '—'}</td>
-              <td><a href={`/reviews/${review.id}/`}>Preview</a></td>
+              <td>{review.id ? <a href={`/reviews/${review.id}/`}>Preview</a> : '—'}</td>
               <td>{review.clickup ? <a href={review.clickup}>Task</a> : '—'}</td>
               <td>{review.published_url ? <a href={review.published_url}>Live</a> : '—'}</td>
               <td>{review.clicks ?? '—'}</td><td>{review.impressions ?? '—'}</td><td>{review.backlinks ?? '—'}</td>
@@ -68,20 +90,20 @@ const published = counts['Published'] ?? 0;
   <h2>Data Sources</h2>
   <div class="source-health">
     <span><i class="health health-ready"></i><strong>Review Hub</strong> Connected</span>
-    <span><i class="health health-planned"></i><strong>ClickUp</strong> Planned</span>
+    <span><i class={`health ${clickup.connected ? 'health-ready' : 'health-planned'}`}></i><strong>ClickUp</strong> {clickup.connected ? 'Connected' : 'Needs secret'}</span>
     <span><i class="health health-planned"></i><strong>Blinto Website</strong> Planned</span>
     <span><i class="health health-planned"></i><strong>GSC</strong> Planned</span>
     <span><i class="health health-planned"></i><strong>GA4</strong> Planned</span>
     <span><i class="health health-later"></i><strong>SEO API</strong> Later</span>
   </div>
-  <p class="source-caption">Connect new sources only when the review program produces data that makes the integration useful.</p>
+  <p class="source-caption">ClickUp is fetched securely at build time. The API token is never sent to the browser. Configure <code>CLICKUP_API_TOKEN</code> as a Cloudflare Pages secret; <code>CLICKUP_REVIEW_LIST_ID</code> is optional and defaults to the Shopify App Reviews list.</p>
 
   <h2>Quick Access</h2>
   <div class="grid">
     <a class="card" href="/planning/"><span class="status">Plan</span><h3>Planning</h3><p>Category ownership, topic validation and review priorities.</p></a>
     <a class="card" href="/process/"><span class="status">Start here</span><h3>Write a Review</h3><p>Human reviewer + AI writer workflow from testing through SEO handoff.</p></a>
     <a class="card" href="/sops/"><span class="status">Reference</span><h3>Core Strategy & SOPs</h3><p>The complete strategy and detailed standards governing the program.</p></a>
-    <a class="card" href="/reviews/"><span class="status">{reviews.length} reviews</span><h3>Review Workspace</h3><p>Open review records, evidence context and rendered private article previews.</p></a>
+    <a class="card" href="/reviews/"><span class="status">{entries.length} reviews</span><h3>Review Workspace</h3><p>Open review records, evidence context and rendered private article previews.</p></a>
   </div>
 
   <h2>Current Phase</h2>
