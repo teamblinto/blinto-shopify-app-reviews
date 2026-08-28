@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const modules = import.meta.glob('../../../reviews/**/*.{md,mdx}', { eager: true });
+export function getStaticPaths() {
+  return Object.entries(modules).map(([path, mod]) => {
+    const slug = path.replace(/^.*\/reviews\//, '').replace(/\.(md|mdx)$/, '');
+    return { params: { slug }, props: { mod, slug } };
+  });
+}
+const { mod, slug } = Astro.props;
+const Content = mod.Content;
+const fm = mod.frontmatter ?? {};
+---
+<BaseLayout title={`${fm.title ?? slug} | Blinto Reviews`}>
+  <div class="eyebrow">Private review preview</div>
+  <h1>{fm.title ?? slug}</h1>
+  <div class="pipeline">
+    <span>Status: {fm.status ?? 'Unknown'}</span>
+    <span>Author: {fm.author ?? 'Unassigned'}</span>
+    <span>Category: {fm.category ?? 'TBD'}</span>
+    <span>Testing: {fm.testing_level ?? 'Not set'}</span>
+  </div>
+  <article class="prose" style="margin-top:20px"><Content /></article>
+</BaseLayout>
