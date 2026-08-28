@@ -6,7 +6,16 @@ The detailed requirements remain in `source-sops/`. Use those documents when a s
 
 ## Workflow
 
-**Assign → Research & Test → Brief → Write → Self-check → Technical Writing Review → SEO Review → Approve → Private Preview → Publish → Monitor**
+**Assign → Research & Test → Brief → Write → Self-check → Technical Review → SEO Review → Private Preview → Publish → Monitor**
+
+## Ownership
+
+- **Individual Author:** Research & Testing → Evidence → Brief → Writing → Self-check
+- **Technical Review:** Fazle or Technical Review Agent
+- **SEO Review:** Shemanto or SEO Agent
+- **Publish:** Fazle or Shemanto, only after the required Technical Review and SEO Review have passed
+
+There is no separate routine Final Approval stage. **Publish is the final gate.**
 
 ## 1. Assign
 
@@ -25,9 +34,9 @@ Do not invent category assignments in the repository. Category ownership is deci
 
 Detailed reference: `source-sops/01-sop-project-planning-and-content-selection.md`
 
-## 2. Research & Test
+## 2. Research & Test — Author
 
-The author owns the evidence base for the review.
+The individual author owns the evidence base for the review.
 
 Minimum requirements:
 
@@ -52,9 +61,9 @@ Never describe Levels 2–4 as full hands-on testing.
 
 Detailed reference: `source-sops/02-sop-app-research-and-hands-on-testing.md`
 
-## 3. Brief
+## 3. Brief — Author
 
-Convert the evidence into a writer-ready SEO/content brief.
+The author converts the evidence into a writer-ready SEO/content brief.
 
 Confirm:
 
@@ -75,7 +84,7 @@ The brief must not introduce claims that are unsupported by the research.
 
 Detailed reference: `source-sops/03-sop-content-research-and-brief-creation.md`
 
-## 4. Write
+## 4. Write — Author
 
 Write for the merchant's decision, not for word count.
 
@@ -98,7 +107,7 @@ Do not copy product marketing language. Do not turn assumptions into facts.
 
 Detailed reference: `source-sops/04-sop-content-writing.md`
 
-## 5. Author Self-check
+## 5. Author Self-check — Author
 
 Before submission, the author confirms:
 
@@ -111,31 +120,29 @@ Before submission, the author confirms:
 - Article helps both right-fit and wrong-fit merchants decide.
 - Required evidence/screenshots are attached or linked.
 
-Only then move the review forward.
+Research through self-check is the responsibility of the individual author. Only after this gate passes does the review move to specialist review.
 
-## 6. Technical Writing Review
+## 6. Technical Review — Fazle or Technical Review Agent
 
-Review accuracy, merchant usefulness, clarity, Shopify/app terminology, evidence representation, and technical claims.
+Technical Review checks accuracy, merchant usefulness, clarity, Shopify/app terminology, evidence representation, unsupported claims, contradictions, disclosures, and technical claims.
 
-Technical validation should involve an appropriate Shopify expert when the article makes material claims about integrations, compatibility, implementation, performance, APIs, themes, checkout, or other technical behavior.
+Material claims about integrations, compatibility, implementation, performance, APIs, themes, checkout, or other technical behavior must be appropriately validated.
 
-## 7. SEO Review
+During the initial pilot, Fazle may perform this review directly. A Technical Review Agent may take over routine checks as it becomes calibrated and reliable, with Fazle handling exceptions or escalations.
 
-Review search intent, topical coverage, headings, metadata direction, internal links, competing content gaps, and natural keyword usage.
+## 7. SEO Review — Shemanto or SEO Agent
+
+SEO Review checks search intent, topical coverage, headings, metadata direction, internal links, competing-content gaps, comparison opportunities, cannibalization risk, and natural keyword usage.
 
 SEO optimization must not override evidence or merchant usefulness.
 
+During the initial stage, Shemanto may perform this review directly. A calibrated SEO Agent may perform the routine gate later, with Shemanto handling exceptions or escalations.
+
 Detailed reference for review gates: `source-sops/05-sop-editorial-seo-and-technical-review.md`
 
-## 8. Approve
+## 8. Private Preview
 
-A review is approved only when substantive editorial, evidence, technical (where required), and SEO issues are resolved.
-
-The founder is not a routine approval gate. Escalate only strategic, reputational, ethical, commercial, or exceptional quality decisions that genuinely require leadership input.
-
-## 9. Private Preview
-
-Render the approved review in Blinto's private review workspace before public publishing.
+Once the required Technical Review and SEO Review pass, render the review in Blinto's private Review Hub before public publishing.
 
 Check:
 
@@ -149,21 +156,31 @@ Check:
 - Testing/disclosure information
 - Metadata/publishing fields
 
-## 10. Publish
+## 9. Publish — Fazle or Shemanto
 
-Publish only the approved version.
+There is no separate routine Final Approval stage. Publishing is the final control gate.
+
+Fazle or Shemanto may publish only when:
+
+- Author self-check is complete.
+- Required Technical Review has passed.
+- Required SEO Review has passed.
+- Required revisions are resolved.
+- Private preview/QA is satisfactory.
 
 Complete live-page QA for formatting, mobile/desktop display, links, images, metadata, indexability, canonical settings, author/reviewer information, disclosures, and other applicable publishing requirements.
 
+Strategic, reputational, ethical, legal, commercial, or exceptional quality concerns should be escalated rather than creating a routine additional approval stage.
+
 Detailed reference: `source-sops/06-sop-design-publishing-and-quality-assurance.md`
 
-## 11. Monitor
+## 10. Monitor
 
 Publication is not completion.
 
 Track search performance, engagement, business/relationship outcomes, outdated facts, pricing/product changes, and refresh requirements.
 
-Use the detailed promotion/performance/maintenance SOP once the monitoring layer is operational.
+Use `source-sops/07-sop-promotion-performance-tracking-and-content-maintenance.md` for the detailed post-publication requirements.
 
 ## AI Rule
 
