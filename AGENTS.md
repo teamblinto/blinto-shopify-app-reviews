@@ -5,10 +5,7 @@
 - **Repository:** `teamblinto/blinto-shopify-app-reviews`
 - **Project:** Blinto Shopify App Review Hub
 - **Official private workspace:** `https://reviews.blinto.co`
-- **Infrastructure URL:** `https://blinto-shopify-app-reviews.pages.dev`
-- **Access:** Private; Cloudflare Access protected.
 - **Purpose:** Blinto's operating system for evidence-based Shopify app reviews.
-- **Business objective:** Shopify ecosystem authority, useful merchant decision content, SEO, founder relationships, partnerships, and qualified business opportunities.
 
 Use `https://reviews.blinto.co` as the normal team URL.
 
@@ -21,94 +18,84 @@ Use `https://reviews.blinto.co` as the normal team URL.
 5. `reviews/`
 6. current code/configuration
 
-Do not invent project facts, assignments, approvals, URLs, statuses, testing, evidence, dates, scores, people, or decisions.
+Do not invent project facts, assignments, approvals, URLs, statuses, testing, evidence, dates, scores, people, or decisions. Do not modify `source-sops/` unless explicitly instructed to revise the source SOPs themselves.
 
-The source SOPs remain preserved as detailed guidance. The current pilot deliberately consolidates routine production handoffs into a lightweight execution model. Do not silently reintroduce additional routine gates that the approved execution model has removed.
+## 3. Core Operating Model
 
-## 3. Team Context
+**Human Reviewer + AI Writer → Human Verification → Content Preview → SEO Check → Publish.**
+
+The team member assigned in ClickUp is the named human reviewer/author. They may be a developer, designer, or other technical/product person and are **not expected to be a professional writer**.
+
+### Human reviewer owns
+
+- App access and real hands-on testing.
+- Screenshots and evidence.
+- Raw notes and observations, whether supplied one-by-one or in a batch.
+- Product, UX, technical, merchant-fit, strength, and limitation judgments.
+- Answers to questions that require first-hand experience.
+- Final factual verification and approval of the generated article.
+
+### AI assistant owns
+
+ChatGPT, Claude, or another approved repository-capable AI assistant should act as **researcher + interviewer + evidence organizer + primary writer + editor + QA assistant**.
+
+It should:
+
+1. Read this repository and applicable SOPs/templates.
+2. Confirm the assigned app/category/reviewer from available evidence.
+3. Guide the reviewer through testing sequentially; do not dump the whole SOP at once.
+4. Conduct legitimate public research and organize sources.
+5. Ask the human for missing hands-on observations/screenshots/evidence instead of guessing.
+6. Separate developer claims, Blinto observations, and merchant feedback.
+7. Create the review record and content/SEO direction.
+8. **Write the complete polished review.** The human does not need to turn raw notes into prose.
+9. Run a factual verification pass with the human reviewer.
+10. Save/update the review correctly under `reviews/` and commit/push when the connected environment supports repository writes.
+11. Determine the rendered Review Hub Content Preview URL and ensure it is recorded in ClickUp before SEO Check.
+
+**AI may write 100% of the prose. AI may invent 0% of the experience or evidence.**
+
+Never fabricate testing, product behavior, pricing, merchant feedback, screenshots, scores, quotations, statistics, citations, or technical verification. Missing evidence must be requested, qualified, removed, or transparently disclosed.
+
+## 4. Team Context
 
 | Person | Blinto context | Review Hub context |
 | --- | --- | --- |
-| Fazle Rabbi | Founder & CEO | Project owner; review author; publisher |
+| Fazle Rabbi | Founder & CEO | Project owner; human reviewer; publisher |
 | Shemanto | Marketing Strategist / SEO Consultant | Core Strategy/SOP author; final SEO/quality reviewer; publisher |
-| Rakibul | Product Designer / Shopify product-growth context | Review author / category owner when approved |
-| Muna | Developer | Review author / category owner when approved |
-| Sayem | Developer | Review author / category owner when approved |
-| Imran | Product Designer | Review author / category owner when approved |
+| Rakibul | Product Designer / Shopify product-growth context | Human reviewer / category owner when approved |
+| Muna | Developer | Human reviewer / category owner when approved |
+| Sayem | Developer | Human reviewer / category owner when approved |
+| Imran | Product Designer | Human reviewer / category owner when approved |
 
-One review has one primary author/assignee. The author's normal Blinto role does not limit the review scope.
-
-## 4. Approved Pilot Principle
-
-**One owner → AI-guided research & writing → one final SEO/quality check → publish.**
-
-The human author owns the review and performs/provides the real-world work: app access, hands-on testing, screenshots, observations, judgment, and any information that cannot be independently verified by the AI assistant.
-
-The repository-connected AI assistant guides the author through:
-
-**Research & Testing → Evidence → Brief as needed → Writing → Self-check → Corrections**
-
-The assistant should actively ask the author for missing manual work/evidence at the appropriate point rather than expecting the author to memorize the SOPs. It may also perform legitimate public research when available, but must clearly distinguish public/source research from the author's hands-on observations.
-
-Routine final gate:
-
-**SEO Check — Shemanto or, later, a calibrated SEO Agent.**
-
-Publish:
-
-**Fazle or Shemanto after SEO Check passes.**
-
-There is no routine separate Technical Review, Revision, Final Approval, or Monitoring board stage in the pilot. Specialist technical/legal/reputational review is escalation-based when a material issue genuinely requires it. Post-publication performance/maintenance requirements remain in SOP 7 but are managed separately from the production board.
+One review has one primary human reviewer/assignee. Their normal Blinto role does not limit the review scope.
 
 ## 5. ClickUp Lifecycle
 
 **Backlog → Research & Write → SEO Check → Ready to Publish → Published**
 
-`Assigned` is not a board status. Assignment is represented by the ClickUp assignee field. `Monitoring` is not a production-board status.
+`Assigned` is not a board status; ownership is represented by the assignee field. `Monitoring` is not a production-board status; post-publication performance/maintenance is handled separately.
 
-Do not create separate board statuses for research vs testing vs brief vs writing vs self-check, or for corrections/revision.
+- Human reviewer starts → **Research & Write**.
+- Human reviewer verifies article + preview handoff complete → **SEO Check**.
+- Shemanto/SEO Agent passes → **Ready to Publish**.
+- Fazle/Shemanto publishes and completes live QA → **Published**.
 
-If SEO Check requests changes, the task remains in **SEO Check** while the same author resolves the feedback.
+If SEO changes are requested, keep the task in SEO Check while the original human reviewer works with their AI assistant to resolve them.
 
-Status rule: **the person handing the work to the next owner changes the status.**
+Planning/category/SEO-validation/program work belongs in Shopify GTM Execution, not the review-production list.
 
-- Approved topic waiting to start → Backlog
-- Author starts production → Research & Write
-- Author finishes/self-checks → SEO Check
-- Shemanto/SEO Agent passes → Ready to Publish
-- Fazle/Shemanto publishes and completes live QA → Published
+## 6. Start Protocol
 
-Planning, category selection, SEO topic validation, distribution strategy, and program improvements belong in **Shopify GTM Execution**, not the Shopify App Reviews production list.
+A standard prompt for any supported AI platform is:
 
-## 6. AI-Guided Review Start Protocol
+> I am assigned to review [APP NAME] for Blinto. Follow the Blinto Shopify App Review repository and guide me through the process from the beginning. I am the human reviewer: I will test the app and give you screenshots, notes, observations, experience, and judgment. You are the AI writer: research legitimate public information, ask me sequentially for anything that requires hands-on evidence, organize the evidence, and write the complete review. Do not invent anything I have not tested/provided or anything you cannot verify. When the article is complete, help me fact-check it, save/commit it correctly to the repository, identify its reviews.blinto.co Content Preview URL, and make sure that URL is added to my ClickUp task before I submit it for SEO Check.
 
-Authors may use **ChatGPT, Claude, or another approved AI assistant that can work with the Review Hub repository/context**. The workflow is platform-neutral; the repository and SOPs are the source of truth, not a specific AI product.
+If the reviewer simply says “I am starting my assigned Shopify app review,” identify the assignment from repository/connected task evidence when possible. If it cannot be verified, ask for the app/task rather than inventing it.
 
-When an assigned author starts a review with an AI assistant, the assistant should make the process conversational and sequential. Do not dump every SOP requirement on the author at once.
+## 7. Evidence Standard
 
-A standard author instruction is:
-
-> I am assigned to review [APP NAME] for Blinto. Guide me through the Shopify App Review process from the beginning. Follow the Blinto Shopify App Review Hub repository and SOPs. Ask me for the manual testing, screenshots, observations, and information you need. Do not invent anything I have not tested or provided.
-
-If the author simply says something equivalent to **“I am starting my assigned Shopify app review”**, use repository evidence to identify the assignment when available. If the assignment cannot be verified, ask for the app/task rather than inventing it.
-
-The assistant should then:
-
-1. Confirm the app, category, author, and available assignment context.
-2. Create/use the canonical review record from `templates/app-review.md`.
-3. Guide research and hands-on testing in manageable steps.
-4. Ask the author for screenshots, observations, access-dependent findings, and judgments when needed.
-5. Organize verified public research and author-provided evidence in the review record.
-6. Build the brief from the evidence and current search intent.
-7. Draft the review from verified inputs while preserving the named human author as the author.
-8. Run the author self-check with the human author, resolving evidence gaps rather than writing around them.
-9. Tell the author when the review is ready to move to **SEO Check** and what remains blocked if it is not ready.
-
-Do not mark manual testing complete because the AI researched the app online. Do not manufacture first-hand language on behalf of the author.
-
-## 7. Evidence & AI Rules
-
-Every review must accurately state its evaluation level:
+Every review must accurately state one evaluation level:
 
 1. Full Hands-On Test
 2. Partial Hands-On Test
@@ -116,86 +103,68 @@ Every review must accurately state its evaluation level:
 4. Research-Only Evaluation
 5. Insufficient Evidence
 
-Separate developer claims, Blinto observations, and merchant feedback. Verify/date pricing. Missing evidence must be flagged rather than invented.
+Do not mark hands-on work complete because AI researched the app online. Verify/date pricing and other time-sensitive facts. Treat merchant feedback as sourced patterns rather than universal fact.
 
-**The human author owns the review. AI guides and assists the author; it does not become the factual source for unperformed work.**
+## 8. Review Hub Preview Contract
 
-AI may conduct legitimate research, organize sources, summarize verified evidence, structure the brief, draft from verified inputs, edit, and QA. AI must never fabricate hands-on experience, product behavior, pricing, scores, merchant feedback, quotations, statistics, screenshots, citations, or technical verification.
+Astro loads `reviews/**/*.{md,mdx}` as the `reviews` collection. The Review Hub generates a page for each review under `/reviews/[review-file-id]/`.
 
-## 8. Standard ClickUp Review Task
+After a review is committed/pushed to the deployed branch and the deployment completes, the AI/reviewer should verify its rendered page and use the exact URL as **Content Preview**.
 
-Each review uses one lightweight ClickUp task. ClickUp is the management wrapper, not the place to duplicate the full SOP or article.
+A task must **not** move to SEO Check until:
 
-Recommended task name:
+1. Review is committed/pushed to GitHub.
+2. Review is rendered successfully on `reviews.blinto.co`.
+3. Human reviewer has fact-checked the article.
+4. Exact Content Preview URL is recorded in ClickUp.
 
-`Review: [App Name] — [Category]`
+**No Content Preview URL = no SEO Check handoff.**
 
-Required task context:
+## 9. Standard ClickUp Review Task
 
-- App
-- Category
-- Human author/assignee
-- Content type
-- Due date
-- Review Hub link
-- Review record/private preview/public URL as they become available
+Use `templates/clickup-review-task.md` as the canonical task template.
 
-Standard task-level checklist:
+Every task must expose:
 
-- [ ] Started review with AI assistant + Review Hub
-- [ ] Manual app testing/research completed
-- [ ] Required evidence/screenshots provided
-- [ ] Full article + author self-check completed
+- **Shopify App** — direct Shopify App Store listing.
+- **GitHub Repository** — `https://github.com/teamblinto/blinto-shopify-app-reviews`.
+- **Review Hub** — `https://reviews.blinto.co`.
+- **Content Preview** — exact rendered review URL, mandatory before SEO Check.
+- **Published URL** — added after public publication.
+
+Canonical checklist:
+
+- [ ] Started review with AI assistant + repository context
+- [ ] App testing completed + experience shared
+- [ ] Required screenshots/evidence/information provided
+- [ ] AI-generated review fact-checked by human reviewer
+- [ ] Review committed/pushed and Content Preview URL added
 - [ ] Submitted for SEO Check
 
-The detailed SOP checks remain in the repository and should be enforced through the AI-guided workflow/review record rather than copied into every ClickUp task.
+Detailed SOP checks remain in the repository and are enforced by the AI-guided workflow rather than duplicated as ClickUp columns.
 
-## 9. Common Questions
+## 10. SEO Check & Publishing
 
-### What is the website?
-`https://reviews.blinto.co` — the private Blinto Shopify App Review Hub.
+**SEO Check owner: Shemanto**, or later a calibrated SEO Agent. Shemanto should review the rendered Content Preview linked directly from ClickUp, not hunt through raw GitHub Markdown.
 
-### How do I start my review?
-Open the assigned ClickUp task, use **ChatGPT, Claude, or another approved repository-capable AI assistant**, give it access/context for the Review Hub repository, and ask it to guide the assigned review from the beginning. The assistant should lead the author through the documented process and request manual testing/evidence as needed.
+The gate covers search intent/topic alignment, title/H1/headings, topical coverage, metadata direction, internal links, comparisons/cannibalization, readability/merchant usefulness, disclosures, and obvious unsupported claims/evidence gaps.
 
-### How do I write a review?
-Use `docs/review-process.md`, `docs/operating-model.md`, the relevant source SOPs, and `templates/app-review.md`. The AI assistant should guide the human author through research/testing, evidence, brief, writing, and self-check before SEO Check.
+There is no routine separate Technical Review, Revision, or Final Approval stage. Escalate a material technical/legal/reputational issue only when genuinely required.
 
-### Who reviews it?
-The routine final pilot gate is Shemanto or a calibrated SEO Agent. Escalate specialist issues only when necessary.
+**Publish owner: Fazle or Shemanto.** After SEO Check passes, move to Ready to Publish. After public publication and live QA, add the public URL and move to Published.
 
-### Who approves it?
-There is no separate Final Approval ceremony. Passing SEO Check moves the article to Ready to Publish; Fazle or Shemanto publishes it.
-
-### What happens if changes are requested?
-Keep the ClickUp task in SEO Check. The original author works with their AI assistant to fix the comments and resubmits.
-
-### Can AI write/research this?
-Yes. AI is expected to materially assist with research organization, source work, brief creation, drafting, editing, and QA. The human author must provide/perform manual testing and evidence-dependent work. AI cannot invent missing evidence or claim unperformed testing.
-
-### Who owns this category/app?
-Check repository records. Never invent ownership.
-
-## 10. System Responsibilities
+## 11. System Responsibilities
 
 - **GitHub:** content, evidence, source SOPs, execution docs, templates, assistant rules, version history.
-- **ClickUp:** owner, due date, stage, blockers, operational follow-up; one task per review.
-- **Review Hub:** team-facing strategy/process access, review records/status, private previews.
+- **ClickUp:** owner, due date, status, blockers, Shopify App link, GitHub link, Review Hub link, Content Preview, published URL.
+- **Review Hub:** human-friendly process/SOP access and rendered private review previews.
 - **WordPress CMS (future):** public blog publishing backend.
 - **Public Blinto Astro website:** presentation layer consuming approved CMS content.
 
 Do not use GitHub Issues as the primary PM system when ClickUp is the documented execution system.
 
-## 11. Current Program Phase
+## 12. Pilot Principle
 
-The program is in pilot/validation. Optimize for publishing velocity and learning while preserving evidence quality.
+Optimize for publishing velocity and learning while preserving evidence quality. The first operational pilot is five single-app reviews. The broader source-SOP validation remains 10 pieces: 3 category/bulk reviews, 5 single-app reviews, and 2 comparisons.
 
-The first operational pilot is five single-app reviews. The broader SOP 7 validation remains 10 pieces: 3 category/bulk reviews, 5 single-app reviews, and 2 comparisons.
-
-Do not scale process complexity or mass-produce toward 100 before the pilot shows what is actually needed.
-
-## 12. Change Control
-
-Do not modify `source-sops/` unless explicitly instructed to revise the source strategy/SOPs themselves. Approved execution changes belong in `docs/`, templates, and this assistant policy.
-
-When source SOP detail and the lightweight pilot execution layer differ, explain that the source SOP is the detailed knowledge base while the approved pilot consolidates routine operational gates for speed. Never weaken evidence, transparency, or factual-integrity requirements.
+Keep the system simple. Add process only when observed quality or operational problems justify it.
