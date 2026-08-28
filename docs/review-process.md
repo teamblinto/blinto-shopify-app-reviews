@@ -2,105 +2,105 @@
 
 This is the approved practical workflow for the current Shopify App Review pilot.
 
-The detailed requirements remain in `source-sops/`. The pilot deliberately keeps ClickUp and handoffs lightweight while preserving evidence, transparency, and SEO quality.
+The detailed requirements remain in `source-sops/`. The execution layer stays lightweight while preserving evidence, transparency, and SEO quality.
 
-## Workflow
+## Core Model
 
-**Assign → Research & Write → Author Self-check → SEO Check → Ready to Publish → Publish → Monitor**
+**Human reviewer tests → AI assistant researches/interviews/writes → human fact-checks → preview → SEO Check → publish.**
 
-## Ownership
+The human assignee is the named reviewer/author and owns the experience, evidence, judgment, and factual approval. The AI assistant (ChatGPT, Claude, or another approved repository-capable assistant) is expected to produce the complete polished article from verified public research plus the reviewer's supplied testing experience and evidence.
 
-- **Individual Author:** owns the review end-to-end from research/testing through writing, evidence, brief as needed, self-check, and requested corrections.
-- **SEO Check:** Shemanto, or a calibrated SEO Agent later, performs the single routine final review gate. This check covers SEO plus obvious editorial/evidence/quality issues before publishing.
-- **Publish:** Fazle or Shemanto publishes once the SEO Check passes and the article is ready.
+**AI may write 100% of the prose. AI may invent 0% of the experience or evidence.**
 
-There is no routine separate Technical Review, Final Approval, or Revision stage during the pilot. Technical or specialist review is requested only when a material claim or risk genuinely requires it.
+## ClickUp Workflow
 
-## 1. Assign
+**Backlog → Research & Write → SEO Check → Ready to Publish → Published**
 
-One app review is assigned to one primary author. Record the app, category, author, content type, due date, and ClickUp task.
+`Assigned` is not a status; ownership is represented by the ClickUp assignee. `Monitoring` is not a production-board status; performance and maintenance are handled separately after publication.
 
-## 2. Research & Write — Author
+## 1. Backlog
 
-The author owns the complete production cycle.
+An approved/proposed review task waits here until production starts. The task should contain the Shopify App Store link, GitHub repository link, Review Hub link, app/category/assignee, and any approval blocker.
 
-The author must:
+## 2. Research & Write — Human Reviewer + AI Writer
 
-- Verify the exact app/developer identity and official sources.
-- Verify current pricing and date checked.
-- Record the real testing/evaluation level.
-- Test the core merchant use case when access allows.
-- Record evidence, screenshots, important features, limitations, integrations, usability, and merchant-fit findings.
-- Separate developer claims, Blinto observations, and merchant feedback.
-- Determine search intent, target merchant, primary topic/keyword, differentiated angle, and article structure.
-- Write the complete merchant-focused review from the verified evidence.
+When the assignee starts, move the task to **Research & Write** and open the repository with ChatGPT or Claude.
 
-A formal standalone brief is not a ClickUp stage. The author should use as much brief structure as necessary to produce a strong review.
+The AI assistant should guide the reviewer sequentially rather than requiring them to memorize the SOP. The reviewer may provide observations one-by-one or as a batch.
 
-## 3. Author Self-check — Author
+### Human reviewer owns
 
-Before handing off, the author confirms:
+- Real app access and hands-on testing.
+- Screenshots and other evidence from testing.
+- Raw observations, opinions, UX/technical/product judgment, problems, strengths, limitations, and merchant-fit conclusions.
+- Answering AI follow-up questions when experience cannot be learned from public sources.
+- Final factual verification of the generated article.
 
-- Important factual claims are supported.
-- Testing disclosure matches actual testing.
-- Pricing is dated/verified.
-- No fabricated experience, quotations, feedback, scores, statistics, screenshots, or citations exist.
-- Important limitations are visible.
-- Verdict follows the evidence.
-- The article helps the intended merchant make a decision.
-- Required evidence/screenshots are attached or linked.
+### AI assistant owns
 
-When complete, the author moves the ClickUp task to **SEO Check**.
+- Reading and following this repository, `docs/`, templates, and applicable `source-sops/`.
+- Legitimate public research and source organization.
+- Asking the reviewer for missing testing, screenshots, observations, or decisions.
+- Separating developer claims, Blinto observations, and merchant feedback.
+- Organizing evidence and creating the content/SEO direction.
+- Writing the complete merchant-focused article in polished prose.
+- Editing, consistency checks, and pre-handoff QA.
+- Creating/updating the review file in `reviews/` and committing/pushing it to the repository when the connected AI environment supports GitHub writes.
 
-## 4. SEO Check — Shemanto or SEO Agent
+AI must never fabricate testing, product behavior, pricing, merchant feedback, screenshots, scores, quotations, statistics, citations, or technical verification. Missing evidence must be requested, removed, qualified, or disclosed.
 
-This is the single routine final review gate for the pilot.
+## 3. Preview & Human Fact-check
 
-Check:
+Every review file under `reviews/` is automatically included in the Astro Review Hub collection. After the review is committed/pushed to the deployed branch and the site deployment completes, its private preview is available at:
 
-- Search intent and keyword/topic alignment.
-- Title/H1, headings, topical coverage, metadata direction, internal links, comparison opportunities, and cannibalization risk.
-- Readability and merchant usefulness.
-- Obvious unsupported claims, misleading language, missing disclosures, evidence gaps, or quality problems.
+`https://reviews.blinto.co/reviews/[review-file-id]/`
 
-If corrections are needed, keep the task in **SEO Check**, record the feedback, and return the work to the same author. The author resolves the comments and resubmits without creating a separate Revision status.
+Before handoff, the human reviewer must read the generated review and confirm it accurately represents what they tested and found.
 
-If a material technical, legal, reputational, or specialist issue cannot be safely checked here, escalate that specific issue rather than adding a routine review stage to every article.
+The reviewer/AI must then add the exact **Content Preview** URL to the ClickUp task.
 
-When the check passes, move the task to **Ready to Publish**.
+A task is **not ready for SEO Check** until all three are true:
+
+1. Review content is committed/pushed to GitHub.
+2. Rendered content preview is available on `reviews.blinto.co`.
+3. Exact Content Preview URL is recorded in ClickUp.
+
+## 4. SEO Check — Shemanto
+
+The reviewer moves the ClickUp task to **SEO Check** only after the preview handoff requirements are satisfied.
+
+Shemanto opens the Content Preview link from ClickUp and checks search intent/topic alignment, title/H1 and headings, topical coverage, metadata direction, internal links, comparison/cannibalization opportunities, readability, merchant usefulness, disclosures, and obvious unsupported claims/evidence gaps.
+
+If corrections are needed, keep the task in **SEO Check**. The same human reviewer works with their AI assistant to resolve the feedback and update the preview.
+
+When the check passes, Shemanto moves the task to **Ready to Publish**.
 
 ## 5. Ready to Publish
 
-The article has passed the required pilot gate and is ready for publishing/preview QA.
+The article has passed the pilot gate. Fazle or Shemanto completes final publishing/QA without adding another routine approval stage.
 
-Fazle or Shemanto can perform the final publishing action. Any small formatting or publishing corrections are handled here without creating another approval stage.
+## 6. Published
 
-## 6. Publish — Fazle or Shemanto
+Once the public article is live and verified, Fazle or Shemanto adds the published URL to ClickUp and moves the task to **Published**.
 
-Publish the article and complete the applicable live-page QA. Once the public article is live and verified, move the task to **Published**.
+Performance tracking, refreshes, pricing/product changes, and maintenance continue according to SOP 7, outside the production-board statuses.
 
-## 7. Monitor
+## Required ClickUp Links
 
-Publication is not the end of the content asset. Track performance, business/relationship outcomes, pricing/product changes, outdated facts, and refresh needs according to SOP 7.
+Every review task should expose:
 
-## ClickUp Statuses
+- **Shopify App** — direct Shopify App Store listing.
+- **GitHub Repository** — `teamblinto/blinto-shopify-app-reviews`.
+- **Review Hub** — `https://reviews.blinto.co`.
+- **Content Preview** — exact rendered review URL; mandatory before SEO Check.
+- **Published URL** — added after public publication.
 
-**Assigned → Research & Write → SEO Check → Ready to Publish → Published**
+## Status Ownership
 
-Use **Monitoring** when the article enters ongoing performance/freshness ownership.
+- Task created/approved → **Backlog**.
+- Human reviewer starts → **Research & Write**.
+- Human reviewer fact-checks + preview is live + preview URL is in ClickUp → **SEO Check**.
+- Shemanto passes SEO/quality gate → **Ready to Publish**.
+- Fazle/Shemanto publishes and verifies → **Published**.
 
-Planning/topic-validation work belongs in the main Shopify GTM Execution list, not in the review-production board.
-
-## Status Ownership Rule
-
-**The person handing the work to the next owner changes the status.**
-
-- Fazle/Shemanto: assignment → **Assigned**
-- Author: starts production → **Research & Write**
-- Author: self-check complete → **SEO Check**
-- Shemanto/SEO Agent: gate passed → **Ready to Publish**
-- Fazle/Shemanto: public publication complete → **Published**, then **Monitoring** when monitoring ownership is active
-
-## AI Rule
-
-AI may assist with research organization, verified-evidence summaries, structure, drafting from verified inputs, editing, and QA. AI cannot create missing evidence or pretend work was performed. Missing evidence must be resolved or transparently disclosed.
+Planning/topic-validation work belongs in Shopify GTM Execution, not the review-production board.
