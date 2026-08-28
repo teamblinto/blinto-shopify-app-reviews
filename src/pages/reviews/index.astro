@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const modules = import.meta.glob('../../../reviews/**/*.{md,mdx}', { eager: true });
+const reviews = Object.entries(modules).map(([path, mod]) => {
+  const slug = path.replace(/^.*\/reviews\//, '').replace(/\.(md|mdx)$/, '');
+  const fm = (mod as any).frontmatter ?? {};
+  return {
+    slug,
+    title: fm.title ?? slug.replaceAll('-', ' '),
+    status: fm.status ?? 'Unknown',
+    author: fm.author ?? 'Unassigned',
+    category: fm.category ?? 'TBD'
+  };
+});
+---
+<BaseLayout title="Reviews | Blinto Reviews">
+  <div class="eyebrow">Working content</div>
+  <h1>Reviews</h1>
+  <p class="lead">Each review has one author and one canonical working record.</p>
+  {reviews.length === 0 ? (
+    <div class="empty">No review records yet. The first five will be created after category research and app assignments.</div>
+  ) : (
+    <div class="grid">
+      {reviews.map((review) => (
+        <a class="card" href={`/reviews/${review.slug}/`}>
+          <span class="status">{review.status}</span>
+          <h3>{review.title}</h3>
+          <p>{review.category} · {review.author}</p>
+        </a>
+      ))}
+    </div>
+  )}
+</BaseLayout>
