@@ -27,6 +27,9 @@ const nav = [
         <nav class="nav">
           {nav.map(([href, label]) => <a class={path === href || (href !== '/' && path.startsWith(href)) ? 'active' : ''} href={href}>{label}</a>)}
         </nav>
+        <div class="sidebar-footer">
+          <a class="logout" href="/cdn-cgi/access/logout">Log out</a>
+        </div>
       </aside>
       <main class="main"><slot /></main>
     </div>
