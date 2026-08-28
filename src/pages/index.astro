@@ -9,44 +9,36 @@ const goal = 100;
 const statuses = ['Backlog', 'Research & Write', 'SEO Check', 'Ready to Publish', 'Published'];
 const contentByTask = new Map(entries.map((entry) => [entry.data.clickup?.split('/').pop(), entry]));
 
-const repoReviews = entries.map((entry) => ({
-  id: entry.id,
-  title: entry.data.title ?? entry.id.replaceAll('-', ' '),
-  status: entry.data.status ?? 'Backlog',
-  author: entry.data.author ?? 'Unassigned',
-  category: entry.data.category ?? 'TBD',
-  due_date: entry.data.due_date ?? null,
-  clickup: entry.data.clickup ?? null,
-  published_url: entry.data.published_url ?? null,
-  clicks: entry.data.clicks ?? null,
-  impressions: entry.data.impressions ?? null,
-  backlinks: entry.data.backlinks ?? null,
-}));
-
+const repoReviews = entries.map((entry) => ({ id: entry.id, title: entry.data.title ?? entry.id.replaceAll('-', ' '), status: entry.data.status ?? 'Backlog', author: entry.data.author ?? 'Unassigned', category: entry.data.category ?? 'TBD', due_date: entry.data.due_date ?? null, clickup: entry.data.clickup ?? null, published_url: entry.data.published_url ?? null, clicks: entry.data.clicks ?? null, impressions: entry.data.impressions ?? null, backlinks: entry.data.backlinks ?? null }));
 const reviews = clickup.connected ? clickup.tasks.map((task) => {
   const content = contentByTask.get(task.id);
-  return {
-    id: content?.id ?? null,
-    title: task.name.replace(/^Review:\s*/i, ''),
-    status: task.status,
-    author: task.reviewer,
-    category: content?.data.category ?? task.name.split('—')[1]?.trim() ?? 'TBD',
-    due_date: task.dueDate,
-    clickup: task.clickupUrl,
-    published_url: content?.data.published_url ?? null,
-    clicks: content?.data.clicks ?? null,
-    impressions: content?.data.impressions ?? null,
-    backlinks: content?.data.backlinks ?? null,
-  };
+  return { id: content?.id ?? null, title: task.name.replace(/^Review:\s*/i, ''), status: task.status, author: task.reviewer, category: content?.data.category ?? task.name.split('—')[1]?.trim() ?? 'TBD', due_date: task.dueDate, clickup: task.clickupUrl, published_url: content?.data.published_url ?? null, clicks: content?.data.clicks ?? null, impressions: content?.data.impressions ?? null, backlinks: content?.data.backlinks ?? null };
 }) : repoReviews;
-
 const counts = Object.fromEntries(statuses.map((status) => [status, reviews.filter((r) => r.status === status).length]));
 const published = counts['Published'] ?? 0;
+const progress = Math.min(100, Math.round((published / goal) * 100));
 ---
 <BaseLayout title="Dashboard | Blinto Reviews">
   <div class="eyebrow">Private Shopify Review Workspace</div>
   <h1>Shopify App Review Hub</h1>
-  <p class="lead">Research, write, review, publish and measure Blinto's Shopify app reviews from one command center. GitHub remains the content source of truth while each operational metric is read from its authoritative system.</p>
+  <p class="lead">Research, write, review, publish and measure Blinto's Shopify app reviews from one command center.</p>
+
+  <section class="sprint-hero">
+    <div class="sprint-copy">
+      <div class="eyebrow">Starts September 1, 2026</div>
+      <h2>100 Reviews in 50 Days</h2>
+      <div class="sprint-score"><strong>{published}</strong><span>/ {goal} Published</span></div>
+      <div class="progress-track"><div class="progress-fill" style={`width:${progress}%`}></div></div>
+      <div class="progress-meta"><span>{progress}% complete</span><span>5 reviewers · 2-day review cycle</span></div>
+    </div>
+    <div class="countdown" id="sprint-countdown" data-start="2026-09-01T00:00:00+06:00" data-end="2026-10-21T00:00:00+06:00">
+      <div class="countdown-label" id="countdown-label">Sprint starts in</div>
+      <div class="countdown-grid">
+        <div><strong id="cd-days">00</strong><span>Days</span></div><div><strong id="cd-hours">00</strong><span>Hours</span></div><div><strong id="cd-minutes">00</strong><span>Min</span></div><div><strong id="cd-seconds">00</strong><span>Sec</span></div>
+      </div>
+      <small>Sep 1 → Oct 20 · Bangladesh time</small>
+    </div>
+  </section>
 
   <h2>100 Reviews Dashboard</h2>
   <div class="metric-grid" id="metric-filters">
@@ -54,72 +46,32 @@ const published = counts['Published'] ?? 0;
     <button class="metric metric-filter" data-status="Published"><strong>{published}</strong><span>Published / {goal}</span></button>
     {statuses.slice(0,4).map((status) => <button class="metric metric-filter" data-status={status}><strong>{counts[status] ?? 0}</strong><span>{status}</span></button>)}
   </div>
-
   <div class="source-note"><strong>Data contract:</strong> ClickUp → production status · Review Hub/GitHub → content & previews · Blinto website/CMS → published truth · GSC/GA4 → organic performance · SEO API → rankings/backlinks.</div>
 
   <h2>Review Pipeline</h2>
-  <div class="pipeline filters" id="filters">
-    <button class="filter active" data-status="All">All <b>{reviews.length}</b></button>
-    {statuses.map((status) => <button class="filter" data-status={status}>{status} <b>{counts[status] ?? 0}</b></button>)}
-  </div>
-
-  {reviews.length === 0 ? (
-    <div class="empty" style="margin-top:18px">No review tasks found yet.</div>
-  ) : (
-    <div class="report-wrap">
-      <table class="report" id="report">
-        <thead><tr><th>Review</th><th>Reviewer</th><th>Status</th><th>Due</th><th>Preview</th><th>ClickUp</th><th>Published</th><th>Clicks</th><th>Impressions</th><th>Backlinks</th></tr></thead>
-        <tbody>
-          {reviews.map((review) => (
-            <tr data-status={review.status}>
-              <td><strong>{review.title}</strong><small>{review.category}</small></td>
-              <td>{review.author}</td>
-              <td><span class="status">{review.status}</span></td>
-              <td>{review.due_date ?? '—'}</td>
-              <td>{review.id ? <a href={`/reviews/${review.id}/`}>Preview</a> : '—'}</td>
-              <td>{review.clickup ? <a href={review.clickup}>Task</a> : '—'}</td>
-              <td>{review.published_url ? <a href={review.published_url}>Live</a> : '—'}</td>
-              <td>{review.clicks ?? '—'}</td><td>{review.impressions ?? '—'}</td><td>{review.backlinks ?? '—'}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  )}
+  <div class="pipeline filters" id="filters"><button class="filter active" data-status="All">All <b>{reviews.length}</b></button>{statuses.map((status) => <button class="filter" data-status={status}>{status} <b>{counts[status] ?? 0}</b></button>)}</div>
+  {reviews.length === 0 ? <div class="empty" style="margin-top:18px">No review tasks found yet.</div> : <div class="report-wrap"><table class="report" id="report"><thead><tr><th>Review</th><th>Reviewer</th><th>Status</th><th>Due</th><th>Preview</th><th>ClickUp</th><th>Published</th><th>Clicks</th><th>Impressions</th><th>Backlinks</th></tr></thead><tbody>{reviews.map((review) => <tr data-status={review.status}><td><strong>{review.title}</strong><small>{review.category}</small></td><td>{review.author}</td><td><span class="status">{review.status}</span></td><td>{review.due_date ?? '—'}</td><td>{review.id ? <a href={`/reviews/${review.id}/`}>Preview</a> : '—'}</td><td>{review.clickup ? <a href={review.clickup}>Task</a> : '—'}</td><td>{review.published_url ? <a href={review.published_url}>Live</a> : '—'}</td><td>{review.clicks ?? '—'}</td><td>{review.impressions ?? '—'}</td><td>{review.backlinks ?? '—'}</td></tr>)}</tbody></table></div>}
 
   <h2>Data Sources</h2>
-  <div class="source-health">
-    <span><i class="health health-ready"></i><strong>Review Hub</strong> Connected</span>
-    <span><i class={`health ${clickup.connected ? 'health-ready' : 'health-planned'}`}></i><strong>ClickUp</strong> {clickup.connected ? 'Connected' : 'Needs secret'}</span>
-    <span><i class="health health-planned"></i><strong>Blinto Website</strong> Planned</span>
-    <span><i class="health health-planned"></i><strong>GSC</strong> Planned</span>
-    <span><i class="health health-planned"></i><strong>GA4</strong> Planned</span>
-    <span><i class="health health-later"></i><strong>SEO API</strong> Later</span>
-  </div>
-  <p class="source-caption">ClickUp is fetched securely at build time. The API token is never sent to the browser. Configure <code>CLICKUP_API_TOKEN</code> as a Cloudflare Pages secret; <code>CLICKUP_REVIEW_LIST_ID</code> is optional and defaults to the Shopify App Reviews list.</p>
+  <div class="source-health"><span><i class="health health-ready"></i><strong>Review Hub</strong> Connected</span><span><i class={`health ${clickup.connected ? 'health-ready' : 'health-planned'}`}></i><strong>ClickUp</strong> {clickup.connected ? 'Connected' : 'Needs secret'}</span><span><i class="health health-planned"></i><strong>Blinto Website</strong> Planned</span><span><i class="health health-planned"></i><strong>GSC</strong> Planned</span><span><i class="health health-planned"></i><strong>GA4</strong> Planned</span><span><i class="health health-later"></i><strong>SEO API</strong> Later</span></div>
 
   <h2>Quick Access</h2>
-  <div class="grid">
-    <a class="card" href="/planning/"><span class="status">Plan</span><h3>Planning</h3><p>Category ownership, topic validation and review priorities.</p></a>
-    <a class="card" href="/process/"><span class="status">Start here</span><h3>Write a Review</h3><p>Human reviewer + AI writer workflow from testing through SEO handoff.</p></a>
-    <a class="card" href="/sops/"><span class="status">Reference</span><h3>Core Strategy & SOPs</h3><p>The complete strategy and detailed standards governing the program.</p></a>
-    <a class="card" href="/reviews/"><span class="status">{entries.length} reviews</span><h3>Review Workspace</h3><p>Open review records, evidence context and rendered private article previews.</p></a>
-  </div>
-
-  <h2>Current Phase</h2>
-  <div class="empty"><strong>Five-review validation pilot.</strong> Build the minimum repeatable process, publish the first reviews, learn from the workflow and performance data, then scale toward 100.</div>
+  <div class="grid"><a class="card" href="/planning/"><span class="status">Plan</span><h3>Planning</h3><p>Category ownership, topic validation and review priorities.</p></a><a class="card" href="/process/"><span class="status">Start here</span><h3>Write a Review</h3><p>Human reviewer + AI writer workflow from testing through SEO handoff.</p></a><a class="card" href="/sops/"><span class="status">Reference</span><h3>Core Strategy & SOPs</h3><p>The complete strategy and detailed standards governing the program.</p></a><a class="card" href="/reviews/"><span class="status">{entries.length} reviews</span><h3>Review Workspace</h3><p>Open review records, evidence context and rendered private article previews.</p></a></div>
 
   <script is:inline>
-    const applyFilter = (wanted) => {
-      document.querySelectorAll('#report tbody tr').forEach((row) => {
-        row.style.display = wanted === 'All' || row.dataset.status === wanted ? '' : 'none';
-      });
-      document.querySelectorAll('[data-status]').forEach((control) => {
-        control.classList.toggle('active', control.dataset.status === wanted);
-      });
+    const applyFilter = (wanted) => { document.querySelectorAll('#report tbody tr').forEach((row) => { row.style.display = wanted === 'All' || row.dataset.status === wanted ? '' : 'none'; }); document.querySelectorAll('[data-status]').forEach((control) => control.classList.toggle('active', control.dataset.status === wanted)); };
+    document.querySelectorAll('.filter, .metric-filter').forEach((button) => button.addEventListener('click', () => applyFilter(button.dataset.status)));
+
+    const countdown = document.getElementById('sprint-countdown');
+    const pad = (n) => String(Math.max(0, n)).padStart(2, '0');
+    const tick = () => {
+      const now = Date.now(); const start = new Date(countdown.dataset.start).getTime(); const end = new Date(countdown.dataset.end).getTime();
+      let target = start; let label = 'Sprint starts in';
+      if (now >= start && now < end) { target = end; label = 'Time remaining'; }
+      if (now >= end) { target = now; label = 'Sprint complete'; }
+      const diff = Math.max(0, target - now); const days = Math.floor(diff / 86400000); const hours = Math.floor((diff % 86400000) / 3600000); const minutes = Math.floor((diff % 3600000) / 60000); const seconds = Math.floor((diff % 60000) / 1000);
+      document.getElementById('countdown-label').textContent = label; document.getElementById('cd-days').textContent = pad(days); document.getElementById('cd-hours').textContent = pad(hours); document.getElementById('cd-minutes').textContent = pad(minutes); document.getElementById('cd-seconds').textContent = pad(seconds);
     };
-    document.querySelectorAll('.filter, .metric-filter').forEach((button) => {
-      button.addEventListener('click', () => applyFilter(button.dataset.status));
-    });
+    tick(); setInterval(tick, 1000);
   </script>
 </BaseLayout>
