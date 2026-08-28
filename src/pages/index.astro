@@ -2,21 +2,22 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const reviews = await getCollection('reviews');
-const statuses = ['Backlog','Assigned','Research','Writing','Review','Revision','Approved','Published','Monitoring'];
+const statuses = ['Backlog','Research & Write','SEO Check','Ready to Publish','Published'];
 ---
 <BaseLayout>
   <div class="eyebrow">Private workspace</div>
   <h1>Shopify App Review Hub</h1>
-  <p class="lead">Research, write, review, approve and track Blinto's Shopify app reviews from one place. GitHub remains the content source of truth.</p>
+  <p class="lead">Research, write, review, publish and measure Blinto's Shopify app reviews from one place. GitHub remains the content source of truth.</p>
 
   <div class="pipeline">{statuses.map((status) => <span>{status}</span>)}</div>
 
   <div class="grid">
-    <a class="card" href="/process/"><span class="status">Start here</span><h3>Write a Review</h3><p>Follow the complete operating workflow from assignment through monitoring.</p></a>
-    <a class="card" href="/sops/"><span class="status">Core</span><h3>Core Strategy & SOPs</h3><p>The complete strategy, standards and SOPs governing Blinto's Shopify App Review program.</p></a>
-    <a class="card" href="/reviews/"><span class="status">{reviews.length} reviews</span><h3>Review Workspace</h3><p>See active review records, statuses and private article previews.</p></a>
+    <a class="card" href="/dashboard/"><span class="status">Command center</span><h3>Review Intelligence</h3><p>Track the 100-review goal, production pipeline, publication and future SEO performance.</p></a>
+    <a class="card" href="/process/"><span class="status">Start here</span><h3>Write a Review</h3><p>Human reviewer + AI writer workflow from testing through SEO handoff.</p></a>
+    <a class="card" href="/reviews/"><span class="status">{reviews.length} reviews</span><h3>Review Workspace</h3><p>Open active review records and rendered private article previews.</p></a>
+    <a class="card" href="/sops/"><span class="status">Reference</span><h3>Core Strategy & SOPs</h3><p>The detailed strategy and standards governing the review program.</p></a>
   </div>
 
   <h2>Current phase</h2>
-  <div class="empty">Validation. Category ownership and first app assignments will be added after category research is completed.</div>
+  <div class="empty">Five-review validation pilot. Use the Dashboard for program progress and the Review Workspace for content previews.</div>
 </BaseLayout>
