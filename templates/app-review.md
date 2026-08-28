@@ -1,6 +1,6 @@
 # [App Name] Review
 
-> Working file for one assigned Shopify app review. Complete evidence first; do not fill gaps with assumptions.
+> Working file for one assigned Shopify app review. One author owns the review. Complete evidence first; do not fill gaps with assumptions.
 
 ## Review Record
 
@@ -8,7 +8,7 @@
 - **Developer:**
 - **Category:**
 - **Content type:** Single App Review
-- **Author:**
+- **Author / Assignee:**
 - **Assigned date:**
 - **Due date:**
 - **ClickUp task:**
@@ -59,8 +59,6 @@ Choose one:
 
 ## Developer Claims
 
-Record important claims that need verification.
-
 | Claim | Source | Verified? | Notes |
 |---|---|---|---|
 | | | | |
@@ -68,24 +66,16 @@ Record important claims that need verification.
 ## Hands-On / Evaluation Notes
 
 ### Installation
-
 ### Onboarding
-
 ### Core Merchant Workflow
-
 ### Important Features
-
 ### Dashboard & Usability
-
 ### Storefront / Customer Experience
-
 ### Integrations / Compatibility
-
 ### Documentation & Support
-
 ### Performance / Technical Observations
 
-Only include technical conclusions supported by appropriate evidence or validation.
+Only include conclusions supported by appropriate evidence. Escalate material specialist claims when necessary.
 
 ## Pricing Findings
 
@@ -97,13 +87,11 @@ Only include technical conclusions supported by appropriate evidence or validati
 
 ## Merchant Feedback Patterns
 
-Do not present isolated reviews as universal experience.
-
 ### Common positives
-
 ### Common complaints / limitations
-
 ### Sources reviewed
+
+Do not present isolated reviews as universal experience.
 
 ## Evidence / Screenshots
 
@@ -131,103 +119,48 @@ Do not present isolated reviews as universal experience.
 
 ## Research Gaps / Claims We Must Not Make
 
-- 
+-
 
 ---
 
-# SEO & Content Brief
+# SEO & Content Direction
 
-## Reader
+This section can be concise. It supports the author's writing; it is not a separate ClickUp stage.
 
-**Target merchant:**
-
-**Merchant problem:**
-
-Complete:
-
-> The reader needs this content because they are trying to decide whether [app] can help them [goal] without creating [main concern/limitation].
-
-## Search Intent
-
-- **Primary intent:**
-- **Decision stage:**
-- **Main decision:**
-
-## Keywords / Topics
-
-- **Primary keyword:**
-- **Secondary keywords:**
-- **Important entities/topics:**
-- **Merchant questions:**
-
-## SERP / Competitor Findings
-
-### What currently ranks
-
-### Important gaps
-
-### Blinto's differentiated angle
-
-## Proposed Verdict Direction
-
-This must follow the evidence. It is not a predetermined positive review.
+- **Target merchant:**
+- **Merchant problem:**
+- **Primary search intent:**
+- **Primary keyword/topic:**
+- **Secondary topics/questions:**
+- **SERP/content gaps:**
+- **Blinto differentiated angle:**
+- **Internal links:**
+- **CTA direction:**
+- **Required disclosures:**
 
 ## Outline
 
 # [H1]
 
 ## Quick Verdict
-
 ## What Is [App]?
-
 ## How We Evaluated [App]
-
 ## [Important Decision Section]
-
 ## Features & Merchant Value
-
 ## Pricing
-
 ## Setup & Ease of Use
-
 ## Integrations / Support / Technical Considerations
-
 ## Pros and Cons
-
 ## Who [App] Is Best For
-
 ## Who Should Consider an Alternative
-
 ## Alternatives
-
 ## Final Verdict
 
-Adjust the outline when search intent and evidence require it. Do not add sections simply to increase length.
-
-## Evidence Mapping
-
-| Article section | Evidence/source |
-|---|---|
-| | |
-
-## Internal Links
-
-- 
-
-## CTA Direction
-
-- 
-
-## Required Disclosures
-
-- Testing disclosure:
-- Commercial/affiliate disclosure if applicable:
+Adjust to evidence and search intent. Do not add sections merely to increase length.
 
 ---
 
 # Draft
-
-> Draft only after research and brief are sufficiently complete.
 
 [Write article here]
 
@@ -235,27 +168,58 @@ Adjust the outline when search intent and evidence require it. Do not add sectio
 
 # Author Self-Check
 
-- [ ] The article satisfies the intended merchant decision/search intent.
-- [ ] Every important factual claim is supported by evidence.
-- [ ] Testing language matches the actual testing level.
+- [ ] Intended merchant decision/search intent is satisfied.
+- [ ] Important factual claims are supported.
+- [ ] Testing language matches actual testing.
 - [ ] Developer claims are not presented as Blinto findings without verification.
 - [ ] Pricing is verified and dated.
-- [ ] Strengths and limitations are both represented.
+- [ ] Strengths and limitations are balanced.
 - [ ] Best-fit and poor-fit merchants are clear.
-- [ ] Technical claims are flagged for validation where required.
+- [ ] Material specialist claims are supported or flagged for escalation.
 - [ ] Merchant feedback is represented as patterns, not universal fact.
-- [ ] No fabricated testing, facts, scores, quotes, feedback, statistics, or citations exist.
-- [ ] Screenshots/evidence are linked and publication suitability is noted.
+- [ ] No fabricated testing, facts, scores, quotes, feedback, statistics, screenshots, or citations exist.
+- [ ] Evidence/screenshots are linked where useful.
 - [ ] Verdict follows the research.
-- [ ] Internal links and CTA direction are included.
-- [ ] Required disclosures are included.
+- [ ] Internal links, CTA direction, and required disclosures are included.
 
-## Author Handoff Notes
+**Author ready for SEO Check:** [ ] Yes
 
-**Areas requiring technical review:**
+---
 
-**Areas requiring SEO attention:**
+# Final SEO / Quality Check
 
-**Known evidence limitations:**
+- **Reviewer:** Shemanto / SEO Agent
+- **Date:**
+- **Status:** Pending / Changes Requested / Passed
 
-**Ready for Technical Writing Review:** [ ] Yes
+Check:
+
+- [ ] Search intent and primary topic alignment
+- [ ] Title/H1 and heading structure
+- [ ] Topical coverage and important content gaps
+- [ ] Natural keyword/entity usage
+- [ ] Internal-link opportunities
+- [ ] Comparison/cannibalization considerations
+- [ ] Readability and merchant usefulness
+- [ ] Obvious unsupported claims/evidence gaps
+- [ ] Required disclosures
+- [ ] Metadata direction
+
+## Feedback / Corrections
+
+-
+
+If corrections are requested, the task stays in **SEO Check** while the same author resolves them.
+
+**Ready to Publish:** [ ] Yes
+
+---
+
+# Publishing
+
+- **Published by:** Fazle / Shemanto
+- **Published date:**
+- **Public URL:**
+- **Live QA complete:** [ ] Yes
+- **Monitoring owner:**
+- **Monitoring active:** [ ] Yes
