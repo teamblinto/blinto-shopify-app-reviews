@@ -1,0 +1,25 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const docs = await getCollection('docs');
+const categoryOwnership = docs.find((entry) => entry.id.includes('category-ownership'));
+const seoValidation = docs.find((entry) => entry.id.includes('seo-topic-validation-prep'));
+
+if (!categoryOwnership) throw new Error('category-ownership.md was not found in docs/');
+if (!seoValidation) throw new Error('seo-topic-validation-prep.md was not found in docs/');
+
+const { Content: CategoryOwnership } = await render(categoryOwnership);
+const { Content: SeoValidation } = await render(seoValidation);
+---
+<BaseLayout title="Planning | Blinto Reviews">
+  <div class="eyebrow">Topic planning & approval</div>
+  <h1>Planning</h1>
+  <p class="lead">Review category ownership, candidate apps, and prepared SEO topic validation here before approving topics for production.</p>
+
+  <article class="prose">
+    <CategoryOwnership />
+    <hr />
+    <SeoValidation />
+  </article>
+</BaseLayout>
