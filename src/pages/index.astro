@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const reviews = Object.values(import.meta.glob('../../reviews/**/*.{md,mdx}', { eager: true }));
+const statuses = ['Backlog','Assigned','Research','Writing','Review','Revision','Approved','Published','Monitoring'];
+---
+<BaseLayout>
+  <div class="eyebrow">Private workspace</div>
+  <h1>Shopify App Review Hub</h1>
+  <p class="lead">Research, write, review, approve and track Blinto's Shopify app reviews from one place. GitHub remains the content source of truth.</p>
+
+  <div class="pipeline">{statuses.map((status) => <span>{status}</span>)}</div>
+
+  <div class="grid">
+    <a class="card" href="/process/"><span class="status">Start here</span><h3>Write a Review</h3><p>Follow the complete operating workflow from assignment through monitoring.</p></a>
+    <a class="card" href="/sops/"><span class="status">Reference</span><h3>Source SOPs</h3><p>Open the canonical detailed strategy and SOP documents when deeper guidance is needed.</p></a>
+    <a class="card" href="/reviews/"><span class="status">{reviews.length} reviews</span><h3>Review Workspace</h3><p>See active review records, statuses and private article previews.</p></a>
+  </div>
+
+  <h2>Current phase</h2>
+  <div class="empty">Validation. Category ownership and first app assignments will be added after category research is completed.</div>
+</BaseLayout>
