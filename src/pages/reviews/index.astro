@@ -1,17 +1,14 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const modules = import.meta.glob('../../../reviews/**/*.{md,mdx}', { eager: true });
-const reviews = Object.entries(modules).map(([path, mod]) => {
-  const slug = path.replace(/^.*\/reviews\//, '').replace(/\.(md|mdx)$/, '');
-  const fm = (mod as any).frontmatter ?? {};
-  return {
-    slug,
-    title: fm.title ?? slug.replaceAll('-', ' '),
-    status: fm.status ?? 'Unknown',
-    author: fm.author ?? 'Unassigned',
-    category: fm.category ?? 'TBD'
-  };
-});
+const entries = await getCollection('reviews');
+const reviews = entries.map((entry) => ({
+  id: entry.id,
+  title: entry.data.title ?? entry.id.replaceAll('-', ' '),
+  status: entry.data.status ?? 'Unknown',
+  author: entry.data.author ?? 'Unassigned',
+  category: entry.data.category ?? 'TBD',
+}));
 ---
 <BaseLayout title="Reviews | Blinto Reviews">
   <div class="eyebrow">Working content</div>
@@ -22,7 +19,7 @@ const reviews = Object.entries(modules).map(([path, mod]) => {
   ) : (
     <div class="grid">
       {reviews.map((review) => (
-        <a class="card" href={`/reviews/${review.slug}/`}>
+        <a class="card" href={`/reviews/${review.id}/`}>
           <span class="status">{review.status}</span>
           <h3>{review.title}</h3>
           <p>{review.category} · {review.author}</p>
