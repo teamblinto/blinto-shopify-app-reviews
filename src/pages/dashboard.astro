@@ -1,0 +1,84 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const entries = await getCollection('reviews');
+const goal = 100;
+const statuses = ['Backlog', 'Research & Write', 'SEO Check', 'Ready to Publish', 'Published'];
+const reviews = entries.map((entry) => ({
+  id: entry.id,
+  title: entry.data.title ?? entry.id.replaceAll('-', ' '),
+  status: entry.data.status ?? 'Backlog',
+  author: entry.data.author ?? 'Unassigned',
+  category: entry.data.category ?? 'TBD',
+  clickup: entry.data.clickup ?? null,
+  published_url: entry.data.published_url ?? null,
+  clicks: entry.data.clicks ?? null,
+  impressions: entry.data.impressions ?? null,
+  backlinks: entry.data.backlinks ?? null,
+}));
+const counts = Object.fromEntries(statuses.map((status) => [status, reviews.filter((r) => r.status === status).length]));
+const published = counts['Published'] ?? 0;
+---
+<BaseLayout title="Dashboard | Blinto Reviews">
+  <div class="eyebrow">Review intelligence</div>
+  <h1>100 Shopify App Reviews</h1>
+  <p class="lead">One command center for production, publishing and SEO performance. Each metric should ultimately be read from its authoritative system rather than maintained twice.</p>
+
+  <div class="metric-grid">
+    <div class="metric"><strong>{published}</strong><span>Published / {goal}</span></div>
+    {statuses.slice(0,4).map((status) => <div class="metric"><strong>{counts[status] ?? 0}</strong><span>{status}</span></div>)}
+  </div>
+
+  <div class="source-note"><strong>Data contract:</strong> ClickUp → production status · Review Hub/GitHub → previews · Blinto website/CMS → published · GSC/GA4 → organic performance · SEO API → rankings/backlinks.</div>
+
+  <h2>Review Pipeline</h2>
+  <div class="pipeline filters" id="filters">
+    <button class="filter active" data-status="All">All <b>{reviews.length}</b></button>
+    {statuses.map((status) => <button class="filter" data-status={status}>{status} <b>{counts[status] ?? 0}</b></button>)}
+  </div>
+
+  {reviews.length === 0 ? (
+    <div class="empty" style="margin-top:18px">No review records are in the repository yet. Production tasks can already live in ClickUp; review rows will appear here automatically as review records are created.</div>
+  ) : (
+    <div class="report-wrap">
+      <table class="report" id="report">
+        <thead><tr><th>Review</th><th>Reviewer</th><th>Status</th><th>Preview</th><th>Published</th><th>Clicks</th><th>Impressions</th><th>Backlinks</th></tr></thead>
+        <tbody>
+          {reviews.map((review) => (
+            <tr data-status={review.status}>
+              <td><strong>{review.title}</strong><small>{review.category}</small></td>
+              <td>{review.author}</td>
+              <td><span class="status">{review.status}</span></td>
+              <td><a href={`/reviews/${review.id}/`}>Preview</a></td>
+              <td>{review.published_url ? <a href={review.published_url}>Live</a> : '—'}</td>
+              <td>{review.clicks ?? '—'}</td><td>{review.impressions ?? '—'}</td><td>{review.backlinks ?? '—'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )}
+
+  <h2>Performance Integrations</h2>
+  <div class="integration-grid">
+    <div class="integration"><strong>ClickUp</strong><span>Production workflow</span><em>V1 source contract</em></div>
+    <div class="integration"><strong>Blinto Website</strong><span>Published review truth</span><em>Connect after publishing starts</em></div>
+    <div class="integration"><strong>Search Console</strong><span>Clicks, impressions, CTR, position</span><em>Connect when search data exists</em></div>
+    <div class="integration"><strong>Google Analytics</strong><span>Sessions, engagement, conversions</span><em>Connect with GSC phase</em></div>
+    <div class="integration"><strong>SEO API</strong><span>Rankings and backlinks</span><em>Later</em></div>
+  </div>
+
+  <script is:inline>
+    document.querySelectorAll('.filter').forEach((button) => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.filter').forEach((b) => b.classList.remove('active'));
+        button.classList.add('active');
+        const wanted = button.dataset.status;
+        document.querySelectorAll('#report tbody tr').forEach((row) => {
+          row.style.display = wanted === 'All' || row.dataset.status === wanted ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</BaseLayout>
