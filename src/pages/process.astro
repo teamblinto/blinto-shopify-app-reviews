@@ -2,10 +2,21 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const docs = await getCollection('docs');
+const operatingModel = docs.find((entry) => entry.id.includes('operating-model'));
 const processDoc = docs.find((entry) => entry.id.includes('review-process'));
+if (!operatingModel) throw new Error('operating-model.md was not found in docs/');
 if (!processDoc) throw new Error('review-process.md was not found in docs/');
-const { Content } = await render(processDoc);
+const { Content: OperatingModel } = await render(operatingModel);
+const { Content: ReviewProcess } = await render(processDoc);
 ---
-<BaseLayout title="Review Process | Blinto Reviews">
-  <article class="prose"><Content /></article>
+<BaseLayout title="Process | Blinto Reviews">
+  <div class="eyebrow">How we operate</div>
+  <h1>Process</h1>
+  <p class="lead">Start with the operating model for the rules of the program, then use the execution workflow when producing an individual review.</p>
+
+  <article class="prose">
+    <OperatingModel />
+    <hr />
+    <ReviewProcess />
+  </article>
 </BaseLayout>
