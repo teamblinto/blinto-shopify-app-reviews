@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const modules = import.meta.glob('../../../source-sops/*.md', { eager: true });
+export function getStaticPaths() {
+  return Object.entries(modules).map(([path, mod]) => {
+    const slug = path.split('/').pop()?.replace(/\.md$/, '') ?? '';
+    return { params: { slug }, props: { mod, slug } };
+  });
+}
+const { mod, slug } = Astro.props;
+const Content = mod.Content;
+---
+<BaseLayout title={`${slug} | Blinto Reviews`}>
+  <article class="prose"><Content /></article>
+</BaseLayout>
