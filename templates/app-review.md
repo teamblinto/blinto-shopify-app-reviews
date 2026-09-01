@@ -135,7 +135,7 @@ The AI assistant should ask these sequentially as needed rather than guessing.
 
 ## Image Concept
 
-Every review automatically gets a hero/thumbnail image concept, generated per `docs/image-style-guide.md` (editorial fine-art / vintage oil painting — see that file for the full rules; do not restate or loosen them here). Supporting images are optional — add one only if it genuinely reinforces a specific concept in the article (see style guide §11).
+Every review automatically gets exactly **one** hero/thumbnail (feature) image concept, generated per `docs/image-style-guide.md` (editorial fine-art / vintage oil painting — see that file for the full rules; do not restate or loosen them here). This system covers the thumbnail/feature image only — it does not generate in-article supporting images, diagrams, or charts.
 
 ### Article understanding pass
 
@@ -151,12 +151,6 @@ Every review automatically gets a hero/thumbnail image concept, generated per `d
 - **Generation prompt (ready to paste into an image tool):**
 - **Status:** Not generated / Prompt drafted / Image generated / Attached to review
 - **File/location once generated:**
-
-### Supporting images (optional — leave empty if none are warranted)
-
-| Purpose (which concept it reinforces) | Type (editorial illustration / visual metaphor / process / technical diagram / data viz) | Concept | Generation prompt (if fine-art style) or notes (if SVG/chart) | Status |
-|---|---|---|---|---|
-| | | | | |
 
 ## AI-Written Review
 

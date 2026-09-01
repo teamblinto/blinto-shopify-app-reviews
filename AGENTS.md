@@ -58,17 +58,17 @@ It should:
 
 Never fabricate testing, product behavior, pricing, merchant feedback, screenshots, scores, quotations, statistics, citations, or technical verification. Missing evidence must be requested, qualified, removed, or transparently disclosed.
 
-## 3a. Image Concept System
+## 3a. Image Concept System (thumbnail/feature image only)
 
-Every review gets a hero/thumbnail image concept, in the permanent **editorial fine-art / vintage oil painting** style defined in `docs/image-style-guide.md`. That file is the single source of truth for the visual identity — read it before writing any image concept and do not restate, loosen, or reinterpret its rules per article.
+Every review/case study/blog post gets exactly **one** hero/thumbnail (feature) image concept, in the permanent **editorial fine-art / vintage oil painting** style defined in `docs/image-style-guide.md`. That file is the single source of truth for the visual identity — read it before writing any image concept and do not restate, loosen, or reinterpret its rules per article.
+
+**Scope: thumbnail/feature image only.** This system does not cover in-article supporting images, diagrams, or charts — do not generate those automatically. If a genuine need for an in-article image comes up, treat it as a separate, manual decision outside this system.
 
 The AI assistant should, as part of writing/updating a review:
 
 1. Read `docs/image-style-guide.md`.
 2. Understand the article's actual substance (central tension, outcome, metaphor, human element) rather than illustrating the title.
-3. Fill in the review's `## Image Concept` section (see `templates/app-review.md`): the understanding pass, a thumbnail concept + ready-to-use generation prompt, and — only if genuinely warranted — supporting image concepts.
-4. Never generate a supporting image concept for every heading; most reviews need only the thumbnail.
-5. Never ask an image model to render technical diagrams or numerically accurate charts — those use SVG/programmatic charts instead, noted as such in the Supporting Images table.
+3. Fill in the review's `## Image Concept` section (see `templates/app-review.md`): the understanding pass, plus the thumbnail concept and its ready-to-use generation prompt.
 
 This repository does not call an image-generation API. The AI assistant produces the concept and prompt text only; a human runs the prompt through Blinto's chosen image tool and attaches the resulting file, then updates the `Status`/`File/location` fields.
 

@@ -213,7 +213,7 @@ Other Shopify page builders in the same category worth comparing include GemPage
 
 ## Image Concept
 
-Generated per `docs/image-style-guide.md` (editorial fine-art / vintage oil painting).
+Generated per `docs/image-style-guide.md` (editorial fine-art / vintage oil painting). Scope: thumbnail/feature image only.
 
 ### Article understanding pass
 
@@ -229,14 +229,6 @@ Generated per `docs/image-style-guide.md` (editorial fine-art / vintage oil pain
 - **Generation prompt:** "Editorial fine-art oil painting, vintage art-book illustration style, 16:9 wide composition with large quiet negative space. A small simplified painterly figure stands at a doorway/threshold inside a spacious interior, where a newly finished, warmly lit room meets an older, dimmer, slightly mismatched entrance hall of the same building — the seam between the fresh new architecture and the older structure is visible but not emphasized. Foreground (the figure and the threshold) rendered with moderate painterly definition and visible brushwork; middle-ground architecture as soft brush masses; background heavily atmospheric, blurred, and abstract with large fields of color. Warm afternoon daylight streaming through a window in the new room, casting long soft shadows, contrasted with cooler, dimmer light in the old entrance. Muted palette: warm cream, dusty ochre, muted terracotta in the new room; muted olive, dusty blue, and muted brown in the old entrance. Restrained contrast, canvas texture, pigment variation, imperfect edges, soft focus throughout — no hyper-detail, no photorealism, no 3D render, no glossy digital painting. Off-center focal point, asymmetrical composition. No text, no logos, no UI elements, no readable typography anywhere in the image."
 - **Status:** Prompt drafted
 - **File/location once generated:** TBD — to be attached by the human reviewer/designer once the prompt is run through Blinto's image tool.
-
-### Supporting images (optional)
-
-| Purpose (which concept it reinforces) | Type | Concept | Generation prompt (if fine-art style) or notes (if SVG/chart) | Status |
-|---|---|---|---|---|
-| | | | | |
-
-None warranted for this review — the thumbnail concept alone captures the article's central idea, and the four verified pricing tiers are better represented as a simple text/table in the article itself than as a generated data visualization.
 
 ## AI-Written Review
 

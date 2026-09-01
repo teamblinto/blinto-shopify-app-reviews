@@ -1,8 +1,10 @@
 # Editorial Fine-Art Image Style Guide
 
-This is the canonical, permanent visual identity for **all** blog/case-study/review imagery on Blinto's Review Hub. It is part of the approved execution layer (see `AGENTS.md` grounding hierarchy) and should not be silently loosened or reinterpreted per article.
+This is the canonical, permanent visual identity for the **hero/thumbnail (feature) image** of every blog post, case study, and review on Blinto's Review Hub. It is part of the approved execution layer (see `AGENTS.md` grounding hierarchy) and should not be silently loosened or reinterpreted per article.
 
-Every hero/thumbnail image — and any supporting conceptual image — must be generated as an **image concept + a ready-to-use generation prompt**, following this guide exactly. This repository does not call an image-generation API automatically; the AI assistant writes the concept and prompt as part of authoring/updating a review, and a human runs the prompt through whatever image tool Blinto uses, then attaches the resulting file.
+**Scope note:** this system currently covers the thumbnail/feature image only — one per review/case study/blog post. It does not cover in-article supporting images, diagrams, or charts; those remain a separate, manual concern until/unless this scope is explicitly extended.
+
+The thumbnail must be produced as an **image concept + a ready-to-use generation prompt**, following this guide exactly. This repository does not call an image-generation API automatically; the AI assistant writes the concept and prompt as part of authoring/updating a review, and a human runs the prompt through whatever image tool Blinto uses, then attaches the resulting file.
 
 ## 1. Core visual style
 
@@ -87,9 +89,9 @@ Example — "Why Customers Abandon Checkout":
 
 Use metaphor whenever it produces a stronger editorial image than a literal depiction would.
 
-## 10. Thumbnail (required for every review)
+## 10. Thumbnail (the only image this system produces)
 
-Every review automatically gets one hero/thumbnail concept. It must:
+Every review/case study/blog post automatically gets exactly **one** hero/thumbnail concept — this system does not generate in-article supporting images, diagrams, or charts (see Scope note above). The thumbnail must:
 
 - summarize the central idea
 - be visually interesting without being literal
@@ -100,15 +102,9 @@ Every review automatically gets one hero/thumbnail concept. It must:
 - have a soft atmospheric background
 - contain no text
 
-## 11. Supporting images (optional, not automatic)
+## 11. Out of scope: in-article supporting images
 
-Do not generate a supporting image for every heading. Only add one when it genuinely helps explain or reinforce an important concept. Types to consider:
-
-1. Editorial conceptual illustration (fine-art style, per this guide)
-2. Visual metaphor (fine-art style, per this guide)
-3. Process illustration (fine-art style, per this guide)
-4. Technical diagram — use clean SVG/programmatic graphics instead of the image model; never ask an image model to render accurate technical diagrams with important text.
-5. Data visualization — use real data/programmatic charts instead of the image model; never ask an image model to generate numerically accurate charts.
+If a future article genuinely needs an in-article illustration, visual metaphor, process diagram, technical diagram, or data visualization, that is a separate, manual decision outside this automated system — not something the AI assistant should generate automatically per heading. Should Blinto decide to extend this system to supporting images later, technical diagrams and charts should still use clean SVG/programmatic graphics and real data rather than an image model, since image models should never be asked to render accurate technical diagrams or numerically correct charts.
 
 ## 12. Style consistency across subjects
 
