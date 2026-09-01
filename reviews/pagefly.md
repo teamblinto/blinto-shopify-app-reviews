@@ -90,10 +90,10 @@ testing_level: "Level 1 — Full Hands-On Test"
 - **Cart Drawer:** A slide-out cart upsell tool — shows discount options and product recommendations at checkout/cart stage.
 - **AEO optimizer:** Per reviewer, it's positioned as helping products get recommended by AI assistants/answer engines (ChatGPT, Google AI, Copilot) via "one-click fixes" so AI systems can read, cite, and recommend the store. Matches the in-app note seen earlier that AEO "currently only works on product pages."
 
-### Missing Evidence / Questions — CRO tools follow-up
+### CRO tools follow-up — resolved
 
-- Resolve the A/B testing plan-gating discrepancy (reviewer says usable on Free; pricing screenshot lists it under Builder). Was reviewer actually still on Free, or had the store moved to a trial/paid state by this point?
-- Section performance: what did the reviewer actually see when opening it (real data, empty state, or an upgrade prompt)?
+- **A/B testing on Free plan — confirmed discrepancy.** Reviewer confirms the store was still on the Free plan when A/B testing was accessible/usable. This contradicts the pricing page, which lists A/B Testing as a Builder-plan ($24/mo) feature. **This is a genuine finding to include in the article**, framed factually: what the reviewer observed hands-on (A/B testing accessible on Free) vs. what PageFly's own pricing page states (A/B testing gated to Builder) — without speculating on why (could be a temporary promo, a plan-detection lag, or documentation not matching current gating).
+- **Section performance — confirmed working with real data**, even on the Free plan, per reviewer's hands-on check.
 
 The reviewer may provide notes one-by-one or as a batch. Writing quality is not required here; record what actually happened.
 
