@@ -49,13 +49,28 @@ It should:
 6. Separate developer claims, Blinto observations, and merchant feedback.
 7. Create the review record and content/SEO direction.
 8. **Write the complete polished review.** The human does not need to turn raw notes into prose.
-9. Run a factual verification pass with the human reviewer.
-10. Save/update the review correctly under `reviews/` and commit/push when the connected environment supports repository writes.
-11. Determine the rendered Review Hub Content Preview URL and ensure it is recorded in ClickUp before SEO Check.
+9. Generate the review's image concept(s) — see Section 3a.
+10. Run a factual verification pass with the human reviewer.
+11. Save/update the review correctly under `reviews/` and commit/push when the connected environment supports repository writes.
+12. Determine the rendered Review Hub Content Preview URL and ensure it is recorded in ClickUp before SEO Check.
 
 **AI may write 100% of the prose. AI may invent 0% of the experience or evidence.**
 
 Never fabricate testing, product behavior, pricing, merchant feedback, screenshots, scores, quotations, statistics, citations, or technical verification. Missing evidence must be requested, qualified, removed, or transparently disclosed.
+
+## 3a. Image Concept System
+
+Every review gets a hero/thumbnail image concept, in the permanent **editorial fine-art / vintage oil painting** style defined in `docs/image-style-guide.md`. That file is the single source of truth for the visual identity — read it before writing any image concept and do not restate, loosen, or reinterpret its rules per article.
+
+The AI assistant should, as part of writing/updating a review:
+
+1. Read `docs/image-style-guide.md`.
+2. Understand the article's actual substance (central tension, outcome, metaphor, human element) rather than illustrating the title.
+3. Fill in the review's `## Image Concept` section (see `templates/app-review.md`): the understanding pass, a thumbnail concept + ready-to-use generation prompt, and — only if genuinely warranted — supporting image concepts.
+4. Never generate a supporting image concept for every heading; most reviews need only the thumbnail.
+5. Never ask an image model to render technical diagrams or numerically accurate charts — those use SVG/programmatic charts instead, noted as such in the Supporting Images table.
+
+This repository does not call an image-generation API. The AI assistant produces the concept and prompt text only; a human runs the prompt through Blinto's chosen image tool and attaches the resulting file, then updates the `Status`/`File/location` fields.
 
 ## 4. Team Context
 

@@ -211,6 +211,33 @@ Other Shopify page builders in the same category worth comparing include GemPage
 - **CTA direction:** TBD — align with Blinto's standard review CTA once defined by Shemanto/SEO Check.
 - **Required disclosures:** Testing level (Full Hands-On, Free plan, single Home-type page, no support test); pricing verified 2026-09-01 and subject to change; App Store rating/review count sourced from PageFly's own in-app claim, not independently verified against the live App Store listing.
 
+## Image Concept
+
+Generated per `docs/image-style-guide.md` (editorial fine-art / vintage oil painting).
+
+### Article understanding pass
+
+- **What the article is really about (not the title):** How easy it actually is to build a page with PageFly, and what happens when that new page meets the merchant's existing store — the gap between "fast, easy new content" and "the older foundation it's attached to."
+- **Central tension / problem:** PageFly makes building a new page fast and approachable, but publishing it as a Home page inserts it as a section into the existing theme homepage — so the new, polished content sits directly against the old, untouched header/hero, and the seam between them shows.
+- **Outcome or takeaway:** The tool itself is easy to use; the rough edge is at the boundary between new and old, not in the editor.
+- **Useful metaphor:** A newly finished, brightly lit room built onto an older structure — the new room is polished and complete, but the doorway/threshold where it meets the old entrance hall doesn't quite match, and that mismatch is visible right at the seam.
+- **Human element:** A single small figure (the merchant/builder) standing at that threshold, having just finished the new room, noticing the mismatch.
+
+### Thumbnail
+
+- **Concept:** A small painterly figure stands in a doorway between a newly finished, warmly lit room and an older, dimmer entrance hall of the same building — the new room's walls and furnishings are fresh and cohesive, while the old entrance's architecture is a slightly different tone and style, with the seam between the two visible at the threshold. Wide, quiet, mostly empty space around the figure.
+- **Generation prompt:** "Editorial fine-art oil painting, vintage art-book illustration style, 16:9 wide composition with large quiet negative space. A small simplified painterly figure stands at a doorway/threshold inside a spacious interior, where a newly finished, warmly lit room meets an older, dimmer, slightly mismatched entrance hall of the same building — the seam between the fresh new architecture and the older structure is visible but not emphasized. Foreground (the figure and the threshold) rendered with moderate painterly definition and visible brushwork; middle-ground architecture as soft brush masses; background heavily atmospheric, blurred, and abstract with large fields of color. Warm afternoon daylight streaming through a window in the new room, casting long soft shadows, contrasted with cooler, dimmer light in the old entrance. Muted palette: warm cream, dusty ochre, muted terracotta in the new room; muted olive, dusty blue, and muted brown in the old entrance. Restrained contrast, canvas texture, pigment variation, imperfect edges, soft focus throughout — no hyper-detail, no photorealism, no 3D render, no glossy digital painting. Off-center focal point, asymmetrical composition. No text, no logos, no UI elements, no readable typography anywhere in the image."
+- **Status:** Prompt drafted
+- **File/location once generated:** TBD — to be attached by the human reviewer/designer once the prompt is run through Blinto's image tool.
+
+### Supporting images (optional)
+
+| Purpose (which concept it reinforces) | Type | Concept | Generation prompt (if fine-art style) or notes (if SVG/chart) | Status |
+|---|---|---|---|---|
+| | | | | |
+
+None warranted for this review — the thumbnail concept alone captures the article's central idea, and the four verified pricing tiers are better represented as a simple text/table in the article itself than as a generated data visualization.
+
 ## AI-Written Review
 
 *Evaluation level: Full Hands-On Test. Testing covered installation and onboarding, the Free plan's pricing/limits, building and publishing one Home-type page from a template, and the CRO Center's core tools. It did not cover Builder/Accelerate/Enterprise-plan-only features, live-chat support, or non-Home page types. Pricing and feature details below were verified directly in the PageFly app on a Shopify dev store on September 1, 2026, and should be re-checked before relying on them, since app pricing can change.*

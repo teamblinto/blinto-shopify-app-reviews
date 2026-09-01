@@ -133,6 +133,31 @@ The AI assistant should ask these sequentially as needed rather than guessing.
 - **CTA direction:**
 - **Required disclosures:**
 
+## Image Concept
+
+Every review automatically gets a hero/thumbnail image concept, generated per `docs/image-style-guide.md` (editorial fine-art / vintage oil painting — see that file for the full rules; do not restate or loosen them here). Supporting images are optional — add one only if it genuinely reinforces a specific concept in the article (see style guide §11).
+
+### Article understanding pass
+
+- **What the article is really about (not the title):**
+- **Central tension / problem:**
+- **Outcome or takeaway:**
+- **Useful metaphor, if any:**
+- **Human element, process/system, comparison, or transformation present:**
+
+### Thumbnail
+
+- **Concept (1–3 sentences, plain description of the scene/metaphor):**
+- **Generation prompt (ready to paste into an image tool):**
+- **Status:** Not generated / Prompt drafted / Image generated / Attached to review
+- **File/location once generated:**
+
+### Supporting images (optional — leave empty if none are warranted)
+
+| Purpose (which concept it reinforces) | Type (editorial illustration / visual metaphor / process / technical diagram / data viz) | Concept | Generation prompt (if fine-art style) or notes (if SVG/chart) | Status |
+|---|---|---|---|---|
+| | | | | |
+
 ## AI-Written Review
 
 The AI assistant writes the complete polished merchant-focused article here using verified public research plus the human reviewer's supplied testing/evidence.
