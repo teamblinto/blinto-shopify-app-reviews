@@ -9,13 +9,13 @@ last_verified: "2026-09-01"
 
 # PageFly Review: Our Hands-On Test of the Shopify Page Builder
 
-PageFly is a drag-and-drop Shopify page builder aimed at merchants who want more control over landing, product, promotional, and home pages without writing code. We installed PageFly on a Shopify development store, built and published a page, checked its responsive behavior, and explored its CRO tools to see how it performs in a real workflow.
-
-Our main takeaway: **PageFly is easy to learn and capable enough for non-technical merchants to build polished campaign and landing pages quickly, but merchants planning a complete homepage redesign should understand how PageFly interacts with their existing Shopify theme before publishing.**
-
 ![Editorial illustration of a designer arranging modular page sections on a large layout](/images/reviews/pagefly/pagefly-visual-page-building-illustration.webp)
 
 *AI-generated editorial illustration representing visual page building.*
+
+PageFly is a drag-and-drop Shopify page builder aimed at merchants who want more control over landing, product, promotional, and home pages without writing code. We installed PageFly on a Shopify development store, built and published a page, checked its responsive behavior, and explored its CRO tools to see how it performs in a real workflow.
+
+Our main takeaway: **PageFly is easy to learn and capable enough for non-technical merchants to build polished campaign and landing pages quickly, but merchants planning a complete homepage redesign should understand how PageFly interacts with their existing Shopify theme before publishing.**
 
 ## Our Verdict
 
