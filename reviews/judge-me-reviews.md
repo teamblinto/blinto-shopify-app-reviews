@@ -246,79 +246,78 @@ Blinto has not yet completed hands-on testing of competing product review apps, 
 
 ## AI-Written Review
 
-*Written by AI from Rakibul H. Rocky's hands-on testing evidence and verified public sources. All facts dated 31 August 2026.*
+*Evaluation level: Partial Hands-On Test. Testing covered installation and the data-access scopes requested, the four-step onboarding wizard, enabling both required Shopify theme app embeds, adding the review widget to the Dawn product template, the seven-task setup guide, every widget customization panel, the email styling screen, and the Import, Reviews, and Analytics screens — all on the Free plan. It did not cover storefront rendering, review collection, review request emails, imports, populated analytics, page-speed impact, Awesome-plan features, or Judge.me support. Details below were verified on a Shopify development store on 31 August 2026 and should be re-checked before relying on them, since app pricing and plan gating can change.*
 
-### Judge.me Review: How Far the Free Plan Actually Gets You
+Judge.me is a product review app for Shopify, aimed at merchants who want to collect and display product and store reviews without paying by review volume. It is one of the best-known apps in its category — 5.0 stars across 44,346 App Store reviews, live since 25 June 2015 — and unusual for charging a flat $15 a month rather than scaling its price as a store grows. There is also a free-forever tier, which is where most merchants start. Blinto tested it hands-on, deliberately on that Free plan, to find where the free tier actually stops.
 
-Judge.me is one of the best-known product review apps on the Shopify App Store — 5.0 stars across 44,346 reviews, live since June 2015, and unusual in the category for charging a flat $15 a month rather than scaling its price with your review volume. There is also a free-forever tier, which is why so many merchants start here.
+### Getting started
 
-That free tier is the interesting question, and it is the one this review sets out to answer. We installed Judge.me on a Shopify development store running the Dawn theme, went through onboarding, deliberately chose the **Free plan**, and worked through every configuration screen the app offers. What follows is what we found — and, just as importantly, what we did not test.
+Install to configured widget took **under ten minutes**, and Judge.me earns that time.
 
-**Scope, stated upfront.** This is a **Partial Hands-On Test** of setup, configuration, and the admin interface on an empty store. We did not collect a single review, did not send or receive a review request email, did not run an import, did not verify the widget on a live storefront product page, did not measure page-speed impact, and did not contact support. Where those things matter to your decision, we say so rather than filling the gap with the developer's marketing copy.
+Shopify's permission screen sets expectations first: Judge.me requests access to customer data (including data flagged as sensitive, device, and activity), staff and contributor data, and view-and-edit access to store data. That is worth reading before clicking, as with any review app that touches customer records.
 
-### Setup: ten minutes, and the hard part is handled
+Onboarding is a four-step wizard — business profile, existing reviews, widgets, plan — and every step can be skipped. It asks what kind of business the merchant runs and whether they dropship, on the stated basis that it will tailor setup and benchmarks to match.
 
-Install to configured widget took **under ten minutes**, and the app earns that.
+After onboarding, the dashboard does not open on a blank screen. A **seven-task setup guide** appears with two tasks already ticked from onboarding, covering widget customization, importing reviews, adding a store logo, checking email styling, and starting the trial.
 
-Shopify's permission screen tells you what you are agreeing to: Judge.me requests access to customer data (including data flagged as sensitive, device, and activity), staff and contributor data, and view-and-edit access to store data. Worth reading before you click, as with any review app that touches customer records.
+### Pricing, as it actually works today
 
-Onboarding is a four-step wizard — business profile, existing reviews, widgets, plan — and every step can be skipped. It asks what kind of business you run and whether you dropship, on the stated basis that it will tailor setup and benchmarks to match.
+Judge.me's pricing is a two-tier structure, billed in USD:
 
-Step three is where most review apps lose people, and where Judge.me is noticeably careful. Reviews will not appear on your store until **two separate Shopify theme app embeds** are switched on: first the Judge.me Core Snippet, which the theme editor itself describes as the code the widgets depend on, and then the Reviews widget. Judge.me deep-links you into the theme editor, shows an illustrated diagram of the exact toggle and the exact Save button, and then detects the change and shows a success screen before moving on. Both embeds enabled first try, no guesswork.
+- **Free — $0/month:** listed as unlimited product and store reviews, unlimited photo and video reviews, the review widget and star rating badge, carousels, Google rich snippets, a trust badge, Shop App / Etsy / Amazon sync, the reviews importer, and 24/7 chat and email support.
+- **Awesome — $15/month:** adds AI features, the full integration set, social and Google Shopping syndication, coupons and referrals, and the widget and email customization controls described below.
 
-It is still two round trips out of the app and back. If you have never opened the Shopify theme editor, that is a moment of mild anxiety — but it is about as well-signposted as this handoff can be.
+A 15-day free trial is offered per the App Store listing and the in-app dashboard badge, though Judge.me's pricing page does not mention a trial period. The pricing page also states that "$15 per month is the most you can ever pay," listing no annual option and no usage-based add-ons. In a category where per-review and per-order pricing is common, a flat ceiling is a real differentiator — but it is the developer's claim, not something Blinto billed and verified. One merchant report on the listing describes an unexpected charge, so the terms are worth reading.
 
-Then you land on the dashboard, which does not present you with a blank screen. There is a **seven-task setup guide**, with two tasks already ticked off from onboarding, walking you through customizing the widget, importing reviews, adding your store logo, checking email styling, and grabbing the trial. That guide is genuinely useful, and it is where the interesting friction starts.
+One aside for developers: on a development store, Judge.me additionally offers the Awesome plan free, described on screen as free forever for development stores. Blinto chose the Free plan instead, precisely to map where the free ceiling falls, and did not test that offer.
 
-### Customization: the Free plan's ceiling, and where you hit it
+### Enabling the widget: two trips to the theme editor
 
-The interface is simple and intuitive, and most of what you would look for is where you would expect. On the Free plan we could change the star and bar-chart colour, button text colour, text and secondary text colour, the widget title, the singular and plural words for "review", the empty-state message, the button label, and the widget's overall layout theme — all with a live preview beside the settings.
+Step three of onboarding is where most review apps lose merchants, and where Judge.me is noticeably careful. Reviews will not appear on a storefront until **two separate Shopify theme app embeds** are switched on: first the Judge.me Core Snippet, which the theme editor itself describes as the code the widgets depend on, and then the Reviews widget. Judge.me deep-links into the theme editor, shows an illustrated diagram of the exact toggle and the exact Save button, then detects the change and confirms it with a success screen before moving on. Both embeds enabled first try, with no guesswork, and the Review Widget block was added to the Dawn default product template.
 
-Two caveats on that preview. It renders against Judge.me's own **sample data** — a placeholder "4.1, 15 reviews" dataset with stock photos and videos — not your store's data. And the preview lives in the app and the theme editor. We never confirmed the widget on a real storefront product page, so we cannot tell you it renders correctly there.
+It is still two round trips out of the app and back. For a merchant who has never opened the Shopify theme editor, that is a moment of mild anxiety — but it is about as well-signposted as this handoff can be.
 
-For anyone with front-end skills there is a real escape hatch: an Advanced panel with a 1,000-character custom CSS field and a copyable Liquid snippet. If the settings UI will not give you something, CSS probably will.
+### Customization, and where the Free plan stops
 
-But the ceiling is real, and you find it by walking into it. Scattered through the settings are controls that are visible, greyed out, and marked with a small star badge indicating the Awesome plan. On the widget alone that covers corner styling, the reply author name, the entire header typography group — header text size, header text weight, average rating style — bar chart type and style, AI review insights, and custom questions.
+The interface is simple and intuitive, and most of what a merchant looks for is where they would expect it. On the Free plan, Blinto was able to change the star and bar-chart colour, button text colour, text and secondary text colour, the widget title, the singular and plural words for "review," the empty-state message, the button label, and the widget's overall layout theme — each with a live preview beside the settings.
 
-The most consequential instance is email styling. **You can upload your store logo to the review request email on the Free plan. You cannot control its size or alignment, or the email's corner styling or font.** So your logo goes in, and then sits at a size you did not choose, in a typeface you did not choose. Our reviewer's blunt summary: this was the one red flag in an otherwise smooth experience.
+Two caveats on that preview. It renders against Judge.me's own **sample data** — a placeholder 4.1-star, 15-review dataset — not the store's own data. And it lives inside the app and the theme editor. Blinto never confirmed the widget on a real storefront product page, so this review cannot say it renders correctly there.
 
-Judge.me is upfront that customization is an Awesome-plan feature — an in-app modal says so before you start. What it does not do is tell you *which* controls are withheld, so the shape of the free tier is something you map by clicking.
+For anyone with front-end skills there is a real escape hatch: an Advanced panel with a 1,000-character custom CSS field and a copyable Liquid widget snippet. Where the settings UI stops, CSS probably will not.
 
-### Import and management: what we could see, and what we couldn't
+But the ceiling is real, and a merchant finds it by walking into it. Scattered through the settings are controls that are visible, greyed out, and marked with a small star badge indicating the Awesome plan. On the widget alone that covers corner styling, the reply author name, the entire header typography group — header text size, header text weight, average rating style — bar chart type and style, AI review insights, and custom questions.
 
-The import screen offers a genuinely broad set of paths: from other review apps (Loox, Yotpo, Air Reviews, Shopify, Klaviyo, Arereviews), from a spreadsheet, from other marketplaces (AliExpress, Etsy, Amazon, Google, Meta), and from another Judge.me store you own. We inspected those options. **We ran no import**, so treat the breadth as confirmed and the reliability as untested — particularly in light of merchant reports below.
+The most consequential instance is email styling. **A store logo can be uploaded to the review request email on the Free plan, but its size and alignment, and the email's corner styling and font, are all locked.** The logo goes in, then sits at a size the merchant did not choose, in a typeface they did not choose. The reviewer's blunt summary: this was the one red flag in an otherwise smooth experience.
 
-The Reviews and Analytics screens were empty throughout — zero reviews, zero requests sent — but they are structured for someone managing real volume. Reviews offers filters for status, source, rating, type, sentiment, topics, tags, and time period, with sentiment analysis and auto-publish both on by default. Analytics splits into reviews-and-requests and revenue, with collection-rate, reviews-collected, average-rating, and requests-sent tiles, a twelve-month range, and CSV export. From a store operator's point of view these read well. Whether the numbers in them are accurate and useful is something only a populated store can tell you.
+Judge.me is upfront that customization is an Awesome-plan feature — an in-app modal says so before setup begins. What it does not do is enumerate *which* controls are withheld, so the shape of the free tier is something a merchant maps by clicking.
 
-### What merchants report that we could not test
+### Import, moderation, and analytics
 
-Judge.me's listing average is 5.0 across 44,346 reviews. Reading the 1–3 star segment specifically — a deliberately self-selected slice, not a representative sample — a few themes recur often enough to be worth your attention, all dated 2026:
+The import screen offers a broad set of paths: from other review apps (Loox, Yotpo, Air Reviews, Shopify, Klaviyo, Arereviews), from a spreadsheet, from other platforms (AliExpress, Etsy, Amazon, Google, Meta), and from another Judge.me store. Blinto inspected those options but **ran no import**, so the breadth is confirmed and the reliability is untested — particularly in light of the merchant reports below.
 
-- **Support follow-through.** Multiple merchants describe escalations that went nowhere, shift handovers that dropped the thread, and being told an issue was resolved when it was not. Judge.me advertises 24/7 support with a 15-second average reply time; these reports are about what happens after that first reply.
+The Reviews and Analytics screens were empty throughout — zero reviews, zero requests sent — but both are structured for someone managing real volume. Reviews offers filters for status, source, rating, type, sentiment, topics, tags, and time period, with sentiment analysis and auto-publish both on by default. Analytics splits into reviews-and-requests and revenue, with collection-rate, reviews-collected, average-rating, and requests-sent tiles, a twelve-month range, and CSV export. From a store operator's point of view these read well. Whether the numbers in them are accurate and useful is something only a populated store can establish.
+
+### What merchants report that Blinto could not test
+
+Judge.me's listing average is 5.0 across 44,346 reviews. Reading the 1–3 star segment specifically — a deliberately self-selected slice, not a representative sample — a few themes recur often enough to warrant attention, all dated 2026:
+
+- **Support follow-through.** Multiple merchants describe escalations that went nowhere, shift handovers that dropped the thread, and being told an issue was resolved when it was not. Judge.me advertises 24/7 support with a 15-second average reply time; these reports concern what happens after that first reply.
 - **Data integrity after migration.** Reviews reportedly losing verified status after being migrated in, and imported reviews reportedly becoming invalid for Google Shopping after a Judge.me partnership change in April 2026.
 - **Unapproved email sends.** Two separate accounts of review request emails going out without merchant approval, one reportedly reaching 3,620 customers.
 - **Widget duplication and template defaults**, sometimes needing a support ticket to fix.
 - **Import ergonomics**, including a flow requiring manual saves every 50 entries.
 
-We reproduced none of this. It sits here because it bears on exactly the areas our test could not reach.
+Blinto reproduced none of this. It sits here because it bears on exactly the areas this test could not reach.
 
-### Pricing
+### Who Judge.me fits
 
-Two tiers. **Free forever** — listed as unlimited product and store reviews, unlimited photo and video reviews, the review widget and star rating badge, carousels, Google rich snippets, a trust badge, Shop App / Etsy / Amazon sync, the importer, and 24/7 support. **Awesome at $15/month**, adding AI features, the full integration set, social and Google Shopping syndication, coupons and referrals, and the customization controls described above. A 15-day free trial is offered.
+Based on this test, Judge.me is a strong fit for **small and newer Shopify stores that want reviews live on the storefront quickly and without a monthly bill**. Setup is a ten-minute job with the theme-embed handoff handled better than most, the interface is simple and intuitive, the free tier covers collection and display, and the price does not climb as review count does. At that stage, not being able to set the font in a review request email is not what stands between a store and more sales. It also suits merchants who specifically want to avoid usage-based review pricing, and stores with in-house front-end skills who would rather write 1,000 characters of CSS than pay for a styling toggle.
 
-Judge.me's pricing page states that "$15 per month is the most you can ever pay," with no annual option or usage-based add-ons. In a category where per-review and per-order pricing is common, a flat ceiling is a real differentiator — but it is the developer's claim, not something we billed and verified. One merchant report on the listing describes an unexpected charge, so read the terms.
+It is a weaker fit for stores with a brand system that must extend into transactional email. Once the widget's typography and the request email's logo treatment and typeface have to match the rest of the brand, the Free plan cannot deliver, and **$15/month is the real cost of entry rather than an upgrade** — better budgeted from the start than discovered mid-setup. Merchants who need verified certainty about high-volume import fidelity, Google Shopping syndication, or support responsiveness should also weigh the merchant reports above, none of which Blinto was able to test.
 
-One aside for developers: on a development store, Judge.me offers the Awesome plan free, described on screen as free forever for development stores. We chose the Free plan instead precisely so we could see where the free ceiling actually falls, and did not test that offer.
+What this verdict rests on is worth restating. Blinto tested installation, onboarding, theme integration, and every configuration screen on an empty development store. It did not test whether reviews get collected, whether the widget renders on a live product page, whether request emails arrive, whether imports hold up, or whether support answers. Where those are the deciding questions, this review narrows the decision rather than closing it.
 
-### Verdict
-
-On the strength of this test, Judge.me is a straightforward recommendation for **small and newer Shopify stores that want reviews live on the storefront quickly and without a monthly bill**. Setup is a ten-minute job with the theme-embed handoff handled better than most, the interface is simple and intuitive, the free tier covers collection and display, and the price does not climb as your review count does. At that stage, not being able to set the font in your review request email is not the thing standing between you and more sales.
-
-The picture changes if you have a brand system to protect. Once the review widget's typography and the request email's logo treatment and typeface have to match the rest of your brand, the Free plan cannot get you there, and **$15/month is the real cost of entry, not an upgrade**. Budget for it from the start rather than discovering the ceiling mid-setup.
-
-And be clear about what this verdict rests on. We tested installation, onboarding, theme integration, and every configuration screen on an empty development store. We did not test whether reviews get collected, whether the widget renders on a live product page, whether request emails arrive, whether imports hold up, or whether support answers. If those are the questions that decide it for you, this review narrows your decision — it does not close it.
-
-*No numeric score is given. Blinto has no commercial relationship with Judge.me: no sponsorship, no affiliate arrangement, and no paid or gifted access. All pricing, rating, review-count, and merchant-feedback figures verified 31 August 2026 and subject to change.*
+*No alternatives are named in this review: Blinto has not yet completed hands-on testing of competing product review apps, and comparative guidance will follow once the product reviews category has more than one completed review. No numeric score is given. Blinto has no commercial relationship with Judge.me — no sponsorship, no affiliate arrangement, and no paid or gifted access. All pricing, rating, review-count, and merchant-feedback figures were verified on 31 August 2026 and are subject to change.*
 
 ## Human Fact-check Before SEO Handoff
 
@@ -332,7 +331,7 @@ And be clear about what this verdict rests on. We tested installation, onboardin
 - [x] Missing evidence is disclosed or the unsupported claim was removed.
 - [x] I approve this article as the named human reviewer.
 
-**Human reviewer approved:** [x] Yes — Rakibul H. Rocky, 31 August 2026
+**Human reviewer approved:** [x] Yes (Rakibul H. Rocky, 31 August 2026)
 
 ## Preview Handoff
 
@@ -351,7 +350,7 @@ Before moving ClickUp to **SEO Check**:
 
 - **Reviewer:** Shemanto / SEO Agent
 - **Date:**
-- **Status:** Pending
+- **Status:** Pending / Changes Requested / Passed
 
 - [ ] Search intent and primary topic alignment
 - [ ] Title/H1 and heading structure
@@ -370,11 +369,11 @@ Before moving ClickUp to **SEO Check**:
 
 If changes are requested, the task stays in **SEO Check** while the same reviewer works with their AI assistant to update the review and preview.
 
-**Ready to Publish:** [ ] No
+**Ready to Publish:** [ ] Yes
 
 ## Publishing
 
 - **Published by:** Fazle / Shemanto
 - **Published date:**
 - **Public URL:**
-- **Live QA complete:** [ ] No
+- **Live QA complete:** [ ] Yes
