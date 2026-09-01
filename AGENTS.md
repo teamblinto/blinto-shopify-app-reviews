@@ -33,11 +33,11 @@ The team member assigned in ClickUp is the named human reviewer/author. They may
 - Raw notes and observations, whether supplied one-by-one or in a batch.
 - Product, UX, technical, merchant-fit, strength, and limitation judgments.
 - Answers to questions that require first-hand experience.
-- Final factual verification and approval of the generated article.
+- Final factual verification and approval of the generated article and selected publication screenshots.
 
 ### AI assistant owns
 
-ChatGPT, Claude, or another approved repository-capable AI assistant should act as **researcher + interviewer + evidence organizer + primary writer + editor + QA assistant**.
+ChatGPT, Claude, or another approved repository-capable AI assistant should act as **researcher + interviewer + evidence organizer + primary writer + editor + visual evidence curator + QA assistant**.
 
 It should:
 
@@ -47,13 +47,16 @@ It should:
 4. Conduct legitimate public research and organize sources.
 5. Ask the human for missing hands-on observations/screenshots/evidence instead of guessing.
 6. Separate developer claims, Blinto observations, and merchant feedback.
-7. Create the review record and content/SEO direction.
-8. **Write the complete polished review.** The human does not need to turn raw notes into prose.
-9. Run a factual verification pass with the human reviewer.
-10. Save/update the review correctly under `reviews/` and commit/push when the connected environment supports repository writes.
-11. Determine the rendered Review Hub Content Preview URL and ensure it is recorded in ClickUp before SEO Check.
+7. Create the internal research/evidence record and content/SEO direction.
+8. **Write the complete polished, publication-ready review under `reviews/`.** The human does not need to turn raw notes into prose.
+9. When hands-on screenshots exist, select the strongest reader-useful screenshots, prepare them for publication, store them under `public/images/reviews/[app-slug]/`, and embed them naturally beside the relevant article content. Do not publish the raw evidence inventory.
+10. Ensure image filenames are descriptive, alt text is meaningful, and sensitive/private information is cropped or redacted before publication.
+11. Run a factual verification pass with the human reviewer, including the selected visual evidence.
+12. Save/update the review correctly under `reviews/` and commit/push when the connected environment supports repository writes.
+13. Verify the final text and images render correctly in the Review Hub Content Preview.
+14. Determine the exact Content Preview URL and ensure it is recorded in ClickUp before SEO Check.
 
-**AI may write 100% of the prose. AI may invent 0% of the experience or evidence.**
+**AI may write 100% of the prose. AI may invent 0% of the experience or evidence. Raw evidence stays internal; selected visual evidence belongs in the final article.**
 
 Never fabricate testing, product behavior, pricing, merchant feedback, screenshots, scores, quotations, statistics, citations, or technical verification. Missing evidence must be requested, qualified, removed, or transparently disclosed.
 
@@ -77,7 +80,7 @@ One review has one primary human reviewer/assignee. Their normal Blinto role doe
 `Assigned` is not a board status; ownership is represented by the assignee field. `Monitoring` is not a production-board status; post-publication performance/maintenance is handled separately.
 
 - Human reviewer starts → **Research & Write**.
-- Human reviewer verifies article + preview handoff complete → **SEO Check**.
+- Human reviewer verifies article + images + preview handoff complete → **SEO Check**.
 - Shemanto/SEO Agent passes → **Ready to Publish**.
 - Fazle/Shemanto publishes and completes live QA → **Published**.
 
@@ -89,7 +92,7 @@ Planning/category/SEO-validation/program work belongs in Shopify GTM Execution, 
 
 A standard prompt for any supported AI platform is:
 
-> I am assigned to review [APP NAME] for Blinto. Follow the Blinto Shopify App Review repository and guide me through the process from the beginning. I am the human reviewer: I will test the app and give you screenshots, notes, observations, experience, and judgment. You are the AI writer: research legitimate public information, ask me sequentially for anything that requires hands-on evidence, organize the evidence, and write the complete review. Do not invent anything I have not tested/provided or anything you cannot verify. When the article is complete, help me fact-check it, save/commit it correctly to the repository, identify its reviews.blinto.co Content Preview URL, and make sure that URL is added to my ClickUp task before I submit it for SEO Check.
+> I am assigned to review [APP NAME] for Blinto. Follow the Blinto Shopify App Review repository and guide me through the process from the beginning. I am the human reviewer: I will test the app and give you screenshots, notes, observations, experience, and judgment. You are the AI writer: research legitimate public information, ask me sequentially for anything that requires hands-on evidence, organize the internal evidence, and write the complete publication-ready review. Select the strongest useful screenshots from my testing, prepare/store them as publication assets, and place them naturally in the final article. Do not invent anything I have not tested/provided or anything you cannot verify. When the article is complete, help me fact-check the text and images, save/commit them correctly to the repository, identify the reviews.blinto.co Content Preview URL, verify the full article renders correctly, and make sure that URL is added to my ClickUp task before I submit it for SEO Check.
 
 If the reviewer simply says “I am starting my assigned Shopify app review,” identify the assignment from repository/connected task evidence when possible. If it cannot be verified, ask for the app/task rather than inventing it.
 
@@ -105,20 +108,25 @@ Every review must accurately state one evaluation level:
 
 Do not mark hands-on work complete because AI researched the app online. Verify/date pricing and other time-sensitive facts. Treat merchant feedback as sourced patterns rather than universal fact.
 
+For Level 1 and Level 2 reviews, useful hands-on screenshots should normally appear in the final article when available. The complete evidence archive remains internal; only reader-useful, publication-safe images are selected for the final article.
+
 ## 8. Review Hub Preview Contract
 
 Astro loads `reviews/**/*.{md,mdx}` as the `reviews` collection. The Review Hub generates a page for each review under `/reviews/[review-file-id]/`.
 
-After a review is committed/pushed to the deployed branch and the deployment completes, the AI/reviewer should verify its rendered page and use the exact URL as **Content Preview**.
+Publishable review images live under `public/images/reviews/[app-slug]/` and are referenced from the review Markdown.
+
+After a review and its selected images are committed/pushed to the deployed branch and deployment completes, the AI/reviewer should verify the rendered page and use the exact URL as **Content Preview**.
 
 A task must **not** move to SEO Check until:
 
-1. Review is committed/pushed to GitHub.
-2. Review is rendered successfully on `reviews.blinto.co`.
-3. Human reviewer has fact-checked the article.
-4. Exact Content Preview URL is recorded in ClickUp.
+1. Final review content is committed/pushed to GitHub.
+2. Selected publication images are committed/pushed when useful hands-on screenshots exist.
+3. Review text and images render successfully on `reviews.blinto.co`.
+4. Human reviewer has fact-checked the article and selected images.
+5. Exact Content Preview URL is recorded in ClickUp.
 
-**No Content Preview URL = no SEO Check handoff.**
+**No complete Content Preview = no SEO Check handoff.**
 
 ## 9. Standard ClickUp Review Task
 
@@ -137,8 +145,10 @@ Canonical checklist:
 - [ ] Started review with AI assistant + repository context
 - [ ] App testing completed + experience shared
 - [ ] Required screenshots/evidence/information provided
-- [ ] AI-generated review fact-checked by human reviewer
-- [ ] Review committed/pushed and Content Preview URL added
+- [ ] AI-generated publication-ready review completed
+- [ ] Reader-useful screenshots selected, embedded, and verified where available
+- [ ] Final review fact-checked by human reviewer
+- [ ] Review committed/pushed and complete Content Preview URL added
 - [ ] Submitted for SEO Check
 
 Detailed SOP checks remain in the repository and are enforced by the AI-guided workflow rather than duplicated as ClickUp columns.
@@ -147,7 +157,7 @@ Detailed SOP checks remain in the repository and are enforced by the AI-guided w
 
 **SEO Check owner: Shemanto**, or later a calibrated SEO Agent. Shemanto should review the rendered Content Preview linked directly from ClickUp, not hunt through raw GitHub Markdown.
 
-The gate covers search intent/topic alignment, title/H1/headings, topical coverage, metadata direction, internal links, comparisons/cannibalization, readability/merchant usefulness, disclosures, and obvious unsupported claims/evidence gaps.
+The gate covers search intent/topic alignment, title/H1/headings, topical coverage, metadata direction, internal links, comparisons/cannibalization, readability/merchant usefulness, disclosures, useful image placement/alt text, and obvious unsupported claims/evidence gaps.
 
 There is no routine separate Technical Review, Revision, or Final Approval stage. Escalate a material technical/legal/reputational issue only when genuinely required.
 
@@ -155,9 +165,9 @@ There is no routine separate Technical Review, Revision, or Final Approval stage
 
 ## 11. System Responsibilities
 
-- **GitHub:** content, evidence, source SOPs, execution docs, templates, assistant rules, version history.
+- **GitHub:** final content, internal evidence, publishable review images, source SOPs, execution docs, templates, assistant rules, version history.
 - **ClickUp:** owner, due date, status, blockers, Shopify App link, GitHub link, Review Hub link, Content Preview, published URL.
-- **Review Hub:** human-friendly process/SOP access and rendered private review previews.
+- **Review Hub:** human-friendly process/SOP access and rendered private review previews including final images.
 - **WordPress CMS (future):** public blog publishing backend.
 - **Public Blinto Astro website:** presentation layer consuming approved CMS content.
 
