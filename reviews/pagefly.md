@@ -13,6 +13,10 @@ PageFly is a drag-and-drop Shopify page builder aimed at merchants who want more
 
 Our main takeaway: **PageFly is easy to learn and capable enough for non-technical merchants to build polished campaign and landing pages quickly, but merchants planning a complete homepage redesign should understand how PageFly interacts with their existing Shopify theme before publishing.**
 
+![Editorial illustration of a designer arranging modular page sections on a large layout](/images/reviews/pagefly/pagefly-visual-page-building-illustration.webp)
+
+*AI-generated editorial illustration representing visual page building.*
+
 ## Our Verdict
 
 PageFly makes the most sense for Shopify merchants who want to create custom landing or promotional pages without depending on a developer for every change. In our test, the editor was straightforward, the template library gave us a useful starting point, and we were able to build a complete page in roughly 30–40 minutes with some planning done beforehand.
