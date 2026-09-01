@@ -43,7 +43,7 @@ testing_level: "Level 1 — Full Hands-On Test"
 
 **What I did not test:**
 
-- Not yet tested: page creation/editing, templates, mobile responsiveness, publish/preview, paid-plan (Builder) features, CRO tools.
+- Not yet tested: paid-plan (Builder/Accelerate/Enterprise) features beyond what's visible on Free; third-party app integrations (require enabling first); multi-page site build; long-term use/maintenance.
 
 **Testing limitations:**
 
@@ -67,6 +67,19 @@ testing_level: "Level 1 — Full Hands-On Test"
   - **Enterprise — $299/month:** 1,600 credits/month for 1 store; Tech Lead ASAP queue; priority support (front of queue); PageFly Page Health Monitor; Founder's Office Hours (1× 45-min async).
 - **This supersedes both the earlier third-party research snapshot and the legacy Silver/Gold/Platinum naming — use only the plan names/prices/features above in the article.**
 
+### Core use case: building a page (2026-09-01)
+
+- **AI generation attempt:** Reviewer first tried the AI page generator, but hit the Free plan's AI credit limit (10 credits) and switched to a pre-built template instead. Screenshot confirms the AI Translator panel separately shows "10/10 AI credits left" on a shared credit pool — consistent with running out when generating a full page via AI.
+- **Template used:** "Juicy – New Year" template (listed as "Used on 3586 pages" in the template library, which showed "128 of 129 templates" available, filterable by Type/Industry/Style/Feature/Collection).
+- **Editor structure (from screenshots):** Left panel shows a "Page content" tree — PageFly body containing multiple "Flex section" blocks, plus separate "Header" (Theme header) and "Footer" (Theme footer) entries. An "Elements" panel offers PageFly elements (32, in this template) and Shopify-native elements (46) — basics like Heading/Paragraph/Button/List/Icon/Divider, media (Image, Image Comparison, YouTube/Vimeo/HTML video, Soundcloud), and app blocks. A separate "Third-party elements" panel requires enabling specific integrations first via "Manage Integrations" before those elements can be used.
+- **Editor experience:** Reviewer found it "very easy to use." Canvas shows live section editing (e.g., an email-signup "Content list" carousel section, a "Product details" block that displayed a "Please select a product in General → Product source" prompt when no product was linked yet — i.e. some template blocks need manual configuration before they're complete).
+- **Responsiveness check:** Reviewer used PageFly's built-in mobile/tablet/desktop preview toggle to check all three breakpoints.
+- **Page settings:** Page title, page type (Home), and page URL are configurable; a note states "Once this page is published, it will be added to your default homepage as a new section" and "Only one PageFly home page can be published at a time." Theme sections (header/footer) stay editable from the Shopify theme editor rather than PageFly. An "Optimization" toggle enables image lazy-loading, with a note recommending Google PageSpeed Insights to check page speed/issues.
+- **CRO Center:** A 4-stage funnel view (Measure → Analyze → Optimize → Test & scale) shown as "0/4 stages checked, 0 passed" by default — includes Page insights (needs PageFly Analytics enabled), Page checkup, AEO ("currently only works on product pages"), Search indexing, and A/B testing ("not run").
+- **AI Translator:** A separate tool that can machine-translate a page's content into other languages (reviewer's screenshot shows Japanese selected, "257 elements," using the shared AI credit pool) — a paid-plan feature per the earlier pricing table (AI Translation listed under Builder).
+- **Publish result — key finding:** Reviewer published the PageFly page as their store's **Home** page, and found the site "look kind of a broken website" because the **navigation bar and hero section still came from the store's previous/original theme design**, while the rest of the page was PageFly content. This lines up with the in-app note above: a PageFly "Home" page is inserted as a new section into the existing theme homepage rather than replacing the whole page — so if the new PageFly content doesn't visually match the existing theme header/hero, the page can look visually inconsistent/disjointed. **This is a real, reproducible design-continuity gap worth flagging clearly in the review**, not a one-off user error, though the reviewer should confirm whether PageFly documentation calls this out and whether there's a way to have PageFly also control the header/hero for full-page consistency.
+- **Time to build:** ~30–40 minutes for the full page, assuming planning was done beforehand.
+
 The reviewer may provide notes one-by-one or as a batch. Writing quality is not required here; record what actually happened.
 
 ## Evidence / Screenshots
@@ -79,6 +92,7 @@ The reviewer may provide notes one-by-one or as a batch. Writing quality is not 
 | Screenshot: Post-onboarding Dashboard with CRO tools panel | Shows CRO tool set (AI page checkup, A/B testing, Heatmaps, Section performance, Cart Drawer (Beta), AEO optimizer (Beta)) and "6 of 6 tools active on your plan" | Provided by reviewer during review session (2026-09-01) | TBD — confirm with reviewer |
 | Screenshot: "Welcome" first-path chooser (Create a new page / Import my PageFly pages / Rebuild pages from my current site / Skip to dashboard) | Shows onboarding path-selection step after plan choice | Provided by reviewer during review session (2026-09-01) | TBD — confirm with reviewer |
 | Screenshot: Full 4-plan pricing comparison (Free / Builder / Accelerate / Enterprise) | Confirms complete current pricing structure, prices, and feature breakdown | Provided by reviewer during review session (2026-09-01) | TBD — confirm with reviewer |
+| Screenshots (8-page PDF): Page editor with "Juicy – New Year" template, Elements panel, Third-party elements panel, Page template library, CRO Center, AI Translator, Page settings | Documents the full editor UI, element/template library, CRO tools, AI translation feature, and page settings/publishing behavior | Provided by reviewer during review session (2026-09-01) | TBD — confirm with reviewer |
 
 ## AI Research & Evidence Organization
 
@@ -115,6 +129,8 @@ The reviewer may provide notes one-by-one or as a batch. Writing quality is not 
 | "Meets Shopify's highest standards for performance, design, and integration" (implies Built for Shopify) | Search-indexed Shopify App Store listing copy | Not verified | Reviewer to confirm Built for Shopify badge status on live listing |
 | Free plan: 1 page/section, 10 AI credits, full template library | In-app pricing screen (reviewer screenshot, 2026-09-01) | **Verified in-app** | Matches reviewer's actual onboarding experience |
 | 4.9/5 rating, 250,000+ active merchants | In-app plan screen (reviewer screenshot, 2026-09-01) | **Verified in-app** (as displayed by PageFly itself) | This is PageFly's own in-app claim, not an independent Shopify App Store page read — still worth a spot-check against the live App Store listing since it's a marketing claim inside the app, not the App Store's own number |
+| 100+/128-129 pre-built page templates, drag-and-drop, no-code editing | Reviewer hands-on test + screenshots (2026-09-01) | **Verified hands-on** | Reviewer confirms ease of use directly; template library count (128 of 129 shown) matches marketing claims in spirit though exact "320+" figure refers to page+section templates combined per the pricing page, not just full-page templates |
+| AI page/section generation | Reviewer hands-on test (2026-09-01) | **Verified hands-on, with caveat** | Feature works but is credit-limited on Free plan (10 credits) — reviewer ran out and had to switch to a template. This is a meaningful practical limitation for free-tier testing/use. |
 
 ### Merchant Feedback Patterns
 
