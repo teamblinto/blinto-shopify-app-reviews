@@ -2,195 +2,89 @@
 title: "[App Name] Review"
 author: "[Human Reviewer]"
 category: "[Category]"
-status: "Research & Write"
-testing_level: "Not set"
+status: "Draft"
+testing_level: "[Testing Level]"
+last_verified: "[YYYY-MM-DD]"
 ---
 
-# [App Name] Review
+# [App Name] Review: [Clear Merchant-Focused Verdict]
 
-> The named human reviewer owns testing, evidence, judgment, and factual approval. The AI assistant may research public information and write the complete prose, but must never invent experience or evidence.
+> [2–3 sentence editorial summary: what the app does, what we tested, and the most important conclusion for merchants.]
 
-## Review Record
+## Our Verdict
 
-- **App:**
-- **Developer:**
-- **Category:**
-- **Content type:** Single App Review
-- **Human reviewer / assignee:**
-- **Due date:**
-- **ClickUp task:**
-- **Shopify App Store:**
-- **GitHub repository:** https://github.com/teamblinto/blinto-shopify-app-reviews
-- **Review Hub:** https://reviews.blinto.co
-- **Content Preview:**
-- **Status:** Research & Write
-- **Research date:**
-- **Last verified:**
+[Give the reader the conclusion early. Explain whether the app is worth considering, who will get the most value from it, and the most important trade-off discovered during testing.]
 
-## Human Testing & Evidence
+## What Is [App Name]?
 
-### Testing level
+[Brief reader-facing explanation of the app, its primary use case, and target merchant. Avoid developer marketing language unless clearly attributed.]
 
-- [ ] Level 1 — Full Hands-On Test
-- [ ] Level 2 — Partial Hands-On Test
-- [ ] Level 3 — Demo and Documentation Review
-- [ ] Level 4 — Research-Only Evaluation
-- [ ] Level 5 — Insufficient Evidence
+## What We Tested
 
-**What I tested:**
+[Describe the actual hands-on scope in natural editorial prose. State important limitations where they materially affect the verdict. Do not expose internal evidence-management notes.]
 
-**What I did not test:**
+## Our Hands-On Experience
 
-**Testing limitations:**
+[Write the core review narrative from verified human testing. Explain onboarding, setup, primary workflow, usability, output/result, and notable observations. Prioritize what a Shopify merchant needs to know before installing.]
 
-**Raw observations / experience:**
+### [Important Workflow / Feature 1]
 
-The reviewer may provide notes one-by-one or as a batch. Writing quality is not required here; record what actually happened.
+[Hands-on findings.]
 
-## Evidence / Screenshots
+### [Important Workflow / Feature 2]
 
-| Evidence | What it proves | Location/link | Publishable? |
-|---|---|---|---|
-| | | | |
+[Hands-on findings.]
 
-## AI Research & Evidence Organization
+### [Important Workflow / Feature 3]
 
-### Official Sources
+[Hands-on findings.]
 
-- Shopify App Store:
-- Developer website:
-- Pricing:
-- Documentation/help center:
-- Other official sources:
+## Key Features
 
-### Baseline
+[Explain the features that materially affect the buying/install decision. Do not turn this into an exhaustive feature dump. Distinguish tested behavior from developer claims when necessary.]
 
-- Core use case:
-- Target merchant:
-- Current App Store rating:
-- Review count:
-- Rating/review count checked on:
-- Pricing model:
-- Free plan:
-- Trial:
-- Main integrations:
-- Important requirements/restrictions:
+## Pricing
 
-### Developer Claims
+[Explain current verified pricing, free plan/trial if applicable, meaningful limits, and which plan is likely appropriate for different merchants. Date time-sensitive pricing when useful.]
 
-| Claim | Source | Verified? | Notes |
-|---|---|---|---|
-| | | | |
+## What We Liked
 
-### Merchant Feedback Patterns
+- **[Strength]:** [Why it matters based on evidence.]
+- **[Strength]:** [Why it matters based on evidence.]
+- **[Strength]:** [Why it matters based on evidence.]
 
-**Common positives:**
+## What Could Be Better
 
-**Common complaints / limitations:**
+- **[Limitation]:** [What happened / why it matters / any qualification.]
+- **[Limitation]:** [Evidence-based explanation.]
+- **[Limitation]:** [Evidence-based explanation.]
 
-**Sources reviewed:**
+## Who [App Name] Is Best For
 
-Do not present isolated merchant reviews as universal experience.
+[Describe the merchant profiles/use cases that fit the evidence.]
 
-### Missing Evidence / Questions for Human Reviewer
+## Who Should Consider an Alternative
 
-The AI assistant should ask these sequentially as needed rather than guessing.
+[Describe merchants/use cases for whom the limitations make another solution worth considering. Mention alternatives only when supported and useful.]
 
--
+## Final Verdict
 
-## Evaluation
+[Concise final recommendation. Synthesize the strongest reason to choose the app, the biggest caveat, and the type of merchant for whom it makes sense. Do not introduce new claims here.]
 
-### Strengths
-1.
-2.
-3.
+## Frequently Asked Questions
 
-### Limitations
-1.
-2.
-3.
+### Is [App Name] free?
 
-### Best Fit
+[Verified answer.]
 
-### Poor Fit
+### Is [App Name] easy to use?
 
-### Alternatives to Consider
+[Answer from the actual testing scope.]
 
-### Claims We Must Not Make
+### [High-intent merchant question]
 
--
+[Concise evidence-based answer.]
 
-## SEO & Content Direction
+---
 
-- **Target merchant:**
-- **Merchant problem:**
-- **Primary search intent:**
-- **Primary keyword/topic:**
-- **Secondary topics/questions:**
-- **SERP/content gaps:**
-- **Blinto differentiated angle:**
-- **Internal links:**
-- **CTA direction:**
-- **Required disclosures:**
-
-## AI-Written Review
-
-The AI assistant writes the complete polished merchant-focused article here using verified public research plus the human reviewer's supplied testing/evidence.
-
-## Human Fact-check Before SEO Handoff
-
-- [ ] The article accurately represents what I tested and observed.
-- [ ] Testing language matches the actual testing level.
-- [ ] Important factual claims are supported.
-- [ ] Developer claims are not presented as Blinto findings without verification.
-- [ ] Pricing/time-sensitive information is verified and dated.
-- [ ] Strengths, limitations, best-fit, and poor-fit conclusions match the evidence.
-- [ ] No fabricated testing, facts, scores, quotes, feedback, statistics, screenshots, or citations exist.
-- [ ] Missing evidence is disclosed or the unsupported claim was removed.
-- [ ] I approve this article as the named human reviewer.
-
-**Human reviewer approved:** [ ] Yes
-
-## Preview Handoff
-
-Before moving ClickUp to **SEO Check**:
-
-- [ ] Review committed/pushed to GitHub.
-- [ ] Review rendered successfully on `reviews.blinto.co`.
-- [ ] Exact Content Preview URL added to ClickUp.
-
-**Content Preview:**
-
-**Ready for SEO Check:** [ ] Yes
-
-## Final SEO / Quality Check
-
-- **Reviewer:** Shemanto / SEO Agent
-- **Date:**
-- **Status:** Pending / Changes Requested / Passed
-
-- [ ] Search intent and primary topic alignment
-- [ ] Title/H1 and heading structure
-- [ ] Topical coverage and important content gaps
-- [ ] Natural keyword/entity usage
-- [ ] Internal-link opportunities
-- [ ] Comparison/cannibalization considerations
-- [ ] Readability and merchant usefulness
-- [ ] Obvious unsupported claims/evidence gaps
-- [ ] Required disclosures
-- [ ] Metadata direction
-
-### Feedback / Corrections
-
--
-
-If changes are requested, the task stays in **SEO Check** while the same reviewer works with their AI assistant to update the review and preview.
-
-**Ready to Publish:** [ ] Yes
-
-## Publishing
-
-- **Published by:** Fazle / Shemanto
-- **Published date:**
-- **Public URL:**
-- **Live QA complete:** [ ] Yes
+*Reviewed by [Human Reviewer] for Blinto. Testing level: [Testing Level]. Last verified: [Date].*
