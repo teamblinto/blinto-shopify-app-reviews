@@ -27,9 +27,13 @@ last_verified: "[YYYY-MM-DD]"
 
 [Write the core review narrative from verified human testing. Explain onboarding, setup, primary workflow, usability, output/result, and notable observations. Prioritize what a Shopify merchant needs to know before installing.]
 
+![Descriptive alt text explaining what this screenshot shows](/images/reviews/[app-slug]/[descriptive-filename].webp)
+
+*Optional short reader-facing caption explaining why the screenshot matters.*
+
 ### [Important Workflow / Feature 1]
 
-[Hands-on findings.]
+[Hands-on findings. Place the strongest relevant screenshot immediately after the paragraph it supports.]
 
 ### [Important Workflow / Feature 2]
 
@@ -45,7 +49,7 @@ last_verified: "[YYYY-MM-DD]"
 
 ## Pricing
 
-[Explain current verified pricing, free plan/trial if applicable, meaningful limits, and which plan is likely appropriate for different merchants. Date time-sensitive pricing when useful.]
+[Explain current verified pricing, free plan/trial if applicable, meaningful limits, and which plan is likely appropriate for different merchants. Date time-sensitive pricing when useful. Include a current pricing screenshot when it materially improves trust or comprehension.]
 
 ## What We Liked
 
@@ -58,6 +62,8 @@ last_verified: "[YYYY-MM-DD]"
 - **[Limitation]:** [What happened / why it matters / any qualification.]
 - **[Limitation]:** [Evidence-based explanation.]
 - **[Limitation]:** [Evidence-based explanation.]
+
+[When a limitation was visually observed, include the screenshot that demonstrates it.]
 
 ## Who [App Name] Is Best For
 
@@ -88,3 +94,16 @@ last_verified: "[YYYY-MM-DD]"
 ---
 
 *Reviewed by [Human Reviewer] for Blinto. Testing level: [Testing Level]. Last verified: [Date].*
+
+<!--
+PUBLICATION IMAGE CONTRACT
+- Final reviews should include selected real screenshots when hands-on screenshots exist.
+- Store publishable images under public/images/reviews/[app-slug]/.
+- Use descriptive lowercase filenames, preferably WebP for screenshots where practical.
+- Use only screenshots that add reader value; do not dump the full evidence archive into the article.
+- Place each image beside the claim/workflow/finding it supports.
+- Every image needs meaningful alt text. Captions are optional and should explain reader value, not internal evidence handling.
+- Crop/redact sensitive store, customer, account, email, token, or private data before publication.
+- Internal/raw screenshots may remain in research/evidence storage and do not all need to be published.
+- A review with useful publishable screenshots available is not publication-complete until the selected images are included and render correctly in the Content Preview.
+-->
