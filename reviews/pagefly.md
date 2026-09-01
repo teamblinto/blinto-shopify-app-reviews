@@ -39,11 +39,26 @@ testing_level: "Level 1 — Full Hands-On Test"
 
 **What I tested:**
 
+- Installed PageFly on a Shopify dev store and went through first-run onboarding (plan-choice screen → dashboard → first-path chooser).
+
 **What I did not test:**
+
+- Not yet tested: page creation/editing, templates, mobile responsiveness, publish/preview, paid-plan (Builder) features, CRO tools.
 
 **Testing limitations:**
 
+- TBD — reviewer to note any constraints (e.g. dev store limitations, time available) as testing continues.
+
 **Raw observations / experience:**
+
+- Install/onboarding: "installation process is easy so far." Confirmed by screenshots.
+- Immediately after clicking into the app post-install, PageFly shows a **"Before you explore — pick your plan"** screen before any dashboard access — it is not a silent free install.
+  - **Free plan (as shown in-app today):** 1 page or section, 10 AI credits, keeps the editor and all 320+ templates; can upgrade later without losing pages.
+  - **Builder plan (as shown in-app today):** $24/month — 5 pages or sections, 80 AI credits, Smart pages & sections (Flymate AI), 320+ page & section templates, dashboard analytics, AI page checkup, unlimited media & font assets, 24/7 live chat support.
+  - In-app badge on this screen: 4.9/5 on Shopify App Store, 250,000+ active merchants.
+  - **Note:** this contradicts the pre-testing public-research pricing snapshot below (which found legacy Silver/Gold/Platinum naming and conflicting review-count figures). The in-app screenshot evidence above is the verified, current source of truth and should be used in the article; the earlier third-party pricing/rating figures should be treated as outdated/unreliable and are being superseded.
+- After the plan screen, the Dashboard shows a **CRO tools panel**: AI page checkup, A/B testing, Heatmaps (10 pages), Section performance, Cart Drawer (Beta), AEO optimizer (Beta) — labeled "6 of 6 tools active on your plan." (Which plan was active when this screenshot was taken — Free or Builder — still needs to be confirmed; see follow-up question.)
+- Onboarding then offers a "Welcome" path chooser: Create a new page (template or AI-generated), Import my PageFly pages (.pf files from another store), Rebuild pages from my current site, or Skip to the dashboard.
 
 The reviewer may provide notes one-by-one or as a batch. Writing quality is not required here; record what actually happened.
 
@@ -51,7 +66,11 @@ The reviewer may provide notes one-by-one or as a batch. Writing quality is not 
 
 | Evidence | What it proves | Location/link | Publishable? |
 |---|---|---|---|
-| | | | |
+| Screenshot: "Before you explore — pick your plan" screen shown immediately after install, before dashboard access | PageFly gates first entry behind a plan-choice screen (not a silent free install); shows Free vs. Builder plan comparison | Provided by reviewer during review session (2026-09-01) | TBD — confirm with reviewer |
+| Screenshot: "Continue on Free" confirmation modal | Confirms free-plan limits as currently shown in-app: 1 page/section, 10 AI credits, full editor + 320+ templates kept, upgrade path preserves pages | Provided by reviewer during review session (2026-09-01) | TBD — confirm with reviewer |
+| Screenshot: Builder plan detail card ($24/month) | Confirms current entry-level paid plan name/price/limits as shown in-app | Provided by reviewer during review session (2026-09-01) | TBD — confirm with reviewer |
+| Screenshot: Post-onboarding Dashboard with CRO tools panel | Shows CRO tool set (AI page checkup, A/B testing, Heatmaps, Section performance, Cart Drawer (Beta), AEO optimizer (Beta)) and "6 of 6 tools active on your plan" | Provided by reviewer during review session (2026-09-01) | TBD — confirm with reviewer |
+| Screenshot: "Welcome" first-path chooser (Create a new page / Import my PageFly pages / Rebuild pages from my current site / Skip to dashboard) | Shows onboarding path-selection step after plan choice | Provided by reviewer during review session (2026-09-01) | TBD — confirm with reviewer |
 
 ## AI Research & Evidence Organization
 
@@ -65,7 +84,9 @@ The reviewer may provide notes one-by-one or as a batch. Writing quality is not 
 
 ### Baseline
 
-**Note on method:** The AI assistant's direct-fetch tool could not load apps.shopify.com, pagefly.io, or help.pagefly.io in this session (network egress blocked those domains). The figures below come from web-search result summaries of those pages, not a direct read of the live page. They are **discovery-level signals only** and must be re-confirmed by the human reviewer by opening the live App Store listing and pricing page directly.
+**Note on method:** The AI assistant's direct-fetch tool could not load apps.shopify.com, pagefly.io, or help.pagefly.io in this session (network egress blocked those domains). The figures below come from web-search result summaries of those pages, not a direct read of the live page. They are **discovery-level signals only**.
+
+**Update (2026-09-01, post hands-on testing):** The reviewer's own install screenshots (see Raw observations above) show the *current* plan structure is Free vs. Builder ($24/month), with an in-app badge of 4.9/5 and 250,000+ active merchants — this is the verified figure to use. The legacy Silver/Gold/Platinum pricing and the ~150k/~5,600-5,900-review figures found via web search below are outdated/unreliable and should NOT be used in the final article except, if useful, as a dated historical note.
 
 - Core use case: AI-assisted and drag-and-drop page builder for Shopify — home, product, collection, landing, FAQ, About/Contact pages, with an AI page/section generator and a large template library.
 - Target merchant: Shopify merchants (especially DTC/dropshipping and marketing-driven stores) who want custom, high-converting landing/product pages without hiring a developer.
