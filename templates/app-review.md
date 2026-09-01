@@ -1,5 +1,5 @@
 ---
-title: "[App Name] Review"
+title: "[App Name] Review: [Merchant Decision Question]"
 author: "[Human Reviewer]"
 category: "[Category]"
 status: "Draft"
@@ -7,103 +7,89 @@ testing_level: "[Testing Level]"
 last_verified: "[YYYY-MM-DD]"
 ---
 
-# [App Name] Review: [Clear Merchant-Focused Verdict]
+# [App Name] Review: [Merchant Decision Question]
 
-> [2–3 sentence editorial summary: what the app does, what we tested, and the most important conclusion for merchants.]
+[Open directly with the real merchant situation/problem that makes someone consider this app. Explain why the app appears to solve it, then state the specific buying question Blinto tested. Do not publish a heading called “Merchant Problem.”]
+
+[Briefly state how Blinto tested the app and give the most important conclusion.]
 
 ## Our Verdict
 
-[Give the reader the conclusion early. Explain whether the app is worth considering, who will get the most value from it, and the most important trade-off discovered during testing.]
+[Answer the merchant decision early: whether the app solves the problem, who gets the most value, the biggest trade-off, and whether Free/paid/alternative is the sensible choice.]
 
 ## What Is [App Name]?
 
-[Brief reader-facing explanation of the app, its primary use case, and target merchant. Avoid developer marketing language unless clearly attributed.]
+[Brief context only. Explain the app and use case without turning this into a feature catalogue.]
 
 ## What We Tested
 
-[Describe the actual hands-on scope in natural editorial prose. State important limitations where they materially affect the verdict. Do not expose internal evidence-management notes.]
+[Describe a realistic merchant scenario and the actual hands-on scope. The test should be designed to answer the merchant decision question, not merely explore every screen. Clearly disclose material things not tested.]
 
-## Our Hands-On Experience
+## [Primary Merchant Question / Workflow]
 
-[Write the core review narrative from verified human testing. Explain onboarding, setup, primary workflow, usability, output/result, and notable observations. Prioritize what a Shopify merchant needs to know before installing.]
+[Use verified hands-on evidence to answer the central question. Include setup time, friction, output, workflow, and observed limitations only where they help the buying decision.]
 
-![Descriptive alt text explaining what this screenshot shows](/images/reviews/[app-slug]/[descriptive-filename].webp)
+![Descriptive alt text](/images/reviews/[app-slug]/[descriptive-filename].webp)
 
-*Optional short reader-facing caption explaining why the screenshot matters.*
+*Optional reader-facing caption.*
 
-### [Important Workflow / Feature 1]
+## [Where the App Starts to Fall Short / Important Trade-off]
 
-[Hands-on findings. Place the strongest relevant screenshot immediately after the paragraph it supports.]
+[Explain the most consequential limitation discovered in testing and why it matters commercially or operationally to a merchant.]
 
-### [Important Workflow / Feature 2]
+## [Other Important Decision Area]
 
-[Hands-on findings.]
+[Examples: customization, automation, migration, analytics, performance, integrations, support, or workflow. Include only areas material to this app and this merchant problem.]
 
-### [Important Workflow / Feature 3]
+## Pricing and Value
 
-[Hands-on findings.]
-
-## Key Features
-
-[Explain the features that materially affect the buying/install decision. Do not turn this into an exhaustive feature dump. Distinguish tested behavior from developer claims when necessary.]
-
-## Pricing
-
-[Explain current verified pricing, free plan/trial if applicable, meaningful limits, and which plan is likely appropriate for different merchants. Date time-sensitive pricing when useful. Include a current pricing screenshot when it materially improves trust or comprehension.]
+[Do more than reproduce a pricing table. Explain current verified pricing, meaningful plan limits, where Free stops, when upgrading becomes worth it, and the likely real cost for the target merchant. Date pricing where useful.]
 
 ## What We Liked
 
-- **[Strength]:** [Why it matters based on evidence.]
-- **[Strength]:** [Why it matters based on evidence.]
-- **[Strength]:** [Why it matters based on evidence.]
+- **[Strength]:** [Evidence + merchant impact.]
+- **[Strength]:** [Evidence + merchant impact.]
+- **[Strength]:** [Evidence + merchant impact.]
 
 ## What Could Be Better
 
-- **[Limitation]:** [What happened / why it matters / any qualification.]
+- **[Limitation]:** [Evidence + merchant impact + qualification.]
 - **[Limitation]:** [Evidence-based explanation.]
 - **[Limitation]:** [Evidence-based explanation.]
-
-[When a limitation was visually observed, include the screenshot that demonstrates it.]
 
 ## Who [App Name] Is Best For
 
-[Describe the merchant profiles/use cases that fit the evidence.]
+[Describe merchant profiles/use cases for whom the tested value proposition makes sense.]
 
-## Who Should Consider an Alternative
+## Who Should Upgrade or Consider an Alternative
 
-[Describe merchants/use cases for whom the limitations make another solution worth considering. Mention alternatives only when supported and useful.]
+[Explain when the app/plan stops being the best fit. Mention alternatives briefly only when supported and useful; save full head-to-head analysis for separate comparison articles.]
 
 ## Final Verdict
 
-[Concise final recommendation. Synthesize the strongest reason to choose the app, the biggest caveat, and the type of merchant for whom it makes sense. Do not introduce new claims here.]
+[Return to the original merchant problem. Give a clear recommendation, strongest reason to choose the app, biggest caveat, and next action: install/start Free/upgrade/test an alternative. Do not introduce new claims.]
 
 ## Frequently Asked Questions
 
-### Is [App Name] free?
-
-[Verified answer.]
-
-### Is [App Name] easy to use?
-
-[Answer from the actual testing scope.]
-
-### [High-intent merchant question]
-
-[Concise evidence-based answer.]
+[Include only genuinely useful high-intent questions that add information rather than repeat the article.]
 
 ---
 
 *Reviewed by [Human Reviewer] for Blinto. Testing level: [Testing Level]. Last verified: [Date].*
 
 <!--
+BLINTO EDITORIAL PRINCIPLE
+The app is the subject; the merchant problem is the evaluation lens.
+Merchant problem → app promise → realistic test → evidence → business/operational impact → cost/value → fit → recommendation.
+Technical findings are evidence, not the story.
+Never claim outcomes (conversion lift, revenue impact, reliability, support quality, etc.) that the test did not establish.
+
 PUBLICATION IMAGE CONTRACT
-- Final reviews should include selected real screenshots when hands-on screenshots exist.
+- Include selected real screenshots when they materially support a finding.
 - Store publishable images under public/images/reviews/[app-slug]/.
-- Use descriptive lowercase filenames, preferably WebP for screenshots where practical.
-- Use only screenshots that add reader value; do not dump the full evidence archive into the article.
+- Use descriptive lowercase filenames, preferably WebP where practical.
 - Place each image beside the claim/workflow/finding it supports.
-- Every image needs meaningful alt text. Captions are optional and should explain reader value, not internal evidence handling.
-- Crop/redact sensitive store, customer, account, email, token, or private data before publication.
-- Internal/raw screenshots may remain in research/evidence storage and do not all need to be published.
-- A review with useful publishable screenshots available is not publication-complete until the selected images are included and render correctly in the Content Preview.
+- Every image needs meaningful alt text.
+- Crop/redact sensitive data before publication.
+- A review with useful publishable screenshots available is not publication-complete until selected images render correctly in Content Preview.
 -->
