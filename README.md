@@ -1,70 +1,83 @@
 # Blinto Shopify App Reviews
 
-Blinto's operating system for researching, writing, reviewing, approving, publishing, and maintaining Shopify app reviews.
+Blinto's operating system for evidence-based Shopify app reviews.
 
 ## Start Here
 
-Every review has **one author** who owns the complete review from research through draft. Authors build expertise by owning a Shopify app category and writing multiple reviews within that category.
+Every review has one primary human reviewer. The reviewer owns testing, evidence, judgment, and factual approval. The AI assistant may research, interview, organize evidence, and write the complete article, but it must never invent experience or evidence.
 
 ### Core workflow
 
-**Assign → Research & Test → Brief → Write → Self-check → Technical Writing Review → SEO Review → Approve → Private Preview → Publish → Monitor**
+**Backlog → Research & Write → Human Fact-check → Content Preview → SEO Check → Ready to Publish → Published**
 
-Use [`docs/review-process.md`](docs/review-process.md) for the practical day-to-day workflow.
+The production model is:
 
-Use [`templates/app-review.md`](templates/app-review.md) when an app is assigned and a new review begins.
+**Internal research/evidence → editorial synthesis → publish-ready review.**
+
+Use [`docs/review-process.md`](docs/review-process.md) for the execution workflow and [`docs/publication-output-contract.md`](docs/publication-output-contract.md) for the publication standard.
+
+Use:
+
+- [`templates/review-research.md`](templates/review-research.md) for internal research, screenshots, testing notes, source validation, discrepancies, and unresolved questions.
+- [`templates/app-review.md`](templates/app-review.md) for the final public-facing article.
+
+## Publication Rule
+
+Files under `reviews/` are publication outputs, not research notebooks.
+
+A finished review must read exactly like the article Blinto intends to publish on its website/blog. It must not expose TODOs, AI instructions, evidence-management notes, reviewer prompts, internal workflow commentary, unresolved research questions, or raw source logs.
+
+Research supports the article; research is not the article.
+
+A review is not complete if an editor cannot copy it into the CMS and publish it with only minor proofreading or formatting changes.
 
 ## Source of Truth
 
-The original project strategy and SOPs written for this initiative are preserved under `source-sops/`. They are the canonical detailed requirements and must not be silently simplified, removed, or overwritten.
+The detailed project strategy and SOPs are preserved under `source-sops/`. The execution layer in `docs/`, `templates/`, `research/`, and `reviews/` translates those requirements into the day-to-day system.
 
-The execution guides, templates, checklists, assistant instructions, and website will translate those requirements into an easier day-to-day system. If an execution document conflicts with a source SOP, the source SOP must be reviewed and the conflict resolved explicitly.
+Grounding hierarchy:
+
+1. `AGENTS.md`
+2. `source-sops/`
+3. `docs/`
+4. `templates/`
+5. `research/`
+6. `reviews/`
+
+Do not silently change source SOPs when improving the execution layer.
 
 ## Operating Principles
 
-1. One review = one primary author.
-2. The author owns research, hands-on testing, evidence, analysis, and the initial draft.
-3. AI may assist research organization, writing, editing, and QA, but must never invent testing, evidence, facts, merchant feedback, quotations, scores, or citations.
-4. Missing evidence must be surfaced, never hidden by better writing.
-5. Technical Writing Review and SEO Review are quality gates after the author's self-check.
-6. Every published article includes its author's name and bio.
-7. Reviews are first rendered on Blinto's private Astro review workspace.
-8. Only approved reviews move to the publishing CMS/public website workflow.
-9. Publication is not completion: reviews continue into performance monitoring and maintenance.
-10. Category ownership is used to compound each author's Shopify app expertise.
+1. One review = one primary human reviewer.
+2. Human reviewer owns real testing, screenshots/evidence, raw observations, product judgment, and final factual approval.
+3. AI assistant owns research support, interviewing, evidence organization, article writing, editing, and QA.
+4. AI may write 100% of the prose; AI may invent 0% of the experience or evidence.
+5. Internal research and final editorial content must remain separate.
+6. Pricing and other time-sensitive facts must be verified and dated.
+7. Developer claims, Blinto observations, and merchant feedback must not be conflated.
+8. Reviews are rendered first on the private Astro Review Hub for fact-checking and SEO review.
+9. No Content Preview URL = no SEO Check handoff.
+10. Publication is followed by monitoring and maintenance.
 
 ## Systems
 
-- **GitHub:** content, evidence, source SOPs, templates, assistant rules, version history.
-- **ClickUp:** assignment, owner, due date, operational status, and management dashboard.
-- **Private Astro workspace:** human-friendly strategy/SOP wiki, review workspace, status visibility, and publication preview.
-- **WordPress CMS (later):** public blog CMS feeding the live Astro website through API.
+- **GitHub:** research, evidence, final review content, SOPs, templates, assistant rules, and version history.
+- **ClickUp:** assignment, assignee, due date, status, blockers, and required links.
+- **Review Hub:** private human-friendly review preview at `https://reviews.blinto.co`.
+- **WordPress CMS (future):** public publishing backend.
+- **Public Blinto Astro website:** presentation layer for approved CMS content.
 
-## Initial Rollout
+## Review File Structure
 
-Start with **five reviews total: one review from each of the five writers**. Run all five through the complete workflow, identify weaknesses, improve the system, and only then expand the category review pipeline.
+For each app, use two separate files when research material needs to be preserved:
 
-Category research and assignments are intentionally **TBD** until the category research is completed.
+- `research/[app-slug].md` — internal only.
+- `reviews/[app-slug].md` — final publication-ready article only.
 
-## Repository Build Plan
+Example: PageFly uses `research/pagefly.md` for Imran's evidence and `reviews/pagefly.md` for the clean article rendered on the Review Hub.
 
-1. Preserve all original source SOPs.
-2. Create the strategy and operating model.
-3. Define category ownership and planning.
-4. Define the review lifecycle and status model.
-5. Create the canonical review schema.
-6. Create research/testing instructions and checklist.
-7. Create brief instructions and template.
-8. Create writing instructions and article template.
-9. Create author self-review checklist.
-10. Create Technical Writing Assistant instructions.
-11. Create technical/human editorial review checklist.
-12. Create SEO review checklist.
-13. Create final approval/publishing checklist.
-14. Define ClickUp task structure and dashboard requirements.
-15. Build the private Astro workspace.
-16. Create the first five review records.
-17. Run the five-review pilot.
-18. Improve the system from pilot findings.
-19. Expand toward five reviews per category.
-20. Add the WordPress CMS publishing integration later.
+## Pilot
+
+The first operational pilot is five single-app reviews. Use those five to improve the workflow while preserving evidence quality and publishing velocity.
+
+The broader source-SOP validation remains 10 pieces: 3 category/bulk reviews, 5 single-app reviews, and 2 comparisons.
