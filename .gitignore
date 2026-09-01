@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Astro build output and cache
+dist/
+.astro/
+
+# Environment
+.env
+.env.production
+
+# OS / editor cruft
+.DS_Store
