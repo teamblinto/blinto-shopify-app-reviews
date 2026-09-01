@@ -3,7 +3,7 @@ title: "PageFly Review"
 author: "Imran"
 category: "Page Builders"
 status: "Research & Write"
-testing_level: "Not set"
+testing_level: "Level 1 — Full Hands-On Test"
 ---
 
 # PageFly Review
@@ -31,7 +31,7 @@ testing_level: "Not set"
 
 ### Testing level
 
-- [ ] Level 1 — Full Hands-On Test
+- [x] Level 1 — Full Hands-On Test
 - [ ] Level 2 — Partial Hands-On Test
 - [ ] Level 3 — Demo and Documentation Review
 - [ ] Level 4 — Research-Only Evaluation
