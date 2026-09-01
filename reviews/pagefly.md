@@ -59,6 +59,13 @@ testing_level: "Level 1 — Full Hands-On Test"
   - **Note:** this contradicts the pre-testing public-research pricing snapshot below (which found legacy Silver/Gold/Platinum naming and conflicting review-count figures). The in-app screenshot evidence above is the verified, current source of truth and should be used in the article; the earlier third-party pricing/rating figures should be treated as outdated/unreliable and are being superseded.
 - After the plan screen, the Dashboard shows a **CRO tools panel**: AI page checkup, A/B testing, Heatmaps (10 pages), Section performance, Cart Drawer (Beta), AEO optimizer (Beta) — labeled "6 of 6 tools active on your plan." (Which plan was active when this screenshot was taken — Free or Builder — still needs to be confirmed; see follow-up question.)
 - Onboarding then offers a "Welcome" path chooser: Create a new page (template or AI-generated), Import my PageFly pages (.pf files from another store), Rebuild pages from my current site, or Skip to the dashboard.
+- Reviewer proceeded on **Free** (confirmed via follow-up). The CRO tools panel ("6 of 6 tools active on your plan") shown on the dashboard appeared while on the Free plan — worth noting since some third-party sources claimed CRO tools are paid-plan-only; this may be a time-limited trial/preview rather than a permanent Free-plan entitlement, which the reviewer should verify by checking access again after using up AI credits or after some time has passed, if practical.
+- Full current pricing (confirmed via screenshot, 2026-09-01), 4 plans, billed in USD, recurring/usage charges every 30 days:
+  - **Free — $0/month:** 1 slot = 1 page or 1 section; 10 AI credits; 320+ page and section templates; 200+ third-party app integrations; 24/7 live chat support.
+  - **Builder — $24/month:** from 5 published slots (+$5 per 5 extra pages/sections, ~$1/slot, optional, billed monthly on Builder & Optimize); 80 AI credits; A/B testing; AI translation; CRO dashboard analytics.
+  - **Accelerate — $99/month:** unlimited published pages and sections; 320 AI credits; everything in Builder, plus Heatmaps, AI page checkup, AEO optimizer, Sales funnel.
+  - **Enterprise — $299/month:** 1,600 credits/month for 1 store; Tech Lead ASAP queue; priority support (front of queue); PageFly Page Health Monitor; Founder's Office Hours (1× 45-min async).
+- **This supersedes both the earlier third-party research snapshot and the legacy Silver/Gold/Platinum naming — use only the plan names/prices/features above in the article.**
 
 The reviewer may provide notes one-by-one or as a batch. Writing quality is not required here; record what actually happened.
 
@@ -71,6 +78,7 @@ The reviewer may provide notes one-by-one or as a batch. Writing quality is not 
 | Screenshot: Builder plan detail card ($24/month) | Confirms current entry-level paid plan name/price/limits as shown in-app | Provided by reviewer during review session (2026-09-01) | TBD — confirm with reviewer |
 | Screenshot: Post-onboarding Dashboard with CRO tools panel | Shows CRO tool set (AI page checkup, A/B testing, Heatmaps, Section performance, Cart Drawer (Beta), AEO optimizer (Beta)) and "6 of 6 tools active on your plan" | Provided by reviewer during review session (2026-09-01) | TBD — confirm with reviewer |
 | Screenshot: "Welcome" first-path chooser (Create a new page / Import my PageFly pages / Rebuild pages from my current site / Skip to dashboard) | Shows onboarding path-selection step after plan choice | Provided by reviewer during review session (2026-09-01) | TBD — confirm with reviewer |
+| Screenshot: Full 4-plan pricing comparison (Free / Builder / Accelerate / Enterprise) | Confirms complete current pricing structure, prices, and feature breakdown | Provided by reviewer during review session (2026-09-01) | TBD — confirm with reviewer |
 
 ## AI Research & Evidence Organization
 
@@ -93,9 +101,9 @@ The reviewer may provide notes one-by-one or as a batch. Writing quality is not 
 - Current App Store rating: ~4.9 out of 5 (per search-indexed listing summaries) — **reviewer to confirm exact figure on the live listing.**
 - Review count: figures found ranged ~5,656–~5,900+ across different indexed snapshots — **reviewer to confirm exact current count on the live listing.**
 - Rating/review count checked on: 2026-09-01, via web search only (not a direct page load) — needs live re-check.
-- Pricing model: PageFly has changed its pricing model. Older/legacy structure (still referenced by some third-party sites) was Free / Silver ($19/mo) / Gold ($39/mo) / Platinum ($99/mo), tiered by page-type quotas. More recent sources describe a newer 5-plan structure priced by published page/section "slots" and monthly AI credits, with all plans getting all features/templates. **The exact current plan names, prices, and limits could not be verified by direct page load and must be confirmed by the human reviewer on the live pricing page before the article states any numbers.**
-- Free plan: Yes — a free-forever plan exists (reported as 1 page of each page type, full feature/template access, no time limit) — reviewer to confirm current limits.
-- Trial: Not independently confirmed beyond the free plan; reviewer to confirm whether paid plans offer a separate trial.
+- Pricing model: **VERIFIED via reviewer screenshot (2026-09-01):** 4-tier, slot/credit-based — Free ($0), Builder ($24/mo), Accelerate ($99/mo), Enterprise ($299/mo). See Raw observations above for full breakdown. Supersedes all earlier third-party research on this point.
+- Free plan: Yes — confirmed: 1 slot (page or section), 10 AI credits, 320+ templates, 200+ third-party app integrations, 24/7 live chat.
+- Trial: No separate "trial" was surfaced during onboarding beyond the Free plan itself; not yet confirmed whether paid plans offer a time-limited trial of higher tiers.
 - Main integrations: Not yet verified from a primary source in this session — to be confirmed during hands-on testing/App Store listing review (e.g. Shopify theme compatibility, third-party apps/pixels commonly cited: reviews, upsell, email tools).
 - Important requirements/restrictions: Page-builder apps typically require embedding via theme app blocks/sections and can affect page load speed depending on page complexity — flagged for hands-on verification, see Merchant Feedback Patterns below.
 
@@ -103,9 +111,10 @@ The reviewer may provide notes one-by-one or as a batch. Writing quality is not 
 
 | Claim | Source | Verified? | Notes |
 |---|---|---|---|
-| AI page/section generator with 320+ (or 130+, per another listing snapshot) templates | Search-indexed Shopify App Store listing copy | Not verified | Conflicting template counts across snapshots — reviewer to confirm exact current claim on live listing |
+| AI page/section generator with 320+ templates | In-app plan screens (reviewer screenshot, 2026-09-01) | **Verified in-app** | Confirms 320+ figure; still not confirmed against the live Shopify App Store listing copy itself |
 | "Meets Shopify's highest standards for performance, design, and integration" (implies Built for Shopify) | Search-indexed Shopify App Store listing copy | Not verified | Reviewer to confirm Built for Shopify badge status on live listing |
-| Free-forever plan available | Developer pricing page (via search summary) | Not verified | Reviewer to confirm current free-plan limits directly |
+| Free plan: 1 page/section, 10 AI credits, full template library | In-app pricing screen (reviewer screenshot, 2026-09-01) | **Verified in-app** | Matches reviewer's actual onboarding experience |
+| 4.9/5 rating, 250,000+ active merchants | In-app plan screen (reviewer screenshot, 2026-09-01) | **Verified in-app** (as displayed by PageFly itself) | This is PageFly's own in-app claim, not an independent Shopify App Store page read — still worth a spot-check against the live App Store listing since it's a marketing claim inside the app, not the App Store's own number |
 
 ### Merchant Feedback Patterns
 
