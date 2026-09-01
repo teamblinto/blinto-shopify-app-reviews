@@ -168,41 +168,103 @@ The AI assistant should ask these sequentially as needed rather than guessing.
 ## Evaluation
 
 ### Strengths
-1.
-2.
-3.
+1. Drag-and-drop editor is genuinely easy to use for a non-technical builder — reviewer built a full page in ~30–40 minutes (with planning) using a pre-built template, and described the editor itself as "very easy to use."
+2. Large, filterable template library (128 of 129 templates visible in this test) with real usage counts shown per template, which speeds up getting to a finished page versus building from a blank canvas.
+3. CRO tooling (Analytics, AI page checkup, Heatmaps, Section performance, A/B testing, Cart Drawer, AEO optimizer) is bundled into the same dashboard rather than requiring separate apps, and several of these were confirmed working with live data even on the Free plan during this test.
 
 ### Limitations
-1.
-2.
-3.
+1. AI page generation is credit-limited on the Free plan (10 AI credits) — the reviewer ran out mid-generation and had to fall back to a template, so merchants relying on AI-first page creation should expect to hit this limit quickly on Free.
+2. Publishing a PageFly page as the store's **Home** page inserts it as a new section into the existing theme homepage rather than replacing the whole page — in this test, the store's original theme header/hero remained while the rest of the page became PageFly content, producing a visually inconsistent ("broken-looking") result. Whether PageFly offers a documented way to avoid this was not verified in this test.
+3. Feature-gating between the pricing page and the actual app was inconsistent in this test: the pricing page lists A/B testing as a Builder-plan ($24/month) feature, but the reviewer could access and use A/B testing while still on the Free plan.
 
 ### Best Fit
 
+Non-technical merchants who need to build individual landing or promotional pages quickly — using PageFly's templates and drag-and-drop editor — without hiring a developer.
+
 ### Poor Fit
+
+Merchants expecting PageFly to produce a fully cohesive, ready-to-publish homepage redesign out of the box: in this test, publishing a PageFly page as the store's Home page left the original theme's header and hero in place alongside new PageFly content, so extra manual work (or theme-editor changes) may be needed to make a full homepage visually consistent.
 
 ### Alternatives to Consider
 
+Other Shopify page builders in the same category worth comparing include GemPages, EComposer, and Shogun. Blinto has not hands-on tested these apps as part of this review; they are named here only as known category alternatives for merchants doing their own comparison shopping, not as a ranked or evaluated recommendation.
+
 ### Claims We Must Not Make
 
--
+- Do not state an exact current Shopify App Store rating or review count as verified fact — the human reviewer confirmed an in-app claim of "4.9/5, 250,000+ active merchants" shown by PageFly itself, but this was not independently cross-checked against the live Shopify App Store listing page.
+- Do not claim or deny "Built for Shopify" badge status — not verified in this test.
+- Do not claim PageFly has no way to avoid the Home-page header/hero mismatch — only that it happened in this test and a workaround was not found/verified.
+- Do not characterize PageFly's live-chat support quality — not tested in this review.
+- Do not state why the A/B testing plan-gating discrepancy occurred (e.g., promo, bug, documentation lag) — only that it was observed.
+- Do not present GemPages/EComposer/Shogun comparisons as tested or evaluated by Blinto — they are named alternatives only.
 
 ## SEO & Content Direction
 
-- **Target merchant:**
-- **Merchant problem:**
-- **Primary search intent:**
-- **Primary keyword/topic:**
-- **Secondary topics/questions:**
-- **SERP/content gaps:**
-- **Blinto differentiated angle:**
-- **Internal links:**
-- **CTA direction:**
-- **Required disclosures:**
+- **Target merchant:** Non-technical Shopify merchants (especially DTC/campaign-driven stores) evaluating a no-code page builder for landing/promo/product pages.
+- **Merchant problem:** Wanting custom, high-converting pages without hiring a developer, and wanting to know PageFly's real pricing, limitations, and CRO feature set before installing.
+- **Primary search intent:** Commercial investigation ("is PageFly worth it," "PageFly review," "PageFly pricing") — merchants comparing before installing.
+- **Primary keyword/topic:** PageFly review (Shopify page builder).
+- **Secondary topics/questions:** PageFly pricing plans; PageFly vs. GemPages/Shogun/EComposer; is PageFly good for a Shopify homepage; PageFly free plan limits; PageFly AI credits.
+- **SERP/content gaps:** Third-party roundups found during research cite outdated/legacy pricing (Silver/Gold/Platinum) — this review's verified, current 4-tier pricing (Free/Builder/Accelerate/Enterprise) and the hands-on home-page section-insertion finding are more current and specific than most existing content.
+- **Blinto differentiated angle:** Actual hands-on build-and-publish walkthrough with a concrete, reproducible finding (home-page header/hero mismatch) and a verified pricing/feature-gating discrepancy that generic listicle reviews don't surface.
+- **Internal links:** Link to other Page Builder category reviews as they're published (GemPages, EComposer, Shogun, Replo per Blinto's category shortlist) once available.
+- **CTA direction:** TBD — align with Blinto's standard review CTA once defined by Shemanto/SEO Check.
+- **Required disclosures:** Testing level (Full Hands-On, Free plan, single Home-type page, no support test); pricing verified 2026-09-01 and subject to change; App Store rating/review count sourced from PageFly's own in-app claim, not independently verified against the live App Store listing.
 
 ## AI-Written Review
 
-The AI assistant writes the complete polished merchant-focused article here using verified public research plus the human reviewer's supplied testing/evidence.
+*Evaluation level: Full Hands-On Test. Testing covered installation and onboarding, the Free plan's pricing/limits, building and publishing one Home-type page from a template, and the CRO Center's core tools. It did not cover Builder/Accelerate/Enterprise-plan-only features, live-chat support, or non-Home page types. Pricing and feature details below were verified directly in the PageFly app on a Shopify dev store on September 1, 2026, and should be re-checked before relying on them, since app pricing can change.*
+
+PageFly is an AI-assisted, drag-and-drop page builder for Shopify, aimed at merchants who want custom landing, product, or home pages without writing code or hiring a developer. Blinto tested it hands-on to see how it actually holds up from install through publishing a real page.
+
+### Getting started
+
+Installing PageFly is straightforward, but it doesn't drop you straight into a blank editor. The very first screen after install is a plan-comparison page — "Before you explore — pick your plan" — showing the Free plan against PageFly's paid Builder tier before you can reach the dashboard. Choosing "Continue on Free" keeps the editor and PageFly's full template library, with the option to upgrade later without losing any pages already built.
+
+Once past the plan screen, onboarding offers a simple choice: create a new page (from a template or with AI), import existing PageFly pages from another store, rebuild pages built elsewhere, or skip straight to the dashboard. It's a clear, low-friction start for a first-time user.
+
+### Pricing, as it actually works today
+
+PageFly's current pricing (verified directly in-app, September 1, 2026) is a four-tier structure, billed in USD, with usage-based charges billed every 30 days:
+
+- **Free — $0/month:** 1 published slot (a page or a section), 10 AI credits, access to PageFly's full library of 320+ page and section templates, 200+ third-party app integrations, and 24/7 live chat support.
+- **Builder — $24/month:** starts at 5 published slots (extra slots available at roughly $1 each, billed monthly), 80 AI credits, A/B testing, AI translation, and CRO dashboard analytics.
+- **Accelerate — $99/month:** unlimited published pages and sections, 320 AI credits, plus everything in Builder along with heatmaps, AI page checkup, AEO optimizer, and a sales funnel view.
+- **Enterprise — $299/month:** 1,600 AI credits/month for one store, a priority "Tech Lead ASAP" support queue, a PageFly Page Health Monitor, and monthly async office hours with PageFly's founder.
+
+This is worth calling out because several third-party roundups still describe PageFly's older Silver/Gold/Platinum pricing (Free/$19/$39/$99) — that structure is outdated. The current plan names, prices, and limits above are what merchants will actually see today.
+
+One inconsistency worth flagging: PageFly's pricing page lists A/B testing as a Builder-plan-only feature, but in this test A/B testing was accessible and usable while still on the Free plan. Merchants evaluating PageFly for A/B testing specifically should verify current access themselves rather than relying on the pricing page alone.
+
+### Building and publishing a real page
+
+For the core test, Blinto tried PageFly's AI page generator first, but ran out of the Free plan's 10 AI credits partway through and switched to a pre-built template ("Juicy – New Year," listed as used on over 3,500 pages) instead. That credit ceiling is worth knowing upfront: merchants planning to lean on AI generation should expect to burn through the Free plan's allowance quickly, likely within a single page.
+
+From there, the editor itself was easy to work with. Pages are built from stacked "Flex sections," edited via a straightforward drag-and-drop canvas, with a large elements panel covering both PageFly's own building blocks (headings, buttons, images, video, icons, etc.) and native Shopify elements. A separate panel for third-party integrations (e.g., app blocks from other Shopify apps) requires enabling those integrations first. Building the full page, including checking it across PageFly's built-in mobile/tablet/desktop preview toggle, took roughly 30–40 minutes with some planning done in advance.
+
+Publishing surfaced the most important finding of this test. The page was set up as the store's **Home** page type — and PageFly's own settings panel notes that a PageFly Home page is added to the existing theme's homepage as a new section, with only one PageFly home page publishable at a time; the theme's header and footer stay under the Shopify theme editor's control, not PageFly's. In practice, that meant the store's original theme header and hero section remained in place while the rest of the homepage became PageFly content — and the result looked visually disjointed, like two different sites stitched together. Merchants planning a full homepage overhaul with PageFly should expect to need extra work in the Shopify theme editor to make the header/hero match the new PageFly content; Blinto did not verify whether PageFly offers a built-in way to avoid this.
+
+### CRO and optimization tools
+
+Beyond the page editor, PageFly bundles a CRO Center with several tools, and multiple of them were usable directly on the Free plan in this test:
+
+- **Analytics** showed a live, working dashboard — pageviews, sessions, visitors, engaged session rate, orders, traffic sources, top countries, visitor type, and device breakdown — populated with real (if low-volume) dev-store traffic.
+- **AI page checkup** returned an overall page/site health score out of 100.
+- **Heatmaps** surfaced visitor-type, traffic-source, and device breakdowns.
+- **Section performance** showed real per-section data in this test.
+- **A/B testing** was usable on the Free plan, despite the pricing page listing it as a Builder feature (see the pricing note above).
+- **Cart Drawer** is a slide-out cart tool offering discount prompts and product recommendations at checkout.
+- **AEO optimizer** is positioned around AI/answer-engine visibility — PageFly describes it as applying one-click fixes so AI assistants like ChatGPT, Google AI, and Copilot can read, cite, and recommend a store's products; PageFly's own interface notes this currently works on product pages only.
+
+Blinto did not test PageFly's live-chat support during this review, so no judgment is offered on support quality or response time.
+
+### Who PageFly fits
+
+Based on this test, PageFly is a strong fit for **non-technical merchants building individual landing or promotional pages** — the editor is genuinely approachable, the template library is large and current, and the bundled CRO tools mean a merchant doesn't need to bolt on separate analytics or A/B-testing apps for basic use cases.
+
+It's a weaker fit for merchants expecting PageFly to hand them a fully cohesive homepage redesign straight out of the box. As tested, publishing a PageFly page as the store's Home page left the original theme header and hero untouched next to new PageFly content, which required additional manual reconciliation to avoid a mismatched look.
+
+*Alternatives worth comparing (not independently tested by Blinto in this review): GemPages, EComposer, and Shogun.*
 
 ## Human Fact-check Before SEO Handoff
 
