@@ -80,6 +80,21 @@ testing_level: "Level 1 — Full Hands-On Test"
 - **Publish result — key finding:** Reviewer published the PageFly page as their store's **Home** page, and found the site "look kind of a broken website" because the **navigation bar and hero section still came from the store's previous/original theme design**, while the rest of the page was PageFly content. This lines up with the in-app note above: a PageFly "Home" page is inserted as a new section into the existing theme homepage rather than replacing the whole page — so if the new PageFly content doesn't visually match the existing theme header/hero, the page can look visually inconsistent/disjointed. **This is a real, reproducible design-continuity gap worth flagging clearly in the review**, not a one-off user error. **Open question (not yet resolved):** the reviewer did not verify whether PageFly offers any setting/workaround to have a Home page also control the theme's header/hero for full-page consistency — the article should describe this as an observed limitation on a default Home-page publish, without claiming there is no possible workaround.
 - **Time to build:** ~30–40 minutes for the full page, assuming planning was done beforehand.
 
+### Secondary features: CRO Center tools (2026-09-01)
+
+- **Analytics (Pages/Sales funnel/A-B tests tabs):** Reviewer's screenshot shows a working analytics dashboard — Pageviews, Sessions, Visitors, Engaged session rate, Orders, Traffic sources, Top countries, Visitor type, Devices, and a per-page table (Home page shown with "Tracking" status, Heatmap toggle, session count). A "Sales tracking" toggle and "Heatmap tracking" counter (0/0) appear in a side panel, alongside a "Biggest movers" revenue widget ("Not enough activity to rank yet" — needs real traffic). This confirms PageFly Analytics is live/functional on a real (if low-traffic) dev store, not just a locked upsell screen.
+- **AI page checkup:** Reviewer ran it — reports overall site/page health as a score out of 100.
+- **A/B testing:** Reviewer reports it was accessible/usable on the Free plan. **Note — this conflicts with the verified pricing screenshot**, which listed "A/B Testing" as a Builder-plan ($24/mo) feature, not included in Free. This discrepancy needs to be resolved before publishing (see Missing Evidence below) — it may mean A/B testing is viewable/configurable but not fully usable without upgrading, or the feature gating differs from the pricing page's stated breakdown.
+- **Heatmaps:** Shows visitor-type breakdown, traffic-source breakdown, and most-used device — i.e., aggregate visitor/session analytics presented as part of the heatmap/analytics view, per reviewer's description.
+- **Section performance:** Not yet described in detail by reviewer — needs a follow-up.
+- **Cart Drawer:** A slide-out cart upsell tool — shows discount options and product recommendations at checkout/cart stage.
+- **AEO optimizer:** Per reviewer, it's positioned as helping products get recommended by AI assistants/answer engines (ChatGPT, Google AI, Copilot) via "one-click fixes" so AI systems can read, cite, and recommend the store. Matches the in-app note seen earlier that AEO "currently only works on product pages."
+
+### Missing Evidence / Questions — CRO tools follow-up
+
+- Resolve the A/B testing plan-gating discrepancy (reviewer says usable on Free; pricing screenshot lists it under Builder). Was reviewer actually still on Free, or had the store moved to a trial/paid state by this point?
+- Section performance: what did the reviewer actually see when opening it (real data, empty state, or an upgrade prompt)?
+
 The reviewer may provide notes one-by-one or as a batch. Writing quality is not required here; record what actually happened.
 
 ## Evidence / Screenshots
