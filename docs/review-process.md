@@ -51,6 +51,15 @@ Use real-world/live validation only when a conclusion genuinely depends on traff
 
 Never claim beyond the testing level. If a workflow was only inspected rather than completed, say so or avoid the claim.
 
+During testing, collect a normal set of **3–4 publication screenshots** rather than an undirected image dump:
+
+1. App homepage, dashboard, or clearest overview for “What [App] Offers.”
+2. The core tested workflow or result that answers the merchant decision question.
+3. The exact issue, limitation, friction, or plan boundary discovered during testing.
+4. The current in-app or official pricing screen when pricing is discussed.
+
+Ask for each screenshot at the relevant testing moment. Three are enough when one image genuinely covers two content moments; never add filler just to reach four.
+
 ### Human reviewer owns
 
 - Real app access and hands-on testing.
@@ -84,6 +93,8 @@ The final review should normally follow this editorial logic:
 Do not publish a heading called “Merchant Problem.” Establish it naturally in the introduction.
 
 Technical findings are evidence. They should earn space because they change or support the merchant's decision.
+
+Place each selected screenshot directly after the explanation it supports. Do not group screenshots into a gallery or leave them detached from the relevant finding.
 
 Alternatives may be mentioned briefly when useful, but a single-app review should not be forced into a comparison article.
 

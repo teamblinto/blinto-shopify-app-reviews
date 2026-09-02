@@ -72,7 +72,7 @@ Every review task must contain these entry points:
 
 - [ ] Started review with AI assistant + repository context
 - [ ] App testing completed + experience shared
-- [ ] Required screenshots/evidence/information provided
+- [ ] Normally 3–4 purposeful screenshots provided: app overview, core workflow/result, important issue/limitation, and pricing when discussed
 - [ ] AI-generated review fact-checked by human reviewer
 - [ ] Review committed/pushed and Content Preview URL added
 - [ ] Submitted for SEO Check

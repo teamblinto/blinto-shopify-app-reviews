@@ -34,6 +34,17 @@
 
 ## Evidence / Screenshots
 
+### Publication screenshot plan (normally 3–4)
+
+| Content moment | Exact screenshot needed | Requested? | Received? | Publication-safe? |
+|---|---|---:|---:|---:|
+| What the app offers — homepage/dashboard/overview | | | | |
+| Core tested workflow or result | | | | |
+| Important issue or limitation | | | | |
+| Pricing and plan boundaries, when discussed | | | | |
+
+Three screenshots are sufficient when one image clearly supports two adjacent moments. Do not use filler images. Ask the reviewer for each exact screen when it becomes relevant during testing.
+
 | Evidence | What it proves | Location/link | Publishable? |
 |---|---|---|---|
 | | | | |

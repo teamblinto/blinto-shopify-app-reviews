@@ -21,6 +21,10 @@ thumbnail_alt: "[Describe what the thumbnail visually shows; do not repeat the t
 
 [Briefly explain what the app offers and which merchant needs it addresses without turning this into a feature catalogue.]
 
+[Ask the reviewer for a screenshot of the app homepage, main dashboard, or clearest overview screen. Place it here once supplied and publication-safe.]
+
+![The main App Name dashboard showing its core tools](/images/reviews/[app-slug]/[app-overview-filename].webp)
+
 ## What We Tested
 
 [Describe a realistic merchant scenario and the actual hands-on scope. The test should be designed to answer the merchant decision question, not merely explore every screen. Clearly disclose material things not tested.]
@@ -39,6 +43,10 @@ thumbnail_alt: "[Describe what the thumbnail visually shows; do not repeat the t
 
 [Explain the most consequential limitation discovered in testing and why it matters commercially or operationally to a merchant.]
 
+[Ask the reviewer for the exact screenshot showing this issue, limitation, friction, mismatch, or plan boundary. Place it directly after the explanation of what the reader should notice.]
+
+![The tested App Name screen showing the observed limitation](/images/reviews/[app-slug]/[important-limitation-filename].webp)
+
 ## [Other Important Decision Area]
 
 [Examples: customization, automation, migration, analytics, performance, integrations, support, or workflow. Include only areas material to this app and this merchant problem.]
@@ -46,6 +54,10 @@ thumbnail_alt: "[Describe what the thumbnail visually shows; do not repeat the t
 ## Pricing and Value
 
 [Do more than reproduce a pricing table. Explain current verified pricing, meaningful plan limits, where Free stops, when upgrading becomes worth it, and the likely real cost for the target merchant. Date pricing where useful.]
+
+[When pricing is discussed, ask for the current in-app pricing screen or capture the verified official pricing page. Place it beside the pricing interpretation, not as a detached gallery image.]
+
+![Current App Name pricing and plan limits](/images/reviews/[app-slug]/[pricing-plans-filename].webp)
 
 ## What We Liked
 
@@ -90,8 +102,10 @@ PUBLICATION IMAGE CONTRACT
 - Follow `docs/image-style-guide.md` exactly for the one hero/thumbnail concept and generation prompt.
 - Every review requires one text-free editorial thumbnail, referenced in frontmatter with `thumbnail` and `thumbnail_alt`.
 - The thumbnail must contain no title, words, letters, numbers, watermarks, captions, or other readable text. Include the recognizable blurred pastel sky emblem derived from verified brand colors as required by `docs/image-style-guide.md`.
-- Include selected real screenshots when they materially support a finding.
-- Ask the human reviewer for the specific screenshot at the point where it is needed to support a workflow, feature, output, price, or limitation.
+- Level 1 and Level 2 reviews should normally include 3–4 purposeful real screenshots: app overview/homepage, core workflow or result, important issue or limitation, and pricing when discussed.
+- Three screenshots are sufficient when one image clearly covers two content moments; never add filler merely to reach four.
+- Ask the human reviewer for each specific screenshot at the point where it is needed, then place it immediately after the claim or explanation it supports.
+- Do not group screenshots into a gallery or append them all at the end.
 - Store publishable images under public/images/reviews/[app-slug]/.
 - Use descriptive lowercase filenames, preferably WebP where practical.
 - Place each image beside the claim/workflow/finding it supports.

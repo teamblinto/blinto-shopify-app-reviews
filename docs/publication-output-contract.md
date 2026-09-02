@@ -74,7 +74,7 @@ It should normally contain:
 - concise “What [App] Offers” context
 - transparent testing scope and realistic merchant scenario
 - hands-on evidence answering the primary merchant question
-- selected screenshots that demonstrate important findings
+- normally 3–4 selected screenshots that demonstrate what the app offers, the tested workflow/result, the most important issue or limitation, and pricing where discussed
 - consequential strengths, limitations and trade-offs
 - pricing interpreted as cost/value, not merely copied into a table
 - best-fit / poor-fit guidance
@@ -87,7 +87,20 @@ The structure should adapt to the app and search intent. Do not manufacture sect
 
 ## Publication Image Contract
 
-Hands-on screenshots are part of the final article when they materially help the reader. The goal is not to publish every evidence screenshot; the goal is to publish the strongest visual evidence in the right place.
+Hands-on screenshots are part of the final article when they materially help the reader. For Level 1 and Level 2 reviews, the normal publication target is **3–4 purposeful screenshots**. The goal is not to publish every evidence screenshot; the goal is to publish the strongest visual evidence in the right place.
+
+### Standard 3–4 screenshot set
+
+Select the strongest available evidence for these content moments:
+
+1. **What the app offers:** the app homepage, main dashboard, or clearest overview screen that helps a merchant understand the product.
+2. **Core workflow or result:** the most decision-useful tested setup step, workflow, storefront output, email, report, automation, or other result.
+3. **Important issue or limitation:** the exact screen or output where Blinto observed the review's most consequential problem, friction, restriction, mismatch, or plan boundary.
+4. **Pricing and value:** the current in-app plan screen or official pricing page when the review discusses pricing or compares plan limits.
+
+Three screenshots are sufficient when one image clearly supports two adjacent content moments or when a fourth image would be repetitive. Use four when each adds distinct decision value. Do not add filler screenshots merely to reach the target. If a required screenshot is unavailable, ask the human reviewer for that exact screen; qualify or remove unsupported claims rather than substituting unrelated imagery.
+
+Place each screenshot immediately after the paragraph that explains what the reader should notice. Do not collect the screenshots into a gallery or place them all at the end of the article.
 
 The one hero/thumbnail image must follow the canonical editorial fine-art system in `docs/image-style-guide.md`. That guide controls its concept, visual metaphor, composition, palette, lighting, abstraction, generation prompt and no-text requirements. It does not apply to evidence screenshots or other in-article supporting visuals.
 
@@ -95,17 +108,18 @@ For each review:
 
 1. Keep the complete/raw evidence inventory in the internal research workflow.
 2. Add one editorial thumbnail that represents the merchant problem or app use case. It must contain no title, words, letters, numbers, watermarks, captions, or other readable text. For app/website reviews, include the recognizable blurred pastel sky emblem derived from verified brand colors as required by `docs/image-style-guide.md`.
-3. Before drafting a finding that needs visual proof, ask the human reviewer for the exact screenshot at the relevant testing step. Do not wait until the article is finished and request an undirected screenshot batch.
-4. Select only screenshots that demonstrate important setup steps, workflows, features, pricing, outputs, or limitations discussed in the article.
-5. Store the thumbnail and selected publishable images under `public/images/reviews/[app-slug]/`.
-6. Record the thumbnail path and meaningful alt text in the review frontmatter as `thumbnail` and `thumbnail_alt`.
-7. Use descriptive lowercase filenames.
-8. Prefer WebP for screenshots where practical while preserving legibility.
-9. Crop unnecessary browser/UI chrome when useful and redact sensitive information.
-10. Add meaningful alt text to every selected image.
-11. Place each screenshot immediately beside the claim it supports.
-12. Use a short caption only when it adds useful context.
-13. Verify the thumbnail and every selected screenshot render correctly in Content Preview before SEO Check.
+3. Plan the standard 3–4 screenshot set before drafting and track whether the overview, workflow/result, issue/limitation, and pricing moments are covered.
+4. Before drafting a finding that needs visual proof, ask the human reviewer for the exact screenshot at the relevant testing step. Do not wait until the article is finished and request an undirected screenshot batch.
+5. Select only screenshots that demonstrate important setup steps, workflows, features, pricing, outputs, or limitations discussed in the article.
+6. Store the thumbnail and selected publishable images under `public/images/reviews/[app-slug]/`.
+7. Record the thumbnail path and meaningful alt text in the review frontmatter as `thumbnail` and `thumbnail_alt`.
+8. Use descriptive lowercase filenames.
+9. Prefer WebP for screenshots where practical while preserving legibility.
+10. Crop unnecessary browser/UI chrome when useful and redact sensitive information.
+11. Add meaningful alt text to every selected image.
+12. Place each screenshot immediately beside the claim it supports.
+13. Use a short caption only when it adds useful context.
+14. Verify the thumbnail and every selected screenshot render correctly in Content Preview before SEO Check.
 
 **Raw evidence is internal. Selected visual evidence is editorial content.**
 
@@ -146,7 +160,7 @@ If either answer is **no**, the article is not finished.
 1. Gather public research and understand search/merchant intent.
 2. Identify the primary merchant problem and provisional decision question.
 3. Guide the human reviewer through a realistic test designed to answer that question.
-4. Ask for the exact screenshot when a tested step, output, price, feature, or limitation requires visual evidence, then record raw evidence and screenshots in the internal research workflow.
+4. Plan the normal 3–4 screenshot set, then ask for each exact screenshot when the overview, tested workflow/result, issue/limitation, or pricing evidence is required. Record raw evidence and screenshots in the internal research workflow.
 5. Ask for deeper scenario testing when the core app promise cannot be evaluated from setup alone.
 6. Resolve material missing evidence and contradictions.
 7. Form an evidence-based merchant judgment.
