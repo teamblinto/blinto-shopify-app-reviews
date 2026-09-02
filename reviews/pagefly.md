@@ -5,8 +5,8 @@ category: "Page Builders"
 status: "SEO Check"
 testing_level: "Level 1 — Full Hands-On Test"
 last_verified: "2026-09-01"
-thumbnail: "/images/reviews/pagefly/pagefly-page-building-thumbnail-with-logo.png"
-thumbnail_alt: "The official PageFly app icon beside a painterly scene of modular page sections being arranged"
+thumbnail: "/images/reviews/pagefly/pagefly-page-building-thumbnail-sky-emblem.png"
+thumbnail_alt: "A painterly page-building scene beneath a recognizable diamond-tile formation in the sky"
 ---
 
 PageFly is a drag-and-drop Shopify page builder aimed at merchants who want more control over landing, product, promotional, and home pages without writing code. We installed PageFly on a Shopify development store, built and published a page, checked its responsive behavior, and explored its CRO tools to see how it performs in a real workflow.

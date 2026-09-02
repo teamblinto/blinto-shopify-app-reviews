@@ -94,7 +94,7 @@ The one hero/thumbnail image must follow the canonical editorial fine-art system
 For each review:
 
 1. Keep the complete/raw evidence inventory in the internal research workflow.
-2. Add one editorial thumbnail that represents the merchant problem or app use case. It must contain no title, words, letters, numbers, logos, watermarks, captions, or other readable text inside the image.
+2. Add one editorial thumbnail that represents the merchant problem or app use case. It must contain no title, words, letters, numbers, watermarks, captions, or other readable text. For app/website reviews, include the recognizable nonverbal painterly sky emblem required by `docs/image-style-guide.md`.
 3. Before drafting a finding that needs visual proof, ask the human reviewer for the exact screenshot at the relevant testing step. Do not wait until the article is finished and request an undirected screenshot batch.
 4. Select only screenshots that demonstrate important setup steps, workflows, features, pricing, outputs, or limitations discussed in the article.
 5. Store the thumbnail and selected publishable images under `public/images/reviews/[app-slug]/`.

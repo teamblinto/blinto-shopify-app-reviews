@@ -56,17 +56,20 @@ Prefer: wide editorial compositions, asymmetrical layouts, large negative space,
 
 Do not fill the entire frame with objects — let the painting breathe.
 
-## 7. No text and official app-logo exception
+## 7. No text and painterly app-identity exception
 
 Generated images must never contain article titles, headlines, captions, paragraphs, fake UI text, fake buttons, fake dashboards, or random readable text. Typography is added separately by the website.
 
-For a review of an app or website, try to present the reviewed product's **official logo** naturally within the thumbnail when a verified, publication-safe logo asset is available. The logo should help identify the subject without becoming oversized, promotional, or more important than the editorial concept.
+For every review of an app or website, communicate the reviewed product's visual identity through a **simplified painterly sky emblem**. Reinterpret the app's recognizable nonverbal symbol, shape language, or brand colors as a cloud, haze, light, or other atmospheric formation in the sky or upper background. It does not need to reproduce the exact official logo.
 
-- Use only a verified official logo obtained from the product's official website, app listing, press/media kit, or material supplied by the reviewer.
-- Never ask an image model to invent, redraw, approximate, spell, or reconstruct a logo. Generate the editorial artwork first and add the verified logo asset separately when necessary.
-- Preserve the logo's official shape, spelling, proportions, colors, and clear space. Do not distort or restyle it to imitate the painting.
-- A wordmark or letters that are part of the verified official logo are allowed. No other readable text is allowed.
-- If an accurate official asset is unavailable, visually unsuitable, or cannot be used safely, omit the logo rather than fabricating it.
+- The sky emblem must be large and distinct enough to remain recognizable at small card/thumbnail size, normally around 20–25% of the canvas width, while remaining secondary to the article's central visual metaphor.
+- It must look naturally formed from the scene's atmosphere and painted through the same brushwork, canvas texture, muted palette, lighting, perspective, softness, and imperfections as the rest of the thumbnail.
+- Reserve suitable negative space in the sky or upper background so the emblem is not hidden behind the main subject.
+- Never paste a crisp digital logo, app-store icon, sharp badge, floating sticker, or separate branded plaque over the painting.
+- Simplify or reinterpret the identifying shape when needed so it supports the editorial composition rather than competing with it.
+- Use an official product source only as visual reference. Do not claim that a painterly interpretation is the official logo.
+- Avoid wordmarks and readable brand names. Never ask an image model to spell or reconstruct logo text.
+- If the app has no useful nonverbal symbol, create a restrained atmospheric formation from its brand colors or shape language rather than forcing an exact logo into the artwork.
 
 ## 8. How to interpret each article
 
@@ -108,7 +111,7 @@ Every review/case study/blog post automatically gets exactly **one** hero/thumbn
 - contain negative space
 - use the editorial fine-art style described above
 - have a soft atmospheric background
-- contain no text except a verified official app/website logo when appropriate under Section 7
+- contain no text; use the recognizable nonverbal painterly sky emblem required by Section 7
 
 ## 11. Out of scope: in-article supporting images
 
@@ -132,7 +135,7 @@ Article: "Judge.me Review: How Far the Free Plan Actually Gets You"
 
 Understanding pass: easy setup; free review collection; storefront display; customization limits; free vs. paid boundary; email customization is the sharpest limitation; a merchant deciding whether the free plan is enough.
 
-Concept: A small Shopify merchant standing inside a spacious contemporary architectural environment, observing a large wall of customer reviews and product feedback. Most of the space is open and accessible, while a subtle translucent architectural boundary separates a more refined area representing advanced customization. Warm afternoon sunlight creates long soft shadows. Muted teal, cream, ochre, olive and terracotta palette. The merchant is a simplified painterly figure. Background architecture is heavily atmospheric and softly blurred. The scene feels like a vintage editorial oil painting rather than a software illustration.
+Concept: Blank feedback cards and star-like review symbols flow from product plinths into an organized architectural display. Most of the collection-and-display system is open and accessible, while a subtle translucent boundary separates a smaller refined area representing advanced customization. A large teal check-like curve inspired by the app's visual identity appears as a softly illuminated cloud formation in the upper sky, recognizable at thumbnail size while sharing the scene's brushwork and atmosphere. Warm afternoon sunlight creates long soft shadows. Muted teal, cream, ochre, olive and terracotta palette. The background architecture is heavily atmospheric and softly blurred. The scene feels like a vintage editorial oil painting rather than a software illustration.
 
 This communicates the article without a fake Judge.me dashboard.
 
@@ -155,6 +158,7 @@ When turning a concept into the final generation prompt, always include, explici
 - [ ] Named palette drawn from Section 4
 - [ ] Lighting direction from Section 5
 - [ ] Composition/aspect ratio (16:9 default) and negative space instruction
-- [ ] Explicit "no text, no UI, no readable typography" instruction, with the only permitted exception being a separately sourced and verified official app/website logo under Section 7
-- [ ] For an app or website review, a decision on whether its verified official logo can be incorporated naturally without overpowering the editorial concept
+- [ ] Explicit "no text, no UI, no readable typography" instruction; only the nonverbal painterly sky emblem required by Section 7 is permitted
+- [ ] For an app or website review, a recognizable simplified emblem or shape-language cue formed naturally from clouds, haze, light, or the upper atmosphere
+- [ ] The sky emblem is large enough to read at thumbnail size, normally around 20–25% of the canvas width, without overpowering the article concept
 - [ ] For thumbnails specifically: a note that it must read clearly at small size with one clear focal point

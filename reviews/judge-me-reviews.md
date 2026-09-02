@@ -5,8 +5,8 @@ category: "Product reviews"
 status: "Research & Write"
 testing_level: "Level 2 — Partial Hands-On Test"
 last_verified: "2026-08-31"
-thumbnail: "/images/reviews/judge-me-reviews/judge-me-review-collection-thumbnail-with-logo.png"
-thumbnail_alt: "The official Judge.me app icon beside feedback cards and rating symbols flowing into an organized review display"
+thumbnail: "/images/reviews/judge-me-reviews/judge-me-review-collection-thumbnail-sky-emblem.png"
+thumbnail_alt: "Feedback cards and rating symbols flowing into a painted review display beneath a check-shaped sky formation"
 ---
 
 Product reviews are almost essential once a Shopify store starts getting customers. But for a newer merchant, adding another monthly app subscription—especially one that becomes more expensive as the store grows—isn't particularly attractive.
