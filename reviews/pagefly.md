@@ -5,7 +5,7 @@ category: "Page Builders"
 status: "SEO Check"
 testing_level: "Level 1 — Full Hands-On Test"
 last_verified: "2026-09-01"
-thumbnail: "/images/reviews/pagefly/pagefly-page-building-thumbnail-sky-emblem.png"
+thumbnail: "/images/reviews/pagefly/pagefly-page-building-thumbnail-pastel-sky-v2.png"
 thumbnail_alt: "A painterly page-building scene beneath a recognizable diamond-tile formation in the sky"
 ---
 

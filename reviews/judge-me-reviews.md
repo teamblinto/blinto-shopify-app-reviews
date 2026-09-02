@@ -5,7 +5,7 @@ category: "Product reviews"
 status: "Research & Write"
 testing_level: "Level 2 — Partial Hands-On Test"
 last_verified: "2026-08-31"
-thumbnail: "/images/reviews/judge-me-reviews/judge-me-review-collection-thumbnail-sky-emblem.png"
+thumbnail: "/images/reviews/judge-me-reviews/judge-me-review-collection-thumbnail-pastel-sky-v2.png"
 thumbnail_alt: "Feedback cards and rating symbols flowing into a painted review display beneath a check-shaped sky formation"
 ---
 
