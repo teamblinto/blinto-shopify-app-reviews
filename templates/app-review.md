@@ -19,11 +19,11 @@ thumbnail_alt: "[Describe what the thumbnail visually shows; do not repeat the t
 
 ## What [App Name] Offers
 
+![The main App Name dashboard showing its core tools](/images/reviews/[app-slug]/[app-overview-filename].webp)
+
 [Briefly explain what the app offers and which merchant needs it addresses without turning this into a feature catalogue.]
 
-[Ask the reviewer for a screenshot of the app homepage, main dashboard, or clearest overview screen. Place it here once supplied and publication-safe.]
-
-![The main App Name dashboard showing its core tools](/images/reviews/[app-slug]/[app-overview-filename].webp)
+[Ask the reviewer for a screenshot of the app homepage, main dashboard, or clearest overview screen. In the completed review, it must be the first element below this section title.]
 
 ## What We Tested
 
@@ -31,19 +31,19 @@ thumbnail_alt: "[Describe what the thumbnail visually shows; do not repeat the t
 
 ## [Primary Merchant Question / Workflow]
 
+![Descriptive alt text](/images/reviews/[app-slug]/[descriptive-filename].webp)
+
 [Use verified hands-on evidence to answer the central question. Include setup time, friction, output, workflow, and observed limitations only where they help the buying decision.]
 
-[Before drafting a claim that is best demonstrated visually, ask the human reviewer for the exact screenshot needed. Request screenshots at the relevant step of testing, not as a generic batch at the end. If the screenshot is unavailable, qualify or remove the claim rather than inventing visual evidence.]
-
-![Descriptive alt text](/images/reviews/[app-slug]/[descriptive-filename].webp)
+[Before drafting a claim that is best demonstrated visually, ask the human reviewer for the exact screenshot needed. Request screenshots at the relevant step of testing, not as a generic batch at the end. If the screenshot is unavailable, qualify or remove the claim rather than inventing visual evidence. In the completed review, the selected image must remain immediately below this section title.]
 
 ## [Where the App Starts to Fall Short / Important Trade-off]
 
+![The tested App Name screen showing the observed limitation](/images/reviews/[app-slug]/[important-limitation-filename].webp)
+
 [Explain the most consequential limitation discovered in testing and why it matters commercially or operationally to a merchant.]
 
-[Ask the reviewer for the exact screenshot showing this issue, limitation, friction, mismatch, or plan boundary. Place it directly after the explanation of what the reader should notice.]
-
-![The tested App Name screen showing the observed limitation](/images/reviews/[app-slug]/[important-limitation-filename].webp)
+[Ask the reviewer for the exact screenshot showing this issue, limitation, friction, mismatch, or plan boundary. In the completed review, it must remain immediately below this section title.]
 
 ## [Other Important Decision Area]
 
@@ -51,11 +51,11 @@ thumbnail_alt: "[Describe what the thumbnail visually shows; do not repeat the t
 
 ## Pricing and Value
 
+![Current App Name pricing and plan limits](/images/reviews/[app-slug]/[pricing-plans-filename].webp)
+
 [Do more than reproduce a pricing table. Explain current verified pricing, meaningful plan limits, where Free stops, when upgrading becomes worth it, and the likely real cost for the target merchant. Date pricing where useful.]
 
-[When pricing is discussed, ask for the current in-app pricing screen or capture the verified official pricing page. Place it beside the pricing interpretation, not as a detached gallery image.]
-
-![Current App Name pricing and plan limits](/images/reviews/[app-slug]/[pricing-plans-filename].webp)
+[When pricing is discussed, ask for the current in-app pricing screen or capture the verified official pricing page. In the completed review, it must remain immediately below this section title.]
 
 ## What We Liked
 
@@ -102,8 +102,8 @@ PUBLICATION IMAGE CONTRACT
 - The thumbnail must contain no title, words, letters, numbers, watermarks, captions, or other readable text. Include the recognizable blurred pastel sky emblem derived from verified brand colors as required by `docs/image-style-guide.md`.
 - Level 1 and Level 2 reviews should normally include 3–4 purposeful real screenshots: app overview/homepage, core workflow or result, important issue or limitation, and pricing when discussed.
 - Three screenshots are sufficient when one image clearly covers two content moments; never add filler merely to reach four.
-- Ask the human reviewer for each specific screenshot at the point where it is needed, then place it immediately after the claim or explanation it supports.
-- Put necessary context, qualification, and interpretation before each image. Do not add captions or explanatory text below screenshots.
+- Ask the human reviewer for each specific screenshot at the point where it is needed, then place it at the top of its relevant section immediately below the section title.
+- Do not add captions or standalone explanatory text below screenshots; continue with the section's normal prose.
 - Do not group screenshots into a gallery or append them all at the end.
 - Store publishable images under public/images/reviews/[app-slug]/.
 - Use descriptive lowercase filenames, preferably WebP where practical.

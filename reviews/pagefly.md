@@ -21,11 +21,11 @@ The biggest limitation appeared when we published the PageFly page as the store'
 
 ## What PageFly Offers
 
+![PageFly public homepage presenting page building, testing, analytics, and optimization tools](/images/reviews/pagefly/pagefly-public-homepage-overview.png)
+
 PageFly is a visual page builder for Shopify. Instead of building layouts entirely through a Shopify theme's native sections or custom code, merchants can assemble pages using templates, drag-and-drop elements, Shopify elements, and integrations with third-party apps.
 
-It also goes beyond basic page building with CRO and optimization tools including analytics, A/B testing, heatmaps, section performance, AI page checkup, a cart drawer, and an AEO optimizer. The screenshot below is from PageFly's public marketing homepage; figures visible in it are PageFly's claims, not results independently verified in our test.
-
-![PageFly public homepage presenting page building, testing, analytics, and optimization tools](/images/reviews/pagefly/pagefly-public-homepage-overview.png)
+It also goes beyond basic page building with CRO and optimization tools including analytics, A/B testing, heatmaps, section performance, AI page checkup, a cart drawer, and an AEO optimizer. Its public marketing homepage also displays merchant, review, and revenue figures; those are PageFly's claims, not results independently verified in our test.
 
 ## What We Tested
 
@@ -57,13 +57,13 @@ With the page structure planned beforehand, the complete build took us approxima
 
 ## The Biggest Issue We Found: Homepage Design Continuity
 
+![The Shopify theme header remaining above a visually different PageFly New Year page design](/images/reviews/pagefly/pagefly-homepage-theme-continuity.webp)
+
 Publishing the page revealed the most important limitation from our test.
 
 We configured the PageFly page as the store's Home page. PageFly's interface indicates that its Home page content works alongside the existing Shopify theme, while theme elements such as the header and footer remain controlled through Shopify's theme editor.
 
 In our test store, the existing theme's navigation and hero content remained visible alongside the new PageFly content. The two designs did not match, so the published homepage looked visually disjointed rather than like one cohesive redesign.
-
-![The Shopify theme header remaining above a visually different PageFly New Year page design](/images/reviews/pagefly/pagefly-homepage-theme-continuity.webp)
 
 For merchants building standalone landing or campaign pages, this may be much less important. But if your goal is to redesign the entire Shopify homepage with PageFly, plan for additional theme-level work so the existing header, hero, and PageFly sections feel like one design system.
 
@@ -99,9 +99,9 @@ These tools make PageFly more interesting for merchants who want page building a
 
 ## Pricing and Value
 
-We verified the following pricing directly inside PageFly on September 1, 2026. Pricing can change, so merchants should re-check it before subscribing.
-
 ![PageFly pricing screen showing the Free, Builder, Accelerate, and Enterprise plans with their principal limits](/images/reviews/pagefly/pagefly-pricing-plans-september-2026.png)
+
+We verified the following pricing directly inside PageFly on September 1, 2026. Pricing can change, so merchants should re-check it before subscribing.
 
 | Plan | Price | Key limits/features shown during our test |
 | --- | ---: | --- |

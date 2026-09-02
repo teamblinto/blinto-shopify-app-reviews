@@ -100,7 +100,7 @@ Select the strongest available evidence for these content moments:
 
 Three screenshots are sufficient when one image clearly supports two adjacent content moments or when a fourth image would be repetitive. Use four when each adds distinct decision value. Do not add filler screenshots merely to reach the target. If a required screenshot is unavailable, ask the human reviewer for that exact screen; qualify or remove unsupported claims rather than substituting unrelated imagery.
 
-Place each screenshot immediately after the paragraph that explains what the reader should notice. Put any necessary context, qualification, source distinction, or interpretation **before** the image. Do not add a caption or explanatory text directly below the image. Do not collect screenshots into a gallery or place them all at the end of the article.
+Place each screenshot at the top of its relevant section, immediately below the section title and before the section's normal prose. Do not add a caption or standalone explanatory text directly below the image. The section's evidence, context, qualification, and interpretation should follow as normal article paragraphs rather than as an image caption. Do not collect screenshots into a gallery or place them all at the end of the article.
 
 The one hero/thumbnail image must follow the canonical editorial fine-art system in `docs/image-style-guide.md`. That guide controls its concept, visual metaphor, composition, palette, lighting, abstraction, generation prompt and no-text requirements. It does not apply to evidence screenshots or other in-article supporting visuals.
 
@@ -117,8 +117,8 @@ For each review:
 9. Prefer WebP for screenshots where practical while preserving legibility.
 10. Crop unnecessary browser/UI chrome when useful and redact sensitive information.
 11. Add meaningful alt text to every selected image.
-12. Place each screenshot immediately beside the claim it supports.
-13. Do not add captions or explanatory text below screenshots; include necessary context in the preceding article paragraph.
+12. Place each screenshot immediately below its relevant section title, before the section's normal prose.
+13. Do not add captions or standalone explanatory text below screenshots; continue with the section's normal article content.
 14. Verify the thumbnail and every selected screenshot render correctly in Content Preview before SEO Check.
 
 **Raw evidence is internal. Selected visual evidence is editorial content.**
