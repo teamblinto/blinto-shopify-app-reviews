@@ -66,7 +66,7 @@
 - Plan-choice screenshot
 - Continue-on-Free confirmation screenshot
 - Builder plan screenshot
-- Full four-plan pricing screenshot
+- Full four-plan pricing screenshot supplied by Imran on 2026-09-02; selected publication asset: `public/images/reviews/pagefly/pagefly-pricing-plans-september-2026.png`. The screen supports the plan prices and principal limits recorded from the September 1, 2026 test.
 - Dashboard/CRO tools screenshot
 - Welcome/path chooser screenshot
 - Editor/template/elements screenshots

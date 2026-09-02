@@ -105,6 +105,10 @@ These tools make PageFly more interesting for merchants who want page building a
 
 We verified the following pricing directly inside PageFly on September 1, 2026. Pricing can change, so merchants should re-check it before subscribing.
 
+![PageFly pricing screen showing the Free, Builder, Accelerate, and Enterprise plans with their principal limits](/images/reviews/pagefly/pagefly-pricing-plans-september-2026.png)
+
+*The in-app pricing screen reviewed during our test. It shows the four available plans and the principal features or limits PageFly associated with each tier.*
+
 | Plan | Price | Key limits/features shown during our test |
 | --- | ---: | --- |
 | **Free** | **$0/month** | 1 published page or section, 10 AI credits, 320+ page/section templates, 200+ integrations, 24/7 live chat |
