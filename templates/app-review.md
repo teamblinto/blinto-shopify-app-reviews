@@ -89,7 +89,7 @@ Never claim outcomes (conversion lift, revenue impact, reliability, support qual
 PUBLICATION IMAGE CONTRACT
 - Follow `docs/image-style-guide.md` exactly for the one hero/thumbnail concept and generation prompt.
 - Every review requires one text-free editorial thumbnail, referenced in frontmatter with `thumbnail` and `thumbnail_alt`.
-- The thumbnail must contain no title, words, letters, numbers, watermarks, captions, or other readable text. Include the recognizable nonverbal painterly sky emblem required by `docs/image-style-guide.md`.
+- The thumbnail must contain no title, words, letters, numbers, watermarks, captions, or other readable text. Include the recognizable blurred pastel sky emblem derived from verified brand colors as required by `docs/image-style-guide.md`.
 - Include selected real screenshots when they materially support a finding.
 - Ask the human reviewer for the specific screenshot at the point where it is needed to support a workflow, feature, output, price, or limitation.
 - Store publishable images under public/images/reviews/[app-slug]/.

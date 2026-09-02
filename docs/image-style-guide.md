@@ -56,20 +56,22 @@ Prefer: wide editorial compositions, asymmetrical layouts, large negative space,
 
 Do not fill the entire frame with objects — let the painting breathe.
 
-## 7. No text and painterly app-identity exception
+## 7. No text and blurred pastel sky identity
 
 Generated images must never contain article titles, headlines, captions, paragraphs, fake UI text, fake buttons, fake dashboards, or random readable text. Typography is added separately by the website.
 
-For every review of an app or website, communicate the reviewed product's visual identity through a **simplified painterly sky emblem**. Reinterpret the app's recognizable nonverbal symbol, shape language, or brand colors as a cloud, haze, light, or other atmospheric formation in the sky or upper background. It does not need to reproduce the exact official logo.
+For every review of an app or website, communicate the reviewed product's visual identity through a **simplified, blurred pastel sky emblem**. Reinterpret the app's recognizable nonverbal symbol or shape language as a cloud, haze, light, or other atmospheric formation in the sky or upper background. It does not need to reproduce the exact official logo.
 
 - The sky emblem must be large and distinct enough to remain recognizable at small card/thumbnail size, normally around 20–25% of the canvas width, while remaining secondary to the article's central visual metaphor.
+- Start with a dominant color verified from the app's official logo or official brand source, then soften it into a pastel tint by mixing it visually with the painting's cream light and surrounding palette. Do not use the raw saturated brand color as a flat fill.
+- Blur and feather the emblem's edges into the sky. Use haze, partial dissolution, lower local contrast, and varied opacity so it feels discovered in the atmosphere rather than placed on top of the artwork.
 - It must look naturally formed from the scene's atmosphere and painted through the same brushwork, canvas texture, muted palette, lighting, perspective, softness, and imperfections as the rest of the thumbnail.
 - Reserve suitable negative space in the sky or upper background so the emblem is not hidden behind the main subject.
 - Never paste a crisp digital logo, app-store icon, sharp badge, floating sticker, or separate branded plaque over the painting.
 - Simplify or reinterpret the identifying shape when needed so it supports the editorial composition rather than competing with it.
-- Use an official product source only as visual reference. Do not claim that a painterly interpretation is the official logo.
+- Use an official product source to verify the source color and recognizable shape. Do not claim that the blurred pastel interpretation is the official logo.
 - Avoid wordmarks and readable brand names. Never ask an image model to spell or reconstruct logo text.
-- If the app has no useful nonverbal symbol, create a restrained atmospheric formation from its brand colors or shape language rather than forcing an exact logo into the artwork.
+- If the app has no useful nonverbal symbol, create a restrained blurred atmospheric formation from a verified brand color or shape-language cue rather than forcing an exact logo into the artwork.
 
 ## 8. How to interpret each article
 
@@ -135,7 +137,7 @@ Article: "Judge.me Review: How Far the Free Plan Actually Gets You"
 
 Understanding pass: easy setup; free review collection; storefront display; customization limits; free vs. paid boundary; email customization is the sharpest limitation; a merchant deciding whether the free plan is enough.
 
-Concept: Blank feedback cards and star-like review symbols flow from product plinths into an organized architectural display. Most of the collection-and-display system is open and accessible, while a subtle translucent boundary separates a smaller refined area representing advanced customization. A large teal check-like curve inspired by the app's visual identity appears as a softly illuminated cloud formation in the upper sky, recognizable at thumbnail size while sharing the scene's brushwork and atmosphere. Warm afternoon sunlight creates long soft shadows. Muted teal, cream, ochre, olive and terracotta palette. The background architecture is heavily atmospheric and softly blurred. The scene feels like a vintage editorial oil painting rather than a software illustration.
+Concept: Blank feedback cards and star-like review symbols flow from product plinths into an organized architectural display. Most of the collection-and-display system is open and accessible, while a subtle translucent boundary separates a smaller refined area representing advanced customization. A large check-like curve uses a pastel tint derived from Judge.me's verified teal and appears as a softly blurred cloud formation in the upper sky. Its feathered edges, warm haze, and varied opacity keep it recognizable at thumbnail size while sharing the scene's brushwork and atmosphere. Warm afternoon sunlight creates long soft shadows. Muted teal, cream, ochre, olive and terracotta palette. The background architecture is heavily atmospheric and softly blurred. The scene feels like a vintage editorial oil painting rather than a software illustration.
 
 This communicates the article without a fake Judge.me dashboard.
 
@@ -160,5 +162,7 @@ When turning a concept into the final generation prompt, always include, explici
 - [ ] Composition/aspect ratio (16:9 default) and negative space instruction
 - [ ] Explicit "no text, no UI, no readable typography" instruction; only the nonverbal painterly sky emblem required by Section 7 is permitted
 - [ ] For an app or website review, a recognizable simplified emblem or shape-language cue formed naturally from clouds, haze, light, or the upper atmosphere
+- [ ] A source color verified from the official logo/brand source and softened into a pastel tint that blends with the painting's cream light
+- [ ] Feathered, partially dissolved edges, warm haze, lower local contrast, and varied opacity instead of a crisp or flat-color mark
 - [ ] The sky emblem is large enough to read at thumbnail size, normally around 20–25% of the canvas width, without overpowering the article concept
 - [ ] For thumbnails specifically: a note that it must read clearly at small size with one clear focal point
