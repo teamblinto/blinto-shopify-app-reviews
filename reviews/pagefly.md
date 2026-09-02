@@ -1,17 +1,13 @@
 ---
-title: "PageFly Review: Our Hands-On Test of the Shopify Page Builder"
+title: "PageFly Review: Can You Build Shopify Pages Without a Developer?"
 author: "Imran"
 category: "Page Builders"
 status: "SEO Check"
 testing_level: "Level 1 — Full Hands-On Test"
 last_verified: "2026-09-01"
+thumbnail: "/images/reviews/pagefly/pagefly-page-building-thumbnail-with-logo.png"
+thumbnail_alt: "The official PageFly app icon beside a painterly scene of modular page sections being arranged"
 ---
-
-# PageFly Review: Our Hands-On Test of the Shopify Page Builder
-
-![Editorial illustration of a designer arranging modular page sections on a large layout](/images/reviews/pagefly/pagefly-visual-page-building-illustration.webp)
-
-*AI-generated editorial illustration representing visual page building.*
 
 PageFly is a drag-and-drop Shopify page builder aimed at merchants who want more control over landing, product, promotional, and home pages without writing code. We installed PageFly on a Shopify development store, built and published a page, checked its responsive behavior, and explored its CRO tools to see how it performs in a real workflow.
 
@@ -23,7 +19,7 @@ PageFly makes the most sense for Shopify merchants who want to create custom lan
 
 The biggest limitation appeared when we published the PageFly page as the store's Home page. Existing theme-controlled content remained alongside the new PageFly content, creating a visually inconsistent result. That does not make PageFly a poor page builder, but it does mean a full homepage redesign may require additional work in Shopify's theme editor to keep everything visually cohesive.
 
-## What Is PageFly?
+## What PageFly Offers
 
 PageFly is a visual page builder for Shopify. Instead of building layouts entirely through a Shopify theme's native sections or custom code, merchants can assemble pages using templates, drag-and-drop elements, Shopify elements, and integrations with third-party apps.
 
@@ -65,6 +61,10 @@ We configured the PageFly page as the store's Home page. PageFly's interface ind
 
 In our test store, the existing theme's navigation and hero content remained visible alongside the new PageFly content. The two designs did not match, so the published homepage looked visually disjointed rather than like one cohesive redesign.
 
+![The Shopify theme header remaining above a visually different PageFly New Year page design](/images/reviews/pagefly/pagefly-homepage-theme-continuity.webp)
+
+*Our published Home-page test retained the theme-controlled header above the PageFly content, creating a visible design mismatch.*
+
 For merchants building standalone landing or campaign pages, this may be much less important. But if your goal is to redesign the entire Shopify homepage with PageFly, plan for additional theme-level work so the existing header, hero, and PageFly sections feel like one design system.
 
 We did not verify whether PageFly provides another built-in workflow that completely avoids this behavior, so our finding is limited to the Home-page publishing setup we tested.
@@ -97,7 +97,7 @@ PageFly also includes a Cart Drawer designed around cart-stage offers and produc
 
 These tools make PageFly more interesting for merchants who want page building and conversion optimization in the same product rather than assembling several separate apps.
 
-## PageFly Pricing
+## Pricing and Value
 
 We verified the following pricing directly inside PageFly on September 1, 2026. Pricing can change, so merchants should re-check it before subscribing.
 
@@ -130,7 +130,7 @@ PageFly is a strong fit for **non-technical Shopify merchants who regularly need
 
 It is particularly attractive when the merchant wants page creation and basic CRO tooling in one environment rather than relying on a developer plus several separate optimization apps.
 
-## Who Should Consider an Alternative
+## Who Should Upgrade or Consider an Alternative
 
 PageFly may be less suitable if your primary goal is to replace every aspect of an existing Shopify homepage without touching the theme itself. Based on our test, merchants pursuing a complete homepage redesign should be comfortable reconciling PageFly content with theme-controlled areas.
 

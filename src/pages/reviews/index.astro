@@ -8,6 +8,8 @@ const reviews = entries.map((entry) => ({
   status: entry.data.status ?? 'Unknown',
   author: entry.data.author ?? 'Unassigned',
   category: entry.data.category ?? 'TBD',
+  thumbnail: entry.data.thumbnail ?? null,
+  thumbnail_alt: entry.data.thumbnail_alt ?? '',
 }));
 ---
 <BaseLayout title="Reviews | Blinto Reviews">
@@ -20,6 +22,7 @@ const reviews = entries.map((entry) => ({
     <div class="grid">
       {reviews.map((review) => (
         <a class="card" href={`/reviews/${review.id}/`}>
+          {review.thumbnail && <img class="review-card-thumbnail" src={review.thumbnail} alt={review.thumbnail_alt} />}
           <span class="status">{review.status}</span>
           <h3>{review.title}</h3>
           <p>{review.category} · {review.author}</p>

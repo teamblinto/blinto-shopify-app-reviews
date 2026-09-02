@@ -20,5 +20,12 @@ const fm = review.data ?? {};
     <span>Category: {fm.category ?? 'TBD'}</span>
     <span>Testing: {fm.testing_level ?? 'Not set'}</span>
   </div>
+  {fm.thumbnail && (
+    <img
+      class="review-thumbnail"
+      src={fm.thumbnail}
+      alt={fm.thumbnail_alt ?? ''}
+    />
+  )}
   <article class="prose" style="margin-top:20px"><Content /></article>
 </BaseLayout>

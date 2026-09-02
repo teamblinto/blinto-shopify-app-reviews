@@ -5,9 +5,9 @@ category: "Product reviews"
 status: "Research & Write"
 testing_level: "Level 2 — Partial Hands-On Test"
 last_verified: "2026-08-31"
+thumbnail: "/images/reviews/judge-me-reviews/judge-me-review-collection-thumbnail-with-logo.png"
+thumbnail_alt: "The official Judge.me app icon beside feedback cards and rating symbols flowing into an organized review display"
 ---
-
-# Judge.me Review: Can a Shopify Store Really Run Product Reviews for Free?
 
 Product reviews are almost essential once a Shopify store starts getting customers. But for a newer merchant, adding another monthly app subscription—especially one that becomes more expensive as the store grows—isn't particularly attractive.
 
@@ -37,7 +37,7 @@ That gives us a fairly simple recommendation:
 
 **If the review experience needs to closely follow your brand system, budget for the $15/month Awesome plan.**
 
-## What Is Judge.me?
+## What Judge.me Offers
 
 Judge.me is a Shopify product review app designed to help merchants collect product and store reviews and display them throughout their storefront.
 

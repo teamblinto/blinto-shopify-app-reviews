@@ -1,13 +1,13 @@
 ---
-title: "[App Name] Review: [Merchant Decision Question]"
+title: "[App Name] Review: [Engaging Merchant Pain-Point Question]"
 author: "[Human Reviewer]"
 category: "[Category]"
 status: "Draft"
 testing_level: "[Testing Level]"
 last_verified: "[YYYY-MM-DD]"
+thumbnail: "/images/reviews/[app-slug]/[descriptive-thumbnail-filename].webp"
+thumbnail_alt: "[Describe what the thumbnail visually shows; do not repeat the title]"
 ---
-
-# [App Name] Review: [Merchant Decision Question]
 
 [Open directly with the real merchant situation/problem that makes someone consider this app. Explain why the app appears to solve it, then state the specific buying question Blinto tested. Do not publish a heading called “Merchant Problem.”]
 
@@ -17,9 +17,9 @@ last_verified: "[YYYY-MM-DD]"
 
 [Answer the merchant decision early: whether the app solves the problem, who gets the most value, the biggest trade-off, and whether Free/paid/alternative is the sensible choice.]
 
-## What Is [App Name]?
+## What [App Name] Offers
 
-[Brief context only. Explain the app and use case without turning this into a feature catalogue.]
+[Briefly explain what the app offers and which merchant needs it addresses without turning this into a feature catalogue.]
 
 ## What We Tested
 
@@ -28,6 +28,8 @@ last_verified: "[YYYY-MM-DD]"
 ## [Primary Merchant Question / Workflow]
 
 [Use verified hands-on evidence to answer the central question. Include setup time, friction, output, workflow, and observed limitations only where they help the buying decision.]
+
+[Before drafting a claim that is best demonstrated visually, ask the human reviewer for the exact screenshot needed. Request screenshots at the relevant step of testing, not as a generic batch at the end. If the screenshot is unavailable, qualify or remove the claim rather than inventing visual evidence.]
 
 ![Descriptive alt text](/images/reviews/[app-slug]/[descriptive-filename].webp)
 
@@ -85,7 +87,11 @@ Technical findings are evidence, not the story.
 Never claim outcomes (conversion lift, revenue impact, reliability, support quality, etc.) that the test did not establish.
 
 PUBLICATION IMAGE CONTRACT
+- Follow `docs/image-style-guide.md` exactly for the one hero/thumbnail concept and generation prompt.
+- Every review requires one text-free editorial thumbnail, referenced in frontmatter with `thumbnail` and `thumbnail_alt`.
+- The thumbnail must contain no title, words, letters, numbers, logos, watermarks, captions, or other readable text inside the image.
 - Include selected real screenshots when they materially support a finding.
+- Ask the human reviewer for the specific screenshot at the point where it is needed to support a workflow, feature, output, price, or limitation.
 - Store publishable images under public/images/reviews/[app-slug]/.
 - Use descriptive lowercase filenames, preferably WebP where practical.
 - Place each image beside the claim/workflow/finding it supports.

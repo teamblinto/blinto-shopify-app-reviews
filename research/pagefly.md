@@ -73,6 +73,7 @@
 - CRO Center screenshot
 - AI Translator screenshot
 - Page settings/publishing screenshots
+- Published Home-page screenshot showing the theme-controlled header above the visually different PageFly New Year content. Supplied by Imran on 2026-09-02; selected publication asset: `public/images/reviews/pagefly/pagefly-homepage-theme-continuity.webp`. Capture date was not separately verified.
 
 ## Editorial Judgment
 

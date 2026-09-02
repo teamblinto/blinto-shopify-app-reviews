@@ -36,9 +36,9 @@ The exact question should emerge from search intent, the app's promise, merchant
 
 The title should normally follow:
 
-**[App Name] Review: [Important Merchant Question / Outcome]**
+**[App Name] Review: [Engaging Merchant Pain-Point Question / Outcome]**
 
-Keep the app name and “Review” for entity/search clarity. Use the second half to communicate why a merchant should read this specific review.
+Keep the app name and “Review” for entity/search clarity. The second half must connect to a concrete Shopify merchant pain point, risk, frustration, cost, or desired outcome and communicate why a merchant should read this specific review. Avoid generic titles such as “Our Hands-On Test” when a more useful merchant decision can lead the title.
 
 ## Testing Standard
 
@@ -67,10 +67,11 @@ A file under `reviews/` must read as though it is already on the Blinto public w
 
 It should normally contain:
 
-- editorial title built around an important merchant decision
+- engaging editorial title built around a concrete Shopify merchant pain point or decision
+- one text-free editorial thumbnail
 - opening that naturally establishes the merchant problem (do not publish a heading called “Merchant Problem”)
 - early verdict
-- concise app context
+- concise “What [App] Offers” context
 - transparent testing scope and realistic merchant scenario
 - hands-on evidence answering the primary merchant question
 - selected screenshots that demonstrate important findings
@@ -88,18 +89,23 @@ The structure should adapt to the app and search intent. Do not manufacture sect
 
 Hands-on screenshots are part of the final article when they materially help the reader. The goal is not to publish every evidence screenshot; the goal is to publish the strongest visual evidence in the right place.
 
+The one hero/thumbnail image must follow the canonical editorial fine-art system in `docs/image-style-guide.md`. That guide controls its concept, visual metaphor, composition, palette, lighting, abstraction, generation prompt and no-text requirements. It does not apply to evidence screenshots or other in-article supporting visuals.
+
 For each review:
 
 1. Keep the complete/raw evidence inventory in the internal research workflow.
-2. Select only screenshots that demonstrate important setup steps, workflows, features, pricing, outputs, or limitations discussed in the article.
-3. Store selected publishable images under `public/images/reviews/[app-slug]/`.
-4. Use descriptive lowercase filenames.
-5. Prefer WebP for screenshots where practical while preserving legibility.
-6. Crop unnecessary browser/UI chrome when useful and redact sensitive information.
-7. Add meaningful alt text.
-8. Place each image immediately beside the claim it supports.
-9. Use a short caption only when it adds useful context.
-10. Verify every selected image renders correctly in Content Preview before SEO Check.
+2. Add one editorial thumbnail that represents the merchant problem or app use case. It must contain no title, words, letters, numbers, logos, watermarks, captions, or other readable text inside the image.
+3. Before drafting a finding that needs visual proof, ask the human reviewer for the exact screenshot at the relevant testing step. Do not wait until the article is finished and request an undirected screenshot batch.
+4. Select only screenshots that demonstrate important setup steps, workflows, features, pricing, outputs, or limitations discussed in the article.
+5. Store the thumbnail and selected publishable images under `public/images/reviews/[app-slug]/`.
+6. Record the thumbnail path and meaningful alt text in the review frontmatter as `thumbnail` and `thumbnail_alt`.
+7. Use descriptive lowercase filenames.
+8. Prefer WebP for screenshots where practical while preserving legibility.
+9. Crop unnecessary browser/UI chrome when useful and redact sensitive information.
+10. Add meaningful alt text to every selected image.
+11. Place each screenshot immediately beside the claim it supports.
+12. Use a short caption only when it adds useful context.
+13. Verify the thumbnail and every selected screenshot render correctly in Content Preview before SEO Check.
 
 **Raw evidence is internal. Selected visual evidence is editorial content.**
 
@@ -140,12 +146,12 @@ If either answer is **no**, the article is not finished.
 1. Gather public research and understand search/merchant intent.
 2. Identify the primary merchant problem and provisional decision question.
 3. Guide the human reviewer through a realistic test designed to answer that question.
-4. Record raw evidence and screenshots in the internal research workflow.
+4. Ask for the exact screenshot when a tested step, output, price, feature, or limitation requires visual evidence, then record raw evidence and screenshots in the internal research workflow.
 5. Ask for deeper scenario testing when the core app promise cannot be evaluated from setup alone.
 6. Resolve material missing evidence and contradictions.
 7. Form an evidence-based merchant judgment.
 8. Write the complete reader-facing article using `templates/app-review.md`.
-9. Select and place the strongest publishable screenshots.
+9. Add a text-free editorial thumbnail, then select and place the strongest publishable screenshots.
 10. Run factual verification against internal evidence.
 11. Human reviewer approves factual accuracy and visual evidence.
 12. Save the final article under `reviews/` and images under `public/images/reviews/[app-slug]/`.
