@@ -94,7 +94,7 @@ Do not publish a heading called “Merchant Problem.” Establish it naturally i
 
 Technical findings are evidence. They should earn space because they change or support the merchant's decision.
 
-Place each selected screenshot directly after the explanation it supports. Do not group screenshots into a gallery or leave them detached from the relevant finding.
+Place each selected screenshot directly after the explanation it supports. Put all necessary context before the image and do not add captions or explanatory text below it. Do not group screenshots into a gallery or leave them detached from the relevant finding.
 
 Alternatives may be mentioned briefly when useful, but a single-app review should not be forced into a comparison article.
 

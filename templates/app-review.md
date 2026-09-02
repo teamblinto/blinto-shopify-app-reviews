@@ -37,8 +37,6 @@ thumbnail_alt: "[Describe what the thumbnail visually shows; do not repeat the t
 
 ![Descriptive alt text](/images/reviews/[app-slug]/[descriptive-filename].webp)
 
-*Optional reader-facing caption.*
-
 ## [Where the App Starts to Fall Short / Important Trade-off]
 
 [Explain the most consequential limitation discovered in testing and why it matters commercially or operationally to a merchant.]
@@ -105,6 +103,7 @@ PUBLICATION IMAGE CONTRACT
 - Level 1 and Level 2 reviews should normally include 3–4 purposeful real screenshots: app overview/homepage, core workflow or result, important issue or limitation, and pricing when discussed.
 - Three screenshots are sufficient when one image clearly covers two content moments; never add filler merely to reach four.
 - Ask the human reviewer for each specific screenshot at the point where it is needed, then place it immediately after the claim or explanation it supports.
+- Put necessary context, qualification, and interpretation before each image. Do not add captions or explanatory text below screenshots.
 - Do not group screenshots into a gallery or append them all at the end.
 - Store publishable images under public/images/reviews/[app-slug]/.
 - Use descriptive lowercase filenames, preferably WebP where practical.

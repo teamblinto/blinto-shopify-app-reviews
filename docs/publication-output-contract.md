@@ -100,7 +100,7 @@ Select the strongest available evidence for these content moments:
 
 Three screenshots are sufficient when one image clearly supports two adjacent content moments or when a fourth image would be repetitive. Use four when each adds distinct decision value. Do not add filler screenshots merely to reach the target. If a required screenshot is unavailable, ask the human reviewer for that exact screen; qualify or remove unsupported claims rather than substituting unrelated imagery.
 
-Place each screenshot immediately after the paragraph that explains what the reader should notice. Do not collect the screenshots into a gallery or place them all at the end of the article.
+Place each screenshot immediately after the paragraph that explains what the reader should notice. Put any necessary context, qualification, source distinction, or interpretation **before** the image. Do not add a caption or explanatory text directly below the image. Do not collect screenshots into a gallery or place them all at the end of the article.
 
 The one hero/thumbnail image must follow the canonical editorial fine-art system in `docs/image-style-guide.md`. That guide controls its concept, visual metaphor, composition, palette, lighting, abstraction, generation prompt and no-text requirements. It does not apply to evidence screenshots or other in-article supporting visuals.
 
@@ -118,7 +118,7 @@ For each review:
 10. Crop unnecessary browser/UI chrome when useful and redact sensitive information.
 11. Add meaningful alt text to every selected image.
 12. Place each screenshot immediately beside the claim it supports.
-13. Use a short caption only when it adds useful context.
+13. Do not add captions or explanatory text below screenshots; include necessary context in the preceding article paragraph.
 14. Verify the thumbnail and every selected screenshot render correctly in Content Preview before SEO Check.
 
 **Raw evidence is internal. Selected visual evidence is editorial content.**

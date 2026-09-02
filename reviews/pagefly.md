@@ -23,11 +23,9 @@ The biggest limitation appeared when we published the PageFly page as the store'
 
 PageFly is a visual page builder for Shopify. Instead of building layouts entirely through a Shopify theme's native sections or custom code, merchants can assemble pages using templates, drag-and-drop elements, Shopify elements, and integrations with third-party apps.
 
-It also goes beyond basic page building with CRO and optimization tools including analytics, A/B testing, heatmaps, section performance, AI page checkup, a cart drawer, and an AEO optimizer.
+It also goes beyond basic page building with CRO and optimization tools including analytics, A/B testing, heatmaps, section performance, AI page checkup, a cart drawer, and an AEO optimizer. The screenshot below is from PageFly's public marketing homepage; figures visible in it are PageFly's claims, not results independently verified in our test.
 
 ![PageFly public homepage presenting page building, testing, analytics, and optimization tools](/images/reviews/pagefly/pagefly-public-homepage-overview.png)
-
-*PageFly's public homepage presents the product as a combined page-building and conversion-optimization platform. The marketing figures visible in the screenshot are PageFly's claims, not results independently verified in our test.*
 
 ## What We Tested
 
@@ -67,8 +65,6 @@ In our test store, the existing theme's navigation and hero content remained vis
 
 ![The Shopify theme header remaining above a visually different PageFly New Year page design](/images/reviews/pagefly/pagefly-homepage-theme-continuity.webp)
 
-*Our published Home-page test retained the theme-controlled header above the PageFly content, creating a visible design mismatch.*
-
 For merchants building standalone landing or campaign pages, this may be much less important. But if your goal is to redesign the entire Shopify homepage with PageFly, plan for additional theme-level work so the existing header, hero, and PageFly sections feel like one design system.
 
 We did not verify whether PageFly provides another built-in workflow that completely avoids this behavior, so our finding is limited to the Home-page publishing setup we tested.
@@ -106,8 +102,6 @@ These tools make PageFly more interesting for merchants who want page building a
 We verified the following pricing directly inside PageFly on September 1, 2026. Pricing can change, so merchants should re-check it before subscribing.
 
 ![PageFly pricing screen showing the Free, Builder, Accelerate, and Enterprise plans with their principal limits](/images/reviews/pagefly/pagefly-pricing-plans-september-2026.png)
-
-*The in-app pricing screen reviewed during our test. It shows the four available plans and the principal features or limits PageFly associated with each tier.*
 
 | Plan | Price | Key limits/features shown during our test |
 | --- | ---: | --- |
