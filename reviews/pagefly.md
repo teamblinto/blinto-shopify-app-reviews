@@ -25,6 +25,10 @@ PageFly is a visual page builder for Shopify. Instead of building layouts entire
 
 It also goes beyond basic page building with CRO and optimization tools including analytics, A/B testing, heatmaps, section performance, AI page checkup, a cart drawer, and an AEO optimizer.
 
+![PageFly public homepage presenting page building, testing, analytics, and optimization tools](/images/reviews/pagefly/pagefly-public-homepage-overview.png)
+
+*PageFly's public homepage presents the product as a combined page-building and conversion-optimization platform. The marketing figures visible in the screenshot are PageFly's claims, not results independently verified in our test.*
+
 ## What We Tested
 
 We tested PageFly hands-on using its Free plan on a Shopify development store on September 1, 2026. Our test covered installation and onboarding, creating a page, working with a pre-built template, editing elements, checking desktop/tablet/mobile views, publishing a Home-type page, and exploring the main CRO tools available from the dashboard.

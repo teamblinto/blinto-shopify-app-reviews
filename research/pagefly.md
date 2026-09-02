@@ -74,6 +74,7 @@
 - AI Translator screenshot
 - Page settings/publishing screenshots
 - Published Home-page screenshot showing the theme-controlled header above the visually different PageFly New Year content. Supplied by Imran on 2026-09-02; selected publication asset: `public/images/reviews/pagefly/pagefly-homepage-theme-continuity.webp`. Capture date was not separately verified.
+- Public PageFly homepage overview supplied by Imran on 2026-09-02; selected publication asset: `public/images/reviews/pagefly/pagefly-public-homepage-overview.png`. Use only to show PageFly's product positioning and advertised toolset; visible marketing figures were not independently verified in the hands-on test.
 
 ## Editorial Judgment
 
