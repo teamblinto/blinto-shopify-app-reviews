@@ -81,9 +81,10 @@ It should normally contain:
 - brief alternatives only where decision-useful
 - final merchant recommendation
 - useful FAQs only where they add value
-- concise reviewer/testing disclosure
 
 The structure should adapt to the app and search intent. Do not manufacture sections simply to satisfy a template.
+
+Keep author, testing level, and last-verification details in review frontmatter. Do not repeat them as an italic reviewer/testing footer at the bottom of the article.
 
 ## Publication Image Contract
 

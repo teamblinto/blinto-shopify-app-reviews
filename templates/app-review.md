@@ -85,10 +85,6 @@ thumbnail_alt: "[Describe what the thumbnail visually shows; do not repeat the t
 
 [Include only genuinely useful high-intent questions that add information rather than repeat the article.]
 
----
-
-*Reviewed by [Human Reviewer] for Blinto. Testing level: [Testing Level]. Last verified: [Date].*
-
 <!--
 BLINTO EDITORIAL PRINCIPLE
 The app is the subject; the merchant problem is the evaluation lens.

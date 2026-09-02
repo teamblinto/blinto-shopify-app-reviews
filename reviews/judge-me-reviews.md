@@ -296,7 +296,3 @@ We wouldn't upgrade simply because Judge.me offers more features. We'd upgrade w
 And that's ultimately why Judge.me stands out from our test:
 
 **The Free plan isn't just there to let you try Judge.me. For the right Shopify merchant, it's enough to actually start solving the product-review problem.**
-
----
-
-*Reviewed hands-on by Rakibul H. Rocky for Blinto. Testing was conducted on August 31, 2026 using Judge.me's Free plan on a Shopify development store with the Dawn theme. Our conclusions are limited to the workflows we actually tested.*
