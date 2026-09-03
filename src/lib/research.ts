@@ -1,5 +1,31 @@
 import { getCollection } from 'astro:content';
 
+export const QUALITY_MAX = {
+  handsOnAuthenticity: 20,
+  merchantUsefulness: 20,
+  researchDepth: 15,
+  evidenceScreenshots: 10,
+  balancedCriticism: 10,
+  originalFindings: 10,
+  decisionClarity: 10,
+  editorialQuality: 5,
+} as const;
+
+export const QUALITY_LABELS: Record<keyof typeof QUALITY_MAX, string> = {
+  handsOnAuthenticity: 'Hands-on authenticity',
+  merchantUsefulness: 'Merchant usefulness',
+  researchDepth: 'Research depth',
+  evidenceScreenshots: 'Evidence / screenshots',
+  balancedCriticism: 'Balanced criticism',
+  originalFindings: 'Original findings',
+  decisionClarity: 'Decision clarity',
+  editorialQuality: 'Writing / editorial quality',
+};
+
+export type QualityKey = keyof typeof QUALITY_MAX;
+export type QualityScore = Partial<Record<QualityKey, number>>;
+export type QualityNotes = Partial<Record<QualityKey, string>>;
+
 export type ResearchRecord = {
   id: string;
   title: string;
@@ -11,9 +37,13 @@ export type ResearchRecord = {
   researchDate: string | null;
   clickupUrl: string | null;
   appStoreUrl: string | null;
+  qualityScore: QualityScore | null;
+  qualityNotes: QualityNotes;
+  qualityTotal: number | null;
+  qualityStatus: string;
 };
 
-const FIELDS: Record<keyof Omit<ResearchRecord, 'id' | 'title' | 'summary'>, string[]> = {
+const FIELDS = {
   app: ['app'],
   category: ['category'],
   reviewer: ['human reviewer', 'human reviewer / assignee', 'reviewer', 'assignee'],
@@ -21,10 +51,8 @@ const FIELDS: Record<keyof Omit<ResearchRecord, 'id' | 'title' | 'summary'>, str
   researchDate: ['research/testing date', 'research date', 'testing date'],
   clickupUrl: ['clickup task', 'clickup'],
   appStoreUrl: ['shopify app store', 'app store'],
-};
+} as const;
 
-// Research files are internal working records without frontmatter, so their
-// metadata is read from the leading heading and the "Review Record" bullets.
 const stripMarkdown = (value: string) =>
   value
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1')
@@ -44,12 +72,27 @@ const readFields = (body: string) => {
   return found;
 };
 
-const pick = (fields: Map<string, string>, labels: string[]) => {
+const pick = (fields: Map<string, string>, labels: readonly string[]) => {
   for (const label of labels) {
     const value = fields.get(label);
     if (value) return value;
   }
   return null;
+};
+
+export const getQualityStatus = (total: number | null) => {
+  if (total === null) return 'Not scored';
+  if (total >= 90) return 'Blinto Standard';
+  if (total >= 80) return 'Publishable';
+  if (total >= 70) return 'Revision required';
+  return 'Not publishable';
+};
+
+export const getQualityTotal = (score: QualityScore | null) => {
+  if (!score) return null;
+  const keys = Object.keys(QUALITY_MAX) as QualityKey[];
+  if (!keys.some((key) => typeof score[key] === 'number')) return null;
+  return keys.reduce((total, key) => total + Math.max(0, Math.min(QUALITY_MAX[key], Number(score[key] ?? 0))), 0);
 };
 
 export const toResearchRecord = (entry: { id: string; body?: string; data?: Record<string, any> }): ResearchRecord => {
@@ -66,18 +109,25 @@ export const toResearchRecord = (entry: { id: string; body?: string; data?: Reco
   };
   const heading = body.match(/^#\s+(.+)$/m)?.[1];
   const quote = body.match(/^>\s*(.+)$/m)?.[1];
+  const qualityScore = entry.data?.qualityScore && typeof entry.data.qualityScore === 'object' ? entry.data.qualityScore as QualityScore : null;
+  const qualityNotes = entry.data?.qualityNotes && typeof entry.data.qualityNotes === 'object' ? entry.data.qualityNotes as QualityNotes : {};
+  const qualityTotal = getQualityTotal(qualityScore);
 
   return {
     id: entry.id,
     title: entry.data?.title ?? (heading ? stripMarkdown(heading) : entry.id.replaceAll('-', ' ')),
     summary: quote ? stripMarkdown(quote) : null,
-    app: text('app'),
-    category: text('category'),
-    reviewer: text('reviewer'),
-    testingLevel: text('testingLevel'),
-    researchDate: text('researchDate'),
-    clickupUrl: url('clickupUrl'),
-    appStoreUrl: url('appStoreUrl'),
+    app: entry.data?.app ?? text('app'),
+    category: entry.data?.category ?? text('category'),
+    reviewer: entry.data?.reviewer ?? text('reviewer'),
+    testingLevel: entry.data?.testingLevel ?? text('testingLevel'),
+    researchDate: entry.data?.researchDate ?? text('researchDate'),
+    clickupUrl: entry.data?.clickupUrl ?? url('clickupUrl'),
+    appStoreUrl: entry.data?.appStoreUrl ?? url('appStoreUrl'),
+    qualityScore,
+    qualityNotes,
+    qualityTotal,
+    qualityStatus: getQualityStatus(qualityTotal),
   };
 };
 
