@@ -4,10 +4,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
   const reviews = await getCollection('reviews');
-  return reviews.map((review) => ({ params: { slug: review.id }, props: { review } }));
+  const researchIds = new Set((await getCollection('research')).map((entry) => entry.id));
+  return reviews.map((review) => ({
+    params: { slug: review.id },
+    props: { review, hasResearch: researchIds.has(review.id) },
+  }));
 }
 
-const { review } = Astro.props;
+const { review, hasResearch } = Astro.props;
 const { Content } = await render(review);
 const fm = review.data ?? {};
 ---
@@ -20,6 +24,11 @@ const fm = review.data ?? {};
     <span>Category: {fm.category ?? 'TBD'}</span>
     <span>Testing: {fm.testing_level ?? 'Not set'}</span>
   </div>
+  {hasResearch && (
+    <div class="source-note" style="margin-top:18px">
+      <strong>Internal evidence:</strong> the research record behind this article is at <a href={`/research/${review.id}/`}>/research/{review.id}/</a>.
+    </div>
+  )}
   {fm.thumbnail && (
     <img
       class="review-thumbnail"

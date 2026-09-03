@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getResearchRecords } from '../../lib/research';
+
+const records = await getResearchRecords();
+const reviewIds = new Set((await getCollection('reviews')).map((entry) => entry.id));
+---
+<BaseLayout title="Research & Evidence | Blinto Reviews">
+  <div class="eyebrow">Internal working records</div>
+  <h1>Research & Evidence</h1>
+  <p class="lead">The internal research record behind each review: testing scope, raw observations, source validation, discrepancies and unresolved questions. Research supports the article; research is never the article.</p>
+  <div class="source-note" style="margin-top:18px"><strong>Internal only:</strong> these records are not publication outputs. The reader-facing article for each app lives under <a href="/reviews/">Reviews</a>.</div>
+  {records.length === 0 ? (
+    <div class="empty" style="margin-top:18px">No research records yet. Each app's evidence file belongs in <code>research/[app-slug].md</code>.</div>
+  ) : (
+    <div class="grid">
+      {records.map((record) => (
+        <a class="card" href={`/research/${record.id}/`}>
+          <span class="status">{record.testingLevel ?? 'Research record'}</span>
+          <h3>{record.app ?? record.title}</h3>
+          <p>{[record.category, record.reviewer].filter(Boolean).join(' · ') || 'Internal evidence record'}</p>
+          <p class="card-meta">
+            {record.researchDate ? `Tested ${record.researchDate}` : 'Date not recorded'}
+            {reviewIds.has(record.id) ? ' · Article drafted' : ' · No article yet'}
+          </p>
+        </a>
+      ))}
+    </div>
+  )}
+</BaseLayout>

@@ -1,0 +1,36 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { toResearchRecord } from '../../lib/research';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('research');
+  const reviews = await getCollection('reviews');
+  const reviewIds = new Set(reviews.map((review) => review.id));
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry, hasReview: reviewIds.has(entry.id) },
+  }));
+}
+
+const { entry, hasReview } = Astro.props;
+const record = toResearchRecord(entry);
+const { Content } = await render(entry);
+---
+<BaseLayout title={`${record.title} | Research | Blinto Reviews`}>
+  <div class="eyebrow">Internal research & evidence</div>
+  <h1>{record.app ?? record.title}</h1>
+  <div class="pipeline">
+    <span>Category: {record.category ?? 'TBD'}</span>
+    <span>Reviewer: {record.reviewer ?? 'Unassigned'}</span>
+    <span>Testing: {record.testingLevel ?? 'Not set'}</span>
+    <span>Tested: {record.researchDate ?? 'Not recorded'}</span>
+  </div>
+  <div class="source-note" style="margin-top:18px">
+    <strong>Internal working file — not for publication.</strong>
+    {hasReview ? <> The publication-ready article is <a href={`/reviews/${entry.id}/`}>the {record.app ?? record.title} review</a>.</> : ' No publication-ready article exists for this app yet.'}
+    {record.clickupUrl && <> · <a href={record.clickupUrl}>ClickUp task</a></>}
+    {record.appStoreUrl && <> · <a href={record.appStoreUrl}>Shopify App Store</a></>}
+  </div>
+  <article class="prose research-doc" style="margin-top:20px"><Content /></article>
+</BaseLayout>
