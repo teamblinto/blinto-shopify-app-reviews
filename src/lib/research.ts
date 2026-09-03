@@ -1,4 +1,5 @@
 import { getCollection } from 'astro:content';
+import { legacyQualityScores } from './quality-scores';
 
 export const QUALITY_MAX = {
   handsOnAuthenticity: 20,
@@ -109,8 +110,13 @@ export const toResearchRecord = (entry: { id: string; body?: string; data?: Reco
   };
   const heading = body.match(/^#\s+(.+)$/m)?.[1];
   const quote = body.match(/^>\s*(.+)$/m)?.[1];
-  const qualityScore = entry.data?.qualityScore && typeof entry.data.qualityScore === 'object' ? entry.data.qualityScore as QualityScore : null;
-  const qualityNotes = entry.data?.qualityNotes && typeof entry.data.qualityNotes === 'object' ? entry.data.qualityNotes as QualityNotes : {};
+  const legacy = legacyQualityScores[entry.id];
+  const qualityScore = entry.data?.qualityScore && typeof entry.data.qualityScore === 'object'
+    ? entry.data.qualityScore as QualityScore
+    : legacy?.score ?? null;
+  const qualityNotes = entry.data?.qualityNotes && typeof entry.data.qualityNotes === 'object'
+    ? entry.data.qualityNotes as QualityNotes
+    : legacy?.notes ?? {};
   const qualityTotal = getQualityTotal(qualityScore);
 
   return {
