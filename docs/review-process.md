@@ -108,6 +108,8 @@ Before handoff, the human reviewer must read the generated review and confirm it
 
 The reviewer/AI must then add the exact **Content Preview** URL to the ClickUp task.
 
+The matching internal evidence file under `research/` renders privately at `https://reviews.blinto.co/research/[research-file-id]/` for fact-checking context. It is never the Content Preview URL.
+
 A task is **not ready for SEO Check** until all three are true:
 
 1. Review content is committed/pushed to GitHub.

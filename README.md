@@ -76,6 +76,8 @@ For each app, use two separate files when research material needs to be preserve
 
 Example: PageFly uses `research/pagefly.md` for Imran's evidence and `reviews/pagefly.md` for the clean article rendered on the Review Hub.
 
+Both render on the private Review Hub: the article at `/reviews/[app-slug]/` and its evidence record at `/research/[app-slug]/`, cross-linked when the slugs match. Only the `/reviews/` URL is a Content Preview URL.
+
 ## Pilot
 
 The first operational pilot is five single-app reviews. Use those five to improve the workflow while preserving evidence quality and publishing velocity.

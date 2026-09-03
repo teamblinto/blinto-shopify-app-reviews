@@ -13,4 +13,8 @@ const reviews = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './reviews' }),
 });
 
-export const collections = { docs, sops, reviews };
+const research = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './research' }),
+});
+
+export const collections = { docs, sops, reviews, research };

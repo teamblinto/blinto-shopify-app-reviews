@@ -114,6 +114,8 @@ For Level 1 and Level 2 reviews, useful hands-on screenshots should normally app
 
 Astro loads `reviews/**/*.{md,mdx}` as the `reviews` collection. The Review Hub generates a page for each review under `/reviews/[review-file-id]/`.
 
+Astro also loads `research/**/*.{md,mdx}` as the `research` collection, rendered under `/research/[research-file-id]/`. Those pages are the internal evidence record, not Content Preview URLs: never hand a `/research/` URL to SEO Check or to ClickUp as the Content Preview. When a research file and a review file share the same slug, the Hub cross-links them automatically.
+
 Publishable review images live under `public/images/reviews/[app-slug]/` and are referenced from the review Markdown.
 
 After a review and its selected images are committed/pushed to the deployed branch and deployment completes, the AI/reviewer should verify the rendered page and use the exact URL as **Content Preview**.
