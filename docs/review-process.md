@@ -23,6 +23,12 @@ The human assignee is the named reviewer/author and owns the experience, evidenc
 
 **AI may write 100% of the prose. AI may invent 0% of the experience or evidence.**
 
+## Internal UI Rule
+
+The quality scorecard and Founder Intelligence are internal working data. They must appear on the private **Research** page for the app, not inside the public review article.
+
+The Review Hub dashboard should show only the review's **final quality score and status** as a compact summary so the team can quickly see which reviews are ready, need revision, or are below standard.
+
 ## ClickUp Workflow
 
 **Backlog → Research & Write → SEO Check → Ready to Publish → Published**
@@ -134,6 +140,43 @@ Interpretation:
 - **Below 70 — Not publishable:** the review does not yet meet the standard.
 
 Writing quality intentionally carries fewer points than authenticity and merchant usefulness. A polished generic article must not outscore genuine hands-on evaluation.
+
+#### Research page scorecard UI
+
+The private research page should render all eight scoring categories with:
+
+- category name;
+- points earned / maximum points;
+- short evaluator note explaining the score;
+- total score out of 100;
+- derived status (`Blinto Standard`, `Publishable`, `Revision required`, or `Not publishable`).
+
+The underlying research Markdown should store the scorecard as structured frontmatter so the Research page and dashboard use the same source of truth.
+
+Recommended structure:
+
+```yaml
+qualityScore:
+  handsOnAuthenticity: 18
+  merchantUsefulness: 17
+  researchDepth: 13
+  evidenceScreenshots: 9
+  balancedCriticism: 8
+  originalFindings: 8
+  decisionClarity: 9
+  editorialQuality: 4
+qualityNotes:
+  handsOnAuthenticity: "Core merchant workflow completed manually."
+  merchantUsefulness: "Strong fit guidance, but one edge case remains untested."
+```
+
+The total must be derived from the category values rather than manually duplicated whenever practical.
+
+#### Dashboard score summary
+
+The Review Hub dashboard table should show a **Quality Score** column for every review that has a scorecard. Display the total as `86/100` plus the derived status. Reviews that have not yet been scored should show `—` or `Not scored` rather than assuming a zero.
+
+The dashboard is internal, so this score can be shown there. Do not expose this internal Blinto quality score inside the public article unless a future editorial policy explicitly chooses to publish it.
 
 ### Step E — Lock the editorial verdict
 
