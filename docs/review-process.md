@@ -2,11 +2,20 @@
 
 This is the approved practical workflow for the Shopify App Review operation.
 
-The detailed requirements remain in `source-sops/`. The execution layer stays lightweight while preserving evidence, transparency, SEO quality, and merchant usefulness.
+The detailed requirements remain in `source-sops/`. The execution layer stays lightweight while preserving evidence, transparency, SEO quality, merchant usefulness, and internal learning.
+
+## Two Required Outputs
+
+Every completed app review must create two distinct outputs:
+
+1. **External — Merchant Decision Output:** help a Shopify merchant make a better app decision through independent, evidence-based, hands-on evaluation.
+2. **Internal — Founder Intelligence Output:** help Blinto understand the app company, merchant pain, product/growth gaps, unanswered questions, and where Blinto could genuinely help the founder.
+
+The public editorial conclusion must be independent of any sales opportunity. **Lock the editorial verdict before founder intelligence is converted into CRM or outreach.** A company becoming a prospect must never make its review more positive.
 
 ## Core Model
 
-**Merchant problem → human reviewer tests a realistic scenario → AI researches/interviews/writes → human fact-checks → preview → SEO Check → publish.**
+**Research → merchant decision → human reviewer tests a realistic scenario → evidence → findings → AI researches/interviews/writes → human fact-checks → quality score → editorial verdict locked → founder intelligence → preview → SEO Check → publish → CRM/outreach when appropriate.**
 
 The app is the subject of each single-app review. The merchant problem is the evaluation lens.
 
@@ -60,11 +69,14 @@ During testing, collect a normal set of **3–4 publication screenshots** rather
 
 Ask for each screenshot at the relevant testing moment. Three are enough when one image genuinely covers two content moments; never add filler just to reach four.
 
+A **short screen recording is optional high-value evidence** when motion or sequence communicates the experience better than screenshots — for example a page-building flow, onboarding sequence, automation, upsell configuration, or another important multi-step workflow. It does not replace the publication screenshots. Recordings should demonstrate actual hands-on use, not become promotional decoration.
+
 ### Human reviewer owns
 
 - Real app access and hands-on testing.
 - Running the realistic merchant scenario requested by the review plan.
 - Screenshots and other evidence from testing.
+- Optional short screen recording when it materially strengthens evidence.
 - Raw observations, opinions, UX/technical/product judgment, problems, strengths, limitations, and merchant-fit conclusions.
 - Answering AI follow-up questions when experience cannot be learned from public sources.
 - Final factual verification of the generated article.
@@ -76,7 +88,7 @@ Ask for each screenshot at the relevant testing moment. Three are enough when on
 - Helping define the merchant problem and decision question.
 - Designing/asking for the minimum realistic testing needed to answer that question.
 - Asking the reviewer for missing testing, screenshots, observations, or decisions.
-- Separating developer claims, Blinto observations, and merchant feedback.
+- Separating **developer claims**, **Blinto hands-on observations**, and **merchant feedback** as distinct evidence classes.
 - Converting technical findings into merchant/business implications without inventing outcomes.
 - Writing the complete merchant-focused article in polished prose.
 - Editing, consistency checks, and pre-handoff QA.
@@ -98,6 +110,52 @@ Place each selected screenshot at the top of its relevant section, immediately b
 
 Alternatives may be mentioned briefly when useful, but a single-app review should not be forced into a comparison article.
 
+### Step D — Blinto Review Quality Score
+
+Before the editorial verdict is locked, score the finished review out of 100:
+
+| Quality area | Points |
+|---|---:|
+| Hands-on authenticity | 20 |
+| Merchant usefulness | 20 |
+| Research depth | 15 |
+| Evidence/screenshots | 10 |
+| Balanced criticism | 10 |
+| Original findings | 10 |
+| Decision clarity | 10 |
+| Writing/editorial quality | 5 |
+| **Total** | **100** |
+
+Interpretation:
+
+- **90–100 — Blinto Standard:** strong enough to represent the review program.
+- **80–89 — Publishable:** minor improvements may still be useful.
+- **70–79 — Revision required:** another editorial/testing pass is needed.
+- **Below 70 — Not publishable:** the review does not yet meet the standard.
+
+Writing quality intentionally carries fewer points than authenticity and merchant usefulness. A polished generic article must not outscore genuine hands-on evaluation.
+
+### Step E — Lock the editorial verdict
+
+After fact-checking and scoring, lock the merchant-facing conclusion before doing commercial qualification. The verdict should clearly answer **install / consider / skip — and for whom**, using language appropriate to the evidence rather than forcing those exact labels into every article.
+
+Do not change the verdict, criticism, score, or factual framing because the developer is a current client, prospective client, partner, sponsor, or outreach target.
+
+### Step F — Create the Founder Intelligence Output
+
+The matching internal `research/` file must include a concise **Founder Intelligence** section after the editorial verdict is locked. This section is internal and must not distort the published review.
+
+Capture:
+
+1. **What the app does exceptionally well** — useful strengths worth recognizing in founder conversations.
+2. **Merchant friction discovered** — onboarding, UX, pricing, documentation, positioning, support, technical or workflow friction evidenced during research/testing.
+3. **Growth opportunities** — SEO, content, positioning, App Store optimization, conversion, onboarding, retention, distribution, or other evidence-backed opportunities.
+4. **Product opportunities** — recurring merchant requests, missing capabilities, workflow problems, integration gaps, or other product observations.
+5. **Questions for the founder** — material things independent research/testing could not establish.
+6. **Blinto fit** — one of: `No obvious opportunity`, `Growth opportunity`, `UX opportunity`, `Development opportunity`, or `Multiple opportunities`, followed by a short evidence-based reason.
+
+Founder intelligence is not permission to manufacture a sales angle. If no meaningful opportunity exists, record that clearly.
+
 ## 3. Preview & Human Fact-check
 
 Every review file under `reviews/` is automatically included in the Astro Review Hub collection. After the review is committed/pushed and deployment completes, its private preview is available at:
@@ -108,13 +166,15 @@ Before handoff, the human reviewer must read the generated review and confirm it
 
 The reviewer/AI must then add the exact **Content Preview** URL to the ClickUp task.
 
-The matching internal evidence file under `research/` renders privately at `https://reviews.blinto.co/research/[research-file-id]/` for fact-checking context. It is never the Content Preview URL.
+The matching internal evidence file under `research/` renders privately at `https://reviews.blinto.co/research/[research-file-id]/` for fact-checking context and founder intelligence. It is never the Content Preview URL.
 
-A task is **not ready for SEO Check** until all three are true:
+A task is **not ready for SEO Check** until all five are true:
 
 1. Review content is committed/pushed to GitHub.
 2. Rendered content preview is available on `reviews.blinto.co`.
 3. Exact Content Preview URL is recorded in ClickUp.
+4. Blinto Review Quality Score has been completed and is **80+**.
+5. Editorial verdict is locked and Founder Intelligence is recorded internally.
 
 ## 4. SEO Check — Shemanto
 
@@ -124,7 +184,7 @@ Shemanto checks search intent/topic alignment, title/H1 and headings, topical co
 
 SEO optimization must preserve the review's merchant-decision thesis rather than turning the article back into a generic feature/pricing/pros-cons template.
 
-If corrections are needed, keep the task in **SEO Check**. The same human reviewer works with their AI assistant to resolve feedback and update the preview.
+If corrections are needed, keep the task in **SEO Check**. The same human reviewer works with their AI assistant to resolve feedback and update the preview. SEO edits may improve presentation and discover factual gaps, but they must not quietly change a locked editorial verdict without returning the review to the reviewer for evidence-based reconsideration.
 
 When the check passes, Shemanto moves the task to **Ready to Publish**.
 
@@ -135,6 +195,8 @@ The article has passed the quality gate. Fazle or Shemanto completes final publi
 ## 6. Published
 
 Once the public article is live and verified, Fazle or Shemanto adds the published URL to ClickUp and moves the task to **Published**.
+
+Only after the independent editorial verdict is locked may relevant Founder Intelligence be transferred into the sales CRM and used for respectful, evidence-based founder outreach.
 
 Performance tracking, refreshes, pricing/product changes, and maintenance continue according to SOP 7, outside the production-board statuses.
 
@@ -152,8 +214,18 @@ Every review task should expose:
 
 - Task created/approved → **Backlog**.
 - Human reviewer starts → **Research & Write**.
-- Human reviewer fact-checks + preview is live + preview URL is in ClickUp → **SEO Check**.
+- Human reviewer fact-checks + scores 80+ + locks verdict + records Founder Intelligence + preview is live + preview URL is in ClickUp → **SEO Check**.
 - Shemanto passes SEO/quality gate → **Ready to Publish**.
 - Fazle/Shemanto publishes and verifies → **Published**.
 
 Planning/topic-validation work belongs in Shopify GTM Execution, not the review-production board.
+
+## CEO Process Improvement Rule
+
+When CEO/final review discovers a recurring weakness, do not fix only that article. Record the observation and decide whether the workflow, template, evidence requirement, or SOP should change so future reviewers automatically follow the improved standard.
+
+Use this simple improvement logic:
+
+**Observation → article issue → reusable process change.**
+
+This is how the review system should improve as Blinto completes more apps.
