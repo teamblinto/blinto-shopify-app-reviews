@@ -13,7 +13,7 @@ const goal = 100;
 const statuses = ['Backlog', 'Research & Write', 'SEO Check', 'Ready to Publish', 'Published'];
 const contentByTask = new Map(entries.map((entry) => [entry.data.clickup?.split('/').pop(), entry]));
 
-const withQuality = (review) => {
+const withQuality = (review: any) => {
   const quality = review.id ? researchById.get(review.id) : null;
   return { ...review, qualityTotal: quality?.qualityTotal ?? null, qualityStatus: quality?.qualityStatus ?? 'Not scored' };
 };
