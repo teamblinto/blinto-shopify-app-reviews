@@ -8,3 +8,6 @@
 @media(max-width:1000px){.metric-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.sprint-hero{grid-template-columns:1fr}.countdown{border-left:0;border-top:1px solid #333;padding:24px 0 0}}
 @media(max-width:800px){.shell{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.nav{grid-template-columns:repeat(2,minmax(0,1fr))}.main{padding:22px}.grid{grid-template-columns:1fr}}
 @media(max-width:520px){.metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.countdown-grid{grid-template-columns:repeat(2,1fr)}.progress-meta{flex-direction:column;gap:2px}}
+
+.sidebar{display:flex;flex-direction:column}.sidebar-footer{margin-top:auto;padding-top:24px;border-top:1px solid #2d2d2d}.logout{display:block;text-decoration:none;padding:10px 12px;border-radius:9px;color:#aaa}.logout:hover{background:#242424;color:#fff}
+@media(max-width:800px){.sidebar-footer{margin-top:20px}.logout{display:inline-block}}
