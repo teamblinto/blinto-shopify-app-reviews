@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { toResearchRecord } from '../../lib/research';
+import { QUALITY_LABELS, QUALITY_MAX, toResearchRecord } from '../../lib/research';
 
 export async function getStaticPaths() {
   const entries = await getCollection('research');
@@ -16,6 +16,7 @@ export async function getStaticPaths() {
 const { entry, hasReview } = Astro.props;
 const record = toResearchRecord(entry);
 const { Content } = await render(entry);
+const qualityKeys = Object.keys(QUALITY_MAX) as Array<keyof typeof QUALITY_MAX>;
 ---
 <BaseLayout title={`${record.title} | Research | Blinto Reviews`}>
   <div class="eyebrow">Internal research & evidence</div>
@@ -32,5 +33,39 @@ const { Content } = await render(entry);
     {record.clickupUrl && <> · <a href={record.clickupUrl}>ClickUp task</a></>}
     {record.appStoreUrl && <> · <a href={record.appStoreUrl}>Shopify App Store</a></>}
   </div>
-  <article class="prose research-doc" style="margin-top:20px"><Content /></article>
+
+  <section style="margin-top:24px">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>
+        <div class="eyebrow">Internal QA</div>
+        <h2 style="margin-bottom:4px">Blinto Review Quality Score</h2>
+        <p style="margin-top:0">Score the finished review after hands-on testing and fact-checking, before locking the editorial verdict.</p>
+      </div>
+      <div class="card" style="min-width:190px;padding:18px 20px">
+        <strong style="font-size:2rem;display:block">{record.qualityTotal === null ? '—' : `${record.qualityTotal}/100`}</strong>
+        <span class="status">{record.qualityStatus}</span>
+      </div>
+    </div>
+
+    {record.qualityTotal === null ? (
+      <div class="source-note" style="margin-top:16px"><strong>Not scored yet.</strong> Add the structured <code>qualityScore</code> and optional <code>qualityNotes</code> fields to this research file after the review is complete.</div>
+    ) : (
+      <div class="report-wrap" style="margin-top:16px">
+        <table class="report">
+          <thead><tr><th>Quality area</th><th>Score</th><th>Evaluator note</th></tr></thead>
+          <tbody>
+            {qualityKeys.map((key) => (
+              <tr>
+                <td><strong>{QUALITY_LABELS[key]}</strong></td>
+                <td><strong>{record.qualityScore?.[key] ?? 0}/{QUALITY_MAX[key]}</strong></td>
+                <td>{record.qualityNotes[key] ?? '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+  </section>
+
+  <article class="prose research-doc" style="margin-top:28px"><Content /></article>
 </BaseLayout>
